@@ -9,8 +9,44 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as PhysicsRouteImport } from './routes/physics'
+import { Route as LawPolicyRouteImport } from './routes/law-policy'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as EarthSystemsRouteImport } from './routes/earth-systems'
+import { Route as CapstoneRouteImport } from './routes/capstone'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhysicsRoute = PhysicsRouteImport.update({
+  id: '/physics',
+  path: '/physics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LawPolicyRoute = LawPolicyRouteImport.update({
+  id: '/law-policy',
+  path: '/law-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EarthSystemsRoute = EarthSystemsRouteImport.update({
+  id: '/earth-systems',
+  path: '/earth-systems',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapstoneRoute = CapstoneRouteImport.update({
+  id: '/capstone',
+  path: '/capstone',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +55,116 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/capstone': typeof CapstoneRoute
+  '/earth-systems': typeof EarthSystemsRoute
+  '/gallery': typeof GalleryRoute
+  '/law-policy': typeof LawPolicyRoute
+  '/physics': typeof PhysicsRoute
+  '/research': typeof ResearchRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/capstone': typeof CapstoneRoute
+  '/earth-systems': typeof EarthSystemsRoute
+  '/gallery': typeof GalleryRoute
+  '/law-policy': typeof LawPolicyRoute
+  '/physics': typeof PhysicsRoute
+  '/research': typeof ResearchRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/capstone': typeof CapstoneRoute
+  '/earth-systems': typeof EarthSystemsRoute
+  '/gallery': typeof GalleryRoute
+  '/law-policy': typeof LawPolicyRoute
+  '/physics': typeof PhysicsRoute
+  '/research': typeof ResearchRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/capstone'
+    | '/earth-systems'
+    | '/gallery'
+    | '/law-policy'
+    | '/physics'
+    | '/research'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/capstone'
+    | '/earth-systems'
+    | '/gallery'
+    | '/law-policy'
+    | '/physics'
+    | '/research'
+  id:
+    | '__root__'
+    | '/'
+    | '/capstone'
+    | '/earth-systems'
+    | '/gallery'
+    | '/law-policy'
+    | '/physics'
+    | '/research'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CapstoneRoute: typeof CapstoneRoute
+  EarthSystemsRoute: typeof EarthSystemsRoute
+  GalleryRoute: typeof GalleryRoute
+  LawPolicyRoute: typeof LawPolicyRoute
+  PhysicsRoute: typeof PhysicsRoute
+  ResearchRoute: typeof ResearchRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/physics': {
+      id: '/physics'
+      path: '/physics'
+      fullPath: '/physics'
+      preLoaderRoute: typeof PhysicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/law-policy': {
+      id: '/law-policy'
+      path: '/law-policy'
+      fullPath: '/law-policy'
+      preLoaderRoute: typeof LawPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/earth-systems': {
+      id: '/earth-systems'
+      path: '/earth-systems'
+      fullPath: '/earth-systems'
+      preLoaderRoute: typeof EarthSystemsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capstone': {
+      id: '/capstone'
+      path: '/capstone'
+      fullPath: '/capstone'
+      preLoaderRoute: typeof CapstoneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +177,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CapstoneRoute: CapstoneRoute,
+  EarthSystemsRoute: EarthSystemsRoute,
+  GalleryRoute: GalleryRoute,
+  LawPolicyRoute: LawPolicyRoute,
+  PhysicsRoute: PhysicsRoute,
+  ResearchRoute: ResearchRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

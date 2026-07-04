@@ -6,9 +6,6 @@ export type Project = {
   links: ProjectLink[];
 };
 
-const img = (n: string) => `/src/assets/photos/image${n}.jpg`;
-// Note: paths resolved via Vite import glob below.
-
 import img01 from "@/assets/photos/image01.jpg";
 import img02 from "@/assets/photos/image02.jpg";
 import img03 from "@/assets/photos/image03.jpg";
@@ -202,5 +199,3 @@ export const lawPolicyProjects: Project[] = [
 ];
 
 export const headshot = img01;
-// Suppress unused var warning for helper
-void img;

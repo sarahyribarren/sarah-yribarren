@@ -11,6 +11,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 
 function NotFoundComponent() {
   return (
@@ -77,14 +79,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Sarah Yribarren — Chemical Engineer & Earth Systems Researcher" },
+      { name: "description", content: "Personal site of Sarah Yribarren: B.S. Chemical Engineering, M.S. Earth Systems @ Stanford. Research, capstone projects, and writing at the intersection of technology and environmental systems." },
+      { name: "author", content: "Sarah Yribarren" },
+      { property: "og:title", content: "Sarah Yribarren" },
+      { property: "og:description", content: "Chemical engineer and Earth systems researcher working at the intersection of technology and environmental systems." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -92,6 +93,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -119,8 +123,19 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SidebarProvider>
+        <AppSidebar />
+        <SidebarInset>
+          <header className="flex h-12 items-center border-b border-border/60 px-3 md:hidden">
+            <SidebarTrigger />
+            <span className="ml-3 font-display text-lg">Sarah Yribarren</span>
+          </header>
+          <main className="fade-in min-h-screen">
+            {/* Required: nested routes render here. */}
+            <Outlet />
+          </main>
+        </SidebarInset>
+      </SidebarProvider>
     </QueryClientProvider>
   );
 }

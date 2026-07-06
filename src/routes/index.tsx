@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/project-tile";
 import { timeline, awards, leadership } from "@/content/timeline";
 import { headshot } from "@/content/projects";
+import { TimelineList } from "@/components/timeline-entry";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,38 +67,7 @@ function Index() {
           </span>
         </div>
 
-        <ol className="relative ml-2 border-l border-border/80">
-          {timeline.map((entry, i) => (
-            <li key={i} className="relative pl-6 pb-8 last:pb-0 md:pl-8">
-              <span
-                className={
-                  "absolute left-0 top-2 -translate-x-1/2 rounded-full ring-4 ring-background " +
-                  (entry.kind === "education"
-                    ? "h-3 w-3 bg-primary"
-                    : entry.kind === "credential"
-                    ? "h-2.5 w-2.5 bg-foreground/60"
-                    : "h-3 w-3 border border-primary bg-background")
-                }
-                aria-hidden
-              />
-              <div className="grid grid-cols-1 gap-1 md:grid-cols-[160px_1fr] md:gap-6">
-                <div className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground md:pt-1">
-                  {entry.year}
-                </div>
-                <div>
-                  <h3 className="font-display text-xl leading-snug text-foreground">
-                    {entry.title}
-                  </h3>
-                  {entry.detail && (
-                    <p className="mt-1 text-[14px] leading-relaxed text-foreground/75">
-                      {entry.detail}
-                    </p>
-                  )}
-                </div>
-              </div>
-            </li>
-          ))}
-        </ol>
+        <TimelineList entries={timeline} />
       </section>
 
       {/* Awards */}

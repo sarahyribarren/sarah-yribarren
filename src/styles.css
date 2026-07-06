@@ -174,6 +174,22 @@
   animation: fadeIn 0.4s ease-out;
 }
 
+@utility photo-placeholder {
+  background:
+    radial-gradient(120% 80% at 20% 15%, oklch(0.92 0.03 130) 0%, transparent 55%),
+    radial-gradient(140% 100% at 85% 90%, oklch(0.78 0.05 145) 0%, transparent 60%),
+    linear-gradient(135deg, var(--sage) 0%, var(--sand) 100%);
+  position: relative;
+  overflow: hidden;
+}
+@utility photo-placeholder-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.4  0 0 0 0 0.45  0 0 0 0 0.35  0 0 0 0.25 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }

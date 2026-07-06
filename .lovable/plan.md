@@ -1,116 +1,67 @@
+# Timeline redesign — centered zig-zag with paired photos
 
-# Sarah Yribarren — Personal Site Remake
+## What changes
 
-A sidebar-driven personal website inspired by Tom Critchlow's notebook layout, with an "About" landing page featuring a portrait + resume-style timeline (Pranathy-inspired), and sidebar sections that swap the main window to your existing project tiles.
+Replace the current left-rail timeline on `/` with a **centered vertical rail** where each entry is a two-column row: a **card on one side** and a **photo panel on the other**, alternating (zig-zag) down the page. The card is the focus, the photo is roughly equal visual weight (not a small thumbnail), and a dot on the center rail marks each entry with the year label just under it.
 
-## Visual direction — Sage & Sand
-
-- Background: `#f5f0e8` (warm cream)
-- Surface / card: `#faf7f0`
-- Muted panel: `#dce5d4` (soft sage)
-- Accent: `#7d9b76` (sage green)
-- Deep accent: `#3a4a3a` (forest, used for text + timeline rail)
-- Hairline: `#c9d1c1`
-
-Typography (loaded via `<link>` in `__root.tsx`, per Tailwind v4 rules):
-- Display: **Instrument Serif** — elegant editorial headings
-- Body: **Inter Tight** — clean neutral
-- Labels / years: body font, tracked wide, small caps feel
-
-Motif: hairline rules, generous whitespace, retained emoji glyphs (⚙️ 🧪 ⚛️ 🌎 ⚖️ 📸), subtle fade-in on route change.
-
-## Layout
+## Row anatomy
 
 ```text
-┌───────────────┬──────────────────────────────────────┐
-│ SIDEBAR       │ MAIN                                 │
-│               │                                      │
-│ Sarah         │  ┌────────┐  Timeline                │
-│ Yribarren     │  │ PHOTO  │  ● 2026 — MS Earth Sys   │
-│ small tagline │  │        │  │       (Stanford)      │
-│               │  └────────┘  ● 2026 — Red Metals     │
-│ ─── nav ───   │  Intro copy   │  Chemical Engineer   │
-│ About         │               ● 2025–26 — WindAid    │
-│ Senior        │               ● 2025 — BS ChemE      │
-│  Capstone     │               ● ...                  │
-│ Engineering   │                                      │
-│  Research     │  Awards & Honors                     │
-│ Physics &     │                                      │
-│  Technology   │  Clubs & Leadership                  │
-│ Earth Systems │                                      │
-│ Law, Policy   │  Contact: email · LinkedIn · NSC     │
-│  & EJ         │           ePortfolio                 │
-│ Photo Gallery │                                      │
-└───────────────┴──────────────────────────────────────┘
+     ┌──────────────┐    │
+     │   PHOTO      │    ●  2025
+     │              │    │      ┌─────────────────────────┐
+     │              │    │      │ 🏛  Stanford University │
+     └──────────────┘    │      │ 📅  Sep 2024 – Jun 2025 │
+                         │      │ ─────────────────────── │
+                         │      │  Graduate Teaching Assistant
+                         │      │  2–3 line description…
+                         │      │  • [add bullet]
+                         │      │  • [add bullet]
+                         │      │  • [add bullet]
+                         │      └─────────────────────────┘
 ```
 
-Mobile: sidebar collapses to a hamburger via `SidebarTrigger` in a slim top bar.
+- **Card**: small eyebrow row (org icon + org name • date • location), sage hairline, `font-display` title, 2–3 line description in body, then 3 bullets in a smaller font (~13px) with sage dots. Rounded, cream card on sand background, soft sage-shadow on hover.
+- **Photo panel**: same height as the card, rounded, sage border, `object-cover`. When no matching gallery photo exists, render a **sage-toned abstract placeholder** — a soft `linear-gradient` on `--sage`/`--sand` with a faint noise/grain overlay and a tiny italic "photo coming soon" label bottom-right (kept quiet).
+- **Center rail**: 1px `--hairline` line, filled sage dot for education, outlined dot for experience, small dot for credential. Year sits just under the dot in small caps.
+- **Mobile (<768px)**: rail slides to the left, photo stacks on top of card, no alternation.
 
-## Routes
+## Content model
 
-- `/` — About + timeline + awards + leadership + contact
-- `/capstone` — Senior Capstone Projects (3 tiles)
-- `/research` — Engineering Research (3 tiles)
-- `/physics` — Physics & Technology (5 tiles)
-- `/earth-systems` — Earth System Science & Systems Thinking (4 tiles)
-- `/law-policy` — Law, Policy & Environmental Justice (5 tiles)
-- `/gallery` — Photo Gallery grouped by section
+Extend `src/content/timeline.ts`:
 
-Every route sets its own `head()` (title, description, og:title, og:description).
+```ts
+type TimelineEntry = {
+  year: string;
+  org: string;              // "Stanford University"
+  role: string;             // "Graduate Teaching Assistant"
+  location?: string;        // "Stanford, CA"
+  dateRange?: string;       // "Sep 2024 – Jun 2025"
+  description: string;      // 2–3 lines, prose
+  bullets: [string, string, string];  // exactly 3
+  photo?: string;           // import from src/assets/photos/*
+  kind: "education" | "experience" | "credential";
+};
+```
 
-## Landing page — timeline entries (from your CV)
+Populate `description` from the CV summary I already have. Populate `bullets` with `"[add bullet]"` × 3 for every entry so it's obvious what to fill in later. Keep the existing 15 entries; add matching gallery photos where the connection is clear (iGEM, WindAid, Tarpeh lab, Chem-E-Car, LSJUMB, teaching, etc.), placeholder otherwise.
 
-Two rails on one vertical timeline: **Education** dots (sage-filled) interleaved with **Experience** dots (sage-outlined). Years in small caps on the left, title + one-line summary on the right.
+## Files touched
 
-- **2026** — MS, Earth Systems, Stanford *(Interdisciplinary emphasis: Technology Supply Chains)*
-- **Jun–Sep 2026** — Chemical Engineer, Red Metals (Copper Recycling Startup, Charleston SC)
-- **2026** — Engineer in Training (CA NCEES) · DELE Spanish B2 · SAChE Certificate
-- **Nov 2025 – Jan 2026** — Rural Electrification Project Engineer, WindAid Institute (Trujillo, Peru)
-- **2025** — BS, Chemical Engineering, Stanford *(Notation in Science Communication, with Distinction)*
-- **Sep 2024 – Jun 2025** — Graduate TA, Stanford Doerr School of Sustainability (ENERGY 102, ESS 166/266, EARTHSYS 112/212)
-- **Spring 2024** — Direct Lithium Extraction — Senior Capstone (ChemE Plant Design)
-- **Nov 2023 – Mar 2024** — Polymer Membrane Synthesis — Senior Capstone (PET → desalination membranes with Cyrene)
-- **Sep – Dec 2023** — FAEE Biosynthesis — Senior Capstone
-- **Jun – Sep 2023** — Process Optimization Intern, Savor Foods (Climate Tech, San Jose CA)
-- **Sep 2022 – Dec 2023** — Electrochemical Separations Researcher, Tarpeh Lab
-- **Sep 2023 – Mar 2025** — Lab Safety Officer / "Lifeguard", Uytengsu Teaching Labs
-- **Jun – Sep 2022** — Nanoparticle Synthesis, Cargnello Group (Schlenk line HEA synthesis)
-- **Jun 2022 – Jun 2023** — Resident Assistant, Ng Humanities House & SSEA
-- **Apr 2020 – Jun 2021** — Bioengineering Researcher, Stanford iGEM + Medicine Catalyst *(iGEM Gold Medal · $40K Med Catalyst grant · provisional patent US63104140)*
+- `src/content/timeline.ts` — new schema, populated data.
+- `src/components/timeline-entry.tsx` — new component; owns the two-column row, alternation via `index % 2`, mobile stacking, placeholder photo panel.
+- `src/routes/index.tsx` — replace the current `<ol>` block with the new component; keep the section header ("Timeline · 2020 → present") and everything else on the page.
+- `src/styles.css` — add a `.photo-placeholder` utility (sage gradient + grain).
 
-### Awards & Honors (compact block below timeline)
-AIChE Distinguished Service Award · Outstanding Service for the Earth Systems Dept. · Cap & Gown Leader Award · Alumni Association Award of Excellence · SDSS Dean's Coterminal Fellowship · iGEM Gold Medal
+## What stays the same
 
-### Clubs & Leadership (chip row)
-AIChE — President · Chem-E-Car Team — Founder & President · Ethics Bowl — Captain & Coach · Practical Ethics Club (SPEC) — President · LSJUMB — Section Leader
+Sidebar, palette, fonts, hero, awards, leadership, contact, all sub-routes, gallery — untouched. Only the About-page timeline changes.
 
-### Contact
-sarahyribarren@gmail.com · LinkedIn · NSC ePortfolio
+## Ideas I'd suggest on top (not building unless you say yes)
 
-## Project pages
+1. **Filter chips** above the timeline — All / Education / Experience / Leadership — subtle toggle that fades rows in/out.
+2. **Sticky year gutter** — as you scroll, the currently-visible year floats in the top-left of the rail. Very Tom Critchlow.
+3. **"Now" pill** at the top of the rail for anything currently active (Red Metals, Stanford M.S.), making it feel alive rather than archival.
+4. **Hover-to-expand card** — collapsed shows description only; hover/tap expands to reveal bullets. Keeps the page shorter.
 
-Each pulls from `src/content/projects.ts` and renders a `<ProjectTile />` grid: hero image, title, course/lab subtitle, link chips. Content and links preserved verbatim from your Carrd (Google Drive PDFs, iGEM, Tableau, Kumu, YouTube, `large.stanford.edu`, etc.).
-
-## Photo gallery page
-
-Masonry grouped grid with section headings: 🎓 Graduation, 🎷 LSJUMB, 🗣️ Ethics Bowl, 🧪 AIChE, 🚗 Chem-E-Car, capstone lab work (♻️ 🧫), Tarpeh Lab, Cargnello Group, iGEM, 🇨🇱 Chile, 🇧🇴 Bolivia, 🇵🇪 Peru, bonus abroad, ⚛️ Understand Energy field trips, 🌽 FUEL, 💼 Part-time jobs. Captions preserved verbatim.
-
-## Technical
-
-- `src/components/app-sidebar.tsx` — shadcn `Sidebar` primitives + `Link` + `useRouterState` for active state.
-- `__root.tsx` — wrap `<Outlet />` in `SidebarProvider`, slim top bar with `SidebarTrigger` for mobile, fonts + real head metadata (replace "Lovable App").
-- New route files: rewrite `index.tsx` as the About page; add `capstone.tsx`, `research.tsx`, `physics.tsx`, `earth-systems.tsx`, `law-policy.tsx`, `gallery.tsx`.
-- Content in typed TS files:
-  - `src/content/timeline.ts` — entries above
-  - `src/content/projects.ts` — 5 section arrays of project tiles
-  - `src/content/gallery.ts` — grouped photo entries
-  - `src/content/about.ts` — awards, leadership, contact
-- Design tokens in `src/styles.css` under `@theme inline` (oklch values) + `--font-display`, `--font-body`. Fonts loaded via `<link>` in root head.
-- Images: download the ~40 photos from your Carrd (`sarahyribarren.carrd.co/assets/images/imageNN.jpg`) into `src/assets/` and reference directly (small enough for repo). Headshot `image01.jpg` on the About page.
-- Small motion: CSS-only fade-in on route change; no extra deps.
-
-## Not doing
-
-- No backend / Cloud (fully static content).
-- No CMS — content is typed TS, trivial to edit later.
-- Keeping every external link exactly as-is.
+Tell me which (if any) of those four you want and I'll fold them in during the build.

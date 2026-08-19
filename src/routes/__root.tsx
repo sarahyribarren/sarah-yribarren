@@ -4,7 +4,6 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
 } from "@tanstack/react-router";
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
@@ -67,19 +66,6 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sarah Yribarren — Chemical Engineer & Earth Systems Researcher" },
-      { name: "description", content: "Personal site of Sarah Yribarren: B.S. Chemical Engineering, M.S. Earth Systems @ Stanford." },
-      { name: "author", content: "Sarah Yribarren" },
-      { property: "og:title", content: "Sarah Yribarren" },
-      { property: "og:description", content: "Chemical engineer and Earth systems researcher working at the intersection of technology and environmental systems." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
@@ -90,7 +76,6 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <HeadContent />
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset>

@@ -3,14 +3,6 @@ import { PageHeader, PageShell } from "@/components/project-tile";
 import { gallerySections, galleryIntro } from "@/content/gallery";
 
 export const Route = createFileRoute("/gallery")({
-  head: () => ({
-    meta: [
-      { title: "Photo Gallery — Sarah Yribarren" },
-      { name: "description", content: "A little look into how I made the most of my life at Stanford: extracurriculars, lab projects, study abroad, and field trips." },
-      { property: "og:title", content: "Photo Gallery" },
-      { property: "og:description", content: "Extracurriculars, lab projects, study abroad, and field trips at Stanford." },
-    ],
-  }),
   component: Page,
 });
 

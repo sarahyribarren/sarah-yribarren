@@ -3,14 +3,6 @@ import { PageHeader, PageShell, ProjectGrid, ProjectTile } from "@/components/pr
 import { lawPolicyProjects } from "@/content/projects";
 
 export const Route = createFileRoute("/law-policy")({
-  head: () => ({
-    meta: [
-      { title: "Law, Policy & Environmental Justice — Sarah Yribarren" },
-      { name: "description", content: "Interdisciplinary work on natural resources: boomtown economics, ESG law with geochemical fingerprinting, Rhyolite Ridge Li-B mine, sanitation access, and worker exploitation." },
-      { property: "og:title", content: "Law, Policy & Environmental Justice" },
-      { property: "og:description", content: "Interdisciplinary work at the intersection of natural resources, law, and equity." },
-    ],
-  }),
   component: Page,
 });
 

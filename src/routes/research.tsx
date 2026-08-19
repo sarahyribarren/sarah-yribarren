@@ -3,14 +3,6 @@ import { PageHeader, PageShell, ProjectGrid, ProjectTile } from "@/components/pr
 import { researchProjects } from "@/content/projects";
 
 export const Route = createFileRoute("/research")({
-  head: () => ({
-    meta: [
-      { title: "Engineering Research — Sarah Yribarren" },
-      { name: "description", content: "Laboratory research with faculty mentors: electrochemical ammonia stripping, colloidal nanoparticle synthesis, and bacterial diagnostics for viruses." },
-      { property: "og:title", content: "Engineering Research" },
-      { property: "og:description", content: "Lab research at Stanford: Tarpeh Lab, Cargnello Group, and iGEM." },
-    ],
-  }),
   component: Page,
 });
 

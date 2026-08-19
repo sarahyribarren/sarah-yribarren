@@ -3,14 +3,6 @@ import { PageHeader, PageShell, ProjectGrid, ProjectTile } from "@/components/pr
 import { capstoneProjects } from "@/content/projects";
 
 export const Route = createFileRoute("/capstone")({
-  head: () => ({
-    meta: [
-      { title: "Senior Capstone Projects — Sarah Yribarren" },
-      { name: "description", content: "Three ChemE senior capstone projects: FAEE biosynthesis in E. coli, greener PET-based desalination membranes, and lithium recovery from produced water." },
-      { property: "og:title", content: "Senior Capstone Projects" },
-      { property: "og:description", content: "Three ChemE senior capstone projects at Stanford: biosynthesis, membranes, and lithium recovery." },
-    ],
-  }),
   component: Page,
 });
 

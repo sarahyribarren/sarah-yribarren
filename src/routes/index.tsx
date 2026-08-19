@@ -5,22 +5,6 @@ import { headshot } from "@/content/projects";
 import { TimelineList } from "@/components/timeline-entry";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Sarah Yribarren — Chemical Engineer & Earth Systems Researcher" },
-      {
-        name: "description",
-        content:
-          "B.S. Chemical Engineering, M.S. Earth Systems @ Stanford. Research and writing at the intersection of technology and environmental systems.",
-      },
-      { property: "og:title", content: "Sarah Yribarren" },
-      {
-        property: "og:description",
-        content:
-          "Chemical engineer and Earth systems researcher working at the intersection of technology and environmental systems.",
-      },
-    ],
-  }),
   component: Index,
 });
 

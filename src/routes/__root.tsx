@@ -5,12 +5,7 @@ import {
   createRootRouteWithContext,
   useRouter,
   HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
-
-import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SidebarProvider, SidebarTrigger, SidebarInset } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 
@@ -39,9 +34,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -80,49 +72,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Sarah Yribarren — Chemical Engineer & Earth Systems Researcher" },
-      { name: "description", content: "Personal site of Sarah Yribarren: B.S. Chemical Engineering, M.S. Earth Systems @ Stanford. Research, capstone projects, and writing at the intersection of technology and environmental systems." },
+      { name: "description", content: "Personal site of Sarah Yribarren: B.S. Chemical Engineering, M.S. Earth Systems @ Stanford." },
       { name: "author", content: "Sarah Yribarren" },
       { property: "og:title", content: "Sarah Yribarren" },
       { property: "og:description", content: "Chemical engineer and Earth systems researcher working at the intersection of technology and environmental systems." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" },
-    ],
   }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
+      <HeadContent />
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset>
@@ -131,7 +99,6 @@ function RootComponent() {
             <span className="ml-3 font-display text-lg">Sarah Yribarren</span>
           </header>
           <main className="fade-in min-h-screen">
-            {/* Required: nested routes render here. */}
             <Outlet />
           </main>
         </SidebarInset>

@@ -12,14 +12,4 @@ export default defineConfig({
     tailwindcss(),
     tsconfigPaths(),
   ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["@tanstack/react-router", "@tanstack/react-query"],
-        },
-      },
-    },
-  },
 });

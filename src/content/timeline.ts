@@ -3,194 +3,228 @@ import img15 from "@/assets/photos/image15.jpg";
 import img73 from "@/assets/photos/image73.jpg";
 import img03 from "@/assets/photos/image03.jpg";
 import img02 from "@/assets/photos/image02.jpg";
-import img05 from "@/assets/photos/image05.jpg";
+import img06 from "@/assets/photos/image06.jpg";
 import img61 from "@/assets/photos/image61.jpg";
 import img32 from "@/assets/photos/image32.jpg";
 import img45 from "@/assets/photos/image45.jpg";
-import img06 from "@/assets/photos/image06.jpg";
 
-export type TimelineEntry = {
+export type TimelineCard = {
+  kind: "education" | "experience" | "credential";
   year: string;
-  org: string;
   role: string;
   location?: string;
   dateRange?: string;
-  description: string;
-  bullets: [string, string, string];
+  description?: string;
+  bullets: string[];
   photo?: string;
-  kind: "education" | "experience" | "credential";
 };
 
-const TBD: [string, string, string] = ["[add bullet]", "[add bullet]", "[add bullet]"];
+export type TimelineNote = {
+  kind: "note";
+  text: string;
+};
+
+export type TimelineEntry = TimelineCard | TimelineNote;
 
 export const timeline: TimelineEntry[] = [
   {
+    kind: "experience",
     year: "2026",
-    org: "Stanford University",
-    role: "M.S. Earth Systems",
-    location: "Stanford, CA",
-    dateRange: "Sep 2025 – Jun 2026",
-    description:
-      "Interdisciplinary master's with an emphasis on Technology Supply Chains — bridging materials, policy, and industrial systems.",
-    bullets: TBD,
-    photo: img29,
-    kind: "education",
-  },
-  {
-    year: "2026",
-    org: "Red Metals",
-    role: "Chemical Engineer",
+    role: "Chemical Engineer @ Red Metals",
     location: "Charleston, SC",
-    dateRange: "Jun – Sep 2026",
-    description:
-      "Copper recycling startup. Designing unit processes and factory layout for a recycled copper wire-to-rod line, and standing up safe SOPs for equipment commissioning.",
-    bullets: TBD,
+    dateRange: "Jun 2026 – Present",
+    bullets: [
+      "Designing unit processes and factory layout for industrial process (scrap Cu → Cu rod)",
+      "Building PFDs and process simulations; running energy and mass balances",
+      "Procuring process equipment, coordinating commissioning, writing safe SOPs",
+      "Prolific building with AI systems (Claude, Gemini) to streamline research and factory workflow",
+    ],
+  },
+  {
+    kind: "note",
+    text: "spending time with family, searching for the right role",
+  },
+  {
     kind: "experience",
-  },
-  {
-    year: "2026",
-    org: "Professional",
-    role: "Certifications",
-    dateRange: "2026",
-    description:
-      "Engineer in Training (CA NCEES) · DELE Spanish B2 · SAChE Safety Certificate (AIChE).",
-    bullets: TBD,
-    kind: "credential",
-  },
-  {
     year: "2025",
-    org: "WindAid Institute",
-    role: "Rural Electrification Engineer",
-    location: "Trujillo, Peru",
+    role: "Rural Electrification Project Engineer @ WindAid",
+    location: "Trujillo, La Libertad, Peru 🇵🇪",
     dateRange: "Nov 2025 – Jan 2026",
-    description:
-      "Built and installed an off-grid wind turbine for a rural Andean community, and led a battery redesign migrating the system from VRLA to AGM cells.",
-    bullets: TBD,
+    bullets: [
+      "Constructed off-grid wind turbine in workshop (welding, casting resin, building generator, etc.)",
+      "Installed in rural Andean community for basic electricity needs",
+      "Initiated project to optimize battery systems, changing from VRLA lead-acid to AGM (gel)",
+    ],
     photo: img73,
-    kind: "experience",
   },
   {
+    kind: "experience",
     year: "2025",
-    org: "Stanford University",
-    role: "B.S. Chemical Engineering",
-    location: "Stanford, CA",
-    dateRange: "Sep 2021 – Jun 2025",
-    description:
-      "Notation in Science Communication, graduated with Distinction. AIChE Distinguished Service Award.",
-    bullets: TBD,
-    photo: img15,
+    role: "Spanish Language Intensive @ Local School",
+    location: "Sucre, Chuquisaca, Bolivia 🇧🇴",
+    dateRange: "Sep 2025 – Nov 2025",
+    bullets: [
+      "Daily 4 hour lessons with private 1-on-1 tutor",
+      "Lived with Bolivian host family",
+      "Achieved B2-level Spanish from this foundation",
+    ],
+  },
+  {
     kind: "education",
+    year: "2025",
+    role: "Study Abroad @ Stanford Santiago Campus",
+    location: "Santiago, Chile 🇨🇱",
+    dateRange: "Aug 2025",
+    bullets: [
+      "Completed final course for M.S. degree: \"Chile's Pathway to a Sustainable Future\"",
+      "Engaged with guest lecturers on a wide range of rural and urban sustainability topics",
+      "Field trips to marine and agricultural research centers, hydro and biogas power plants, and more.",
+    ],
   },
   {
+    kind: "education",
     year: "2024",
-    org: "Doerr School of Sustainability",
-    role: "Graduate Teaching Assistant",
-    location: "Stanford, CA",
-    dateRange: "Sep 2024 – Jun 2025",
-    description:
-      "TA'd three courses across renewable power, climate technology, and human-environment systems — ENERGY 102, ESS 166/266, and EARTHSYS 112/212.",
-    bullets: TBD,
+    role: "Master of Science in Earth Systems",
+    location: "Stanford University",
+    dateRange: "Jan 2024 – Jun 2025",
+    bullets: [
+      "Interdisciplinary masters program with emphasis on Technology Supply Chains",
+    ],
+    photo: img29,
+  },
+  {
+    kind: "experience",
+    year: "2025",
+    role: "Teaching Assistant @ Energy Resource Engineering Dept.",
+    location: "Stanford University",
+    dateRange: "Mar 2025 – Jun 2025",
+    bullets: [
+      "\"Fundamentals of Renewable Power\"",
+      "Survey course deep-diving into engineering and related issues for wind, solar, biomass, geothermal, tidal and wave power technologies.",
+    ],
     photo: img06,
-    kind: "experience",
   },
   {
+    kind: "experience",
+    year: "2025",
+    role: "Teaching Assistant @ Earth System Science Dept.",
+    location: "Stanford University",
+    dateRange: "Mar 2025 – Jun 2025",
+    bullets: [
+      "\"Will Technology Save the World?: Environmental Ethics and Techno-Optimism\"",
+      "Interdisciplinary course teaching applied environmental ethics and critical analysis of the risks, benefits, and societal impacts of technological solutions to environmental problems.",
+    ],
+  },
+  {
+    kind: "experience",
     year: "2024",
-    org: "Senior Capstone",
-    role: "Direct Lithium Extraction Plant Design",
-    dateRange: "Spring 2024",
-    description:
-      "Full ChemE plant design recovering Li₂CO₃ from oil & gas produced water in AspenPlus; techno-economic analysis showed a 2.8-year breakeven and 392.9% ROI.",
-    bullets: TBD,
+    role: "Teaching Assistant @ Earth Systems Dept.",
+    location: "Stanford University",
+    dateRange: "Sep 2024 – Dec 2024",
+    bullets: [
+      "\"Human Society and Environmental Change\"",
+      "Interdisciplinary examination of human-environment interactions through the lenses of economics, policy, culture, history, and governance.",
+    ],
+  },
+  {
+    kind: "education",
+    year: "2019",
+    role: "Bachelor of Science in Chemical Engineering",
+    location: "Stanford University",
+    dateRange: "Sep 2019 – Jun 2024",
+    bullets: [
+      "Graduated from the Notation in Science Communication program, with Distinction",
+    ],
+    photo: img15,
+  },
+  {
+    kind: "experience",
+    year: "2024",
+    role: "Direct Lithium Extraction Researcher @ ChemE Capstone",
+    location: "Stanford University",
+    dateRange: "Mar 2024 – Jun 2024",
+    bullets: [
+      "Designed plant from scratch which recovers lithium carbonate from oil and gas wastewater",
+      "Built PFD and PF&ID diagrams for extraction, separation, and purification processes",
+      "Modeled energy and mass balances for unit operation design and simulated in AspenPlus",
+      "Conducted literature reviews, capital cost estimations, and equipment sizing analysis",
+      "Outcome: Techno-economic analysis indicated 2.8 years to breakeven, 3 years for payback, and 392.9% ROI netting >$200 million of profit over 10-years, producing 2000 tonnes of Li₂CO₃ per year",
+    ],
     photo: img03,
-    kind: "experience",
   },
   {
-    year: "2024",
-    org: "Senior Capstone",
-    role: "Greener Desalination Membranes",
+    kind: "experience",
+    year: "2023",
+    role: "Polymer Membrane Synthesis Researcher @ ChemE Capstone",
+    location: "Stanford University",
     dateRange: "Nov 2023 – Mar 2024",
-    description:
-      "Synthesized PET-based nanofiltration membranes using bio-solvent Cyrene in place of NMP, achieving smaller pore size and higher Na⁺ rejection.",
-    bullets: TBD,
+    bullets: [
+      "Synthesized polymer membranes for desalination from PET, tested with benchtop desalination setup",
+      "Outcome: Developed greener synthesis method for desalination membranes by replacing NMP with Cyrene",
+    ],
     photo: img02,
-    kind: "experience",
   },
   {
-    year: "2023",
-    org: "Senior Capstone",
-    role: "FAEE Biosynthesis in E. coli",
-    dateRange: "Sep – Dec 2023",
-    description:
-      "Enhanced biosynthesis and extraction of fatty acid ethyl esters in engineered E. coli as a renewable-fuel precursor pathway.",
-    bullets: TBD,
-    photo: img05,
     kind: "experience",
-  },
-  {
     year: "2023",
-    org: "Savor Foods",
-    role: "Process Optimization Intern",
-    location: "San Jose, CA",
-    dateRange: "Jun – Sep 2023",
-    description:
-      "Climate-tech startup making carbon-neutral fats. Optimized the industrial scale-up of paraffin oxidation to improve yield and safety at pilot scale.",
-    bullets: TBD,
-    kind: "experience",
-  },
-  {
-    year: "2023",
-    org: "Tarpeh Lab, Stanford",
-    role: "Electrochemical Separations Researcher",
-    dateRange: "Sep 2022 – Dec 2023",
-    description:
-      "Piloted a hand-built electrochemical stripping system to separate ammonia from wastewater, with CV and FIA analysis for cell performance.",
-    bullets: TBD,
-    photo: img61,
-    kind: "experience",
-  },
-  {
-    year: "2023",
-    org: "Uytengsu Teaching Labs",
-    role: "Lab Safety Officer",
-    location: "Stanford, CA",
+    role: "Lab Safety Officer @ Uytengsu Teaching Labs",
+    location: "Stanford University",
     dateRange: "Sep 2023 – Mar 2025",
-    description:
-      "Oversaw after-hours lab safety for undergraduate ChemE senior projects across three quarters of capstone work.",
-    bullets: TBD,
-    kind: "experience",
+    bullets: [
+      "Oversaw safety of student projects after-hours, including handling of waste and mechanical/electrical equipment",
+      "Proactively prevented dangerous situations, and managed uncertainties and emergencies",
+    ],
   },
   {
+    kind: "experience",
+    year: "2023",
+    role: "Process Optimization Intern @ Savor",
+    location: "San Jose, CA",
+    dateRange: "Jun 2023 – Sep 2023",
+    bullets: [
+      "Optimized process for industrial scale-up of paraffin oxidation reaction for carbon-neutral fat production",
+      "Designed and ran catalytic synthesis experiments; assisted chemistry team in Python analysis of GC-MS data",
+      "Navigated various dynamic tasks in startup environment, including reactor and equipment setup",
+      "Outcome: Delivered actionable data on 4 primary variables to inform engineering decisions about process design",
+    ],
+  },
+  {
+    kind: "experience",
     year: "2022",
-    org: "Cargnello Group, Stanford",
-    role: "Nanoparticle Synthesis Researcher",
-    dateRange: "Jun – Sep 2022",
-    description:
-      "Schlenk-line synthesis and washing of high-entropy alloy nanoparticles for heterogeneous catalysis studies.",
-    bullets: TBD,
+    role: "Electrochemical Separations Researcher @ Tarpeh Lab",
+    location: "Stanford University",
+    dateRange: "Sep 2022 – Dec 2023",
+    bullets: [
+      "Assisted in pilot-level scaleup of electrochemical stripping (ECS) system to separate ammonia from wastewater",
+      "Built electrochemical cells by hand to test various configurations of membranes, electrodes, and pump system",
+      "Ran experiments using potentiostat & cyclic voltammetry, analysis with colorimetric flow-injection analysis (FIA)",
+      "Outcome: Reported on effects of varying parameters on NH₄⁺ current efficiency to optimize annular cell operation",
+    ],
+    photo: img61,
+  },
+  {
+    kind: "experience",
+    year: "2022",
+    role: "Nanoparticle Synthesis @ Cargnello Group",
+    location: "Stanford University",
+    dateRange: "Jun 2022 – Sep 2022",
+    bullets: [
+      "Synthesized high-entropy alloy (HEA) nanoparticles using Schlenk line synthesis techniques",
+      "Outcome: Drew conclusions about mechanism of formation & influence of process variables on product",
+    ],
     photo: img32,
-    kind: "experience",
   },
   {
+    kind: "experience",
     year: "2022",
-    org: "Ng Humanities House & SSEA",
-    role: "Resident Assistant",
-    location: "Stanford, CA",
-    dateRange: "Jun 2022 – Jun 2023",
-    description:
-      "Community programming, mentorship, and on-call support for pre-frosh engineering students and a humanities-focused dorm.",
-    bullets: TBD,
-    kind: "experience",
-  },
-  {
-    year: "2020",
-    org: "iGEM + Stanford Med Catalyst",
-    role: "Bioengineering Researcher",
-    dateRange: "Apr 2020 – Jun 2021",
-    description:
-      "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence. Earned an iGEM Gold Medal, a $40K Med Catalyst grant, and provisional patent US63104140.",
-    bullets: TBD,
+    role: "Bioengineering Researcher @ Endy Lab / iGEM",
+    location: "Stanford University",
+    dateRange: "Jun 2022 – Sep 2022",
+    bullets: [
+      "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence.",
+      "Earned an iGEM Gold Medal, a $40K Med Catalyst grant, and filed provisional patent US63104140.",
+    ],
     photo: img45,
-    kind: "experience",
   },
 ];
 

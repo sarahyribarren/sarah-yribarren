@@ -1,4 +1,5 @@
 import type { Project } from "@/content/projects";
+import type { Course } from "@/content/coursework";
 
 export function ProjectTile({ project }: { project: Project }) {
   return (
@@ -35,6 +36,20 @@ export function ProjectTile({ project }: { project: Project }) {
 export function ProjectGrid({ children }: { children: React.ReactNode }) {
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">{children}</div>
+  );
+}
+
+export function CourseTile({ course }: { course: Course }) {
+  return (
+    <article className="flex flex-col gap-2 rounded-lg border border-border bg-card p-5">
+      <div className="flex items-start justify-between gap-2">
+        <h3 className="font-display text-lg leading-tight text-foreground">{course.title}</h3>
+        <span className="shrink-0 whitespace-nowrap rounded-full border border-border bg-background px-2 py-0.5 text-[10px] uppercase tracking-[0.1em] text-muted-foreground">
+          {course.code}
+        </span>
+      </div>
+      <p className="text-[12.5px] leading-relaxed text-muted-foreground">{course.description}</p>
+    </article>
   );
 }
 

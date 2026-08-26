@@ -17,9 +17,6 @@ function Index() {
           <div className="overflow-hidden rounded-lg border border-border bg-muted shadow-[0_20px_60px_-30px_rgba(58,74,58,0.4)]">
             <img src={headshot} alt="Sarah Yribarren" className="aspect-[4/5] w-full object-cover" />
           </div>
-          <p className="mt-4 text-center text-[11px] uppercase tracking-[0.18em] text-muted-foreground md:text-left">
-            Stanford · ChemE '25 · Earth Systems '26
-          </p>
         </div>
 
         <div>
@@ -30,16 +27,49 @@ function Index() {
             Sarah Yribarren
           </h1>
           <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-foreground/80">
-            I'm a chemical engineer and Earth systems researcher working at the intersection
-            of technological innovation and environmental systems — from electrochemical
-            wastewater treatment and desalination membranes to ESG law and semiconductor
-            supply chains.
+            I'm a chemical engineer and Earth systems scientist working at the intersection of
+            technological innovation and environmental systems. I love being in dynamic and
+            fast-moving environments where I have no choice but to learn something new every
+            day. I am passionate about technology supply chains, manufacturing, and designing
+            processes and systems towards a more sustainable, equitable, and just world.
           </p>
-          <p className="mt-4 max-w-xl text-[15px] italic leading-relaxed text-muted-foreground">
-            This work is just the beginning. I'm seeking high-impact, mission-driven roles at
-            the intersection of technology and environmental systems. Open to work.
+          <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-foreground/80">
+            This website is a portfolio of my education at Stanford. Do not hesitate to reach
+            out if you want to connect. Always open to new opportunities.
           </p>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href="mailto:sarahyribarren@gmail.com"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-[15px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              sarahyribarren@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sarah-yribarren/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-[15px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              LinkedIn <span aria-hidden>→</span>
+            </a>
+            <a
+              href="https://stanford.digication.com/sarahyribarren-eportfolio/home"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-[15px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              NSC ePortfolio <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
+      </section>
+
+      {/* Quote */}
+      <section className="mt-20 rounded-lg border border-primary/20 bg-secondary/50 px-6 py-10 text-center md:px-10">
+        <p className="mx-auto max-w-2xl font-display text-2xl italic leading-snug text-foreground md:text-3xl">
+          "The best way to predict the future is to invent it."
+        </p>
       </section>
 
       {/* Timeline */}
@@ -78,38 +108,6 @@ function Index() {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section className="mt-20 rounded-lg border border-border bg-card p-6 md:p-8">
-        <h2 className="font-display text-2xl text-foreground">Get in touch</h2>
-        <p className="mt-2 text-[14px] text-muted-foreground">
-          The best ways to reach me or read more of my work.
-        </p>
-        <div className="mt-5 flex flex-wrap gap-2">
-          <a
-            href="mailto:sarahyribarren@gmail.com"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-[13px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
-          >
-            sarahyribarren@gmail.com
-          </a>
-          <a
-            href="https://www.linkedin.com/in/sarah-yribarren/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-[13px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
-          >
-            LinkedIn <span aria-hidden>→</span>
-          </a>
-          <a
-            href="https://stanford.digication.com/sarahyribarren-eportfolio/home"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-[13px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
-          >
-            NSC ePortfolio <span aria-hidden>→</span>
-          </a>
         </div>
       </section>
 

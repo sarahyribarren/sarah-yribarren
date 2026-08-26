@@ -1,13 +1,13 @@
-import { Building2, Calendar, MapPin, GraduationCap, Award } from "lucide-react";
-import type { TimelineEntry } from "@/content/timeline";
+import { Calendar, MapPin } from "lucide-react";
+import type { TimelineCard as TimelineCardType, TimelineEntry } from "@/content/timeline";
 
-function PhotoPanel({ entry }: { entry: TimelineEntry }) {
+function PhotoPanel({ entry }: { entry: TimelineCardType }) {
   if (entry.photo) {
     return (
       <div className="overflow-hidden rounded-lg border border-border shadow-[0_20px_60px_-30px_rgba(58,74,58,0.35)]">
         <img
           src={entry.photo}
-          alt={`${entry.role} — ${entry.org}`}
+          alt={entry.role}
           loading="lazy"
           className="aspect-[4/3] w-full object-cover"
         />
@@ -24,15 +24,10 @@ function PhotoPanel({ entry }: { entry: TimelineEntry }) {
   );
 }
 
-function Card({ entry }: { entry: TimelineEntry }) {
-  const OrgIcon = entry.kind === "education" ? GraduationCap : entry.kind === "credential" ? Award : Building2;
+function Card({ entry }: { entry: TimelineCardType }) {
   return (
     <article className="group rounded-lg border border-border bg-card p-6 transition-shadow duration-300 hover:shadow-[0_20px_50px_-25px_rgba(58,74,58,0.4)]">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[12px] text-muted-foreground">
-        <span className="inline-flex items-center gap-1.5 font-medium text-primary">
-          <OrgIcon className="h-3.5 w-3.5" aria-hidden />
-          {entry.org}
-        </span>
         {entry.dateRange && (
           <span className="inline-flex items-center gap-1.5">
             <Calendar className="h-3.5 w-3.5" aria-hidden />
@@ -49,7 +44,9 @@ function Card({ entry }: { entry: TimelineEntry }) {
 
       <h3 className="mt-3 font-display text-2xl leading-tight text-foreground">{entry.role}</h3>
 
-      <p className="mt-2 text-[14px] leading-relaxed text-foreground/80">{entry.description}</p>
+      {entry.description && (
+        <p className="mt-2 text-[14px] leading-relaxed text-foreground/80">{entry.description}</p>
+      )}
 
       <ul className="mt-4 space-y-1.5">
         {entry.bullets.map((b, i) => (
@@ -64,6 +61,8 @@ function Card({ entry }: { entry: TimelineEntry }) {
 }
 
 export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
+  let cardIndex = 0;
+
   return (
     <div className="relative">
       {/* Center rail (desktop) / left rail (mobile) */}
@@ -74,7 +73,18 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
 
       <ol className="space-y-14 md:space-y-20">
         {entries.map((entry, i) => {
-          const cardLeft = i % 2 === 0;
+          if (entry.kind === "note") {
+            return (
+              <li key={i} className="relative flex justify-center py-2">
+                <span className="rounded-full border border-border bg-background px-5 py-1.5 text-center text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                  {entry.text}
+                </span>
+              </li>
+            );
+          }
+
+          const cardLeft = cardIndex % 2 === 0;
+          cardIndex += 1;
           const dotClass =
             entry.kind === "education"
               ? "h-3 w-3 bg-primary"

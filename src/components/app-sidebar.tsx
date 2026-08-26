@@ -19,6 +19,7 @@ const nav = [
   { title: "Physics & Technology", url: "/physics", emoji: "⚛️" },
   { title: "Earth Systems", url: "/earth-systems", emoji: "🌎" },
   { title: "Law, Policy & EJ", url: "/law-policy", emoji: "⚖️" },
+  { title: "Coursework", url: "/coursework", emoji: "📝" },
   { title: "Photo Gallery", url: "/gallery", emoji: "📸" },
 ];
 

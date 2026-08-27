@@ -1,9 +1,24 @@
-import img29 from "@/assets/photos/image29.jpg";
+import img04 from "@/assets/photos/image04.jpg";
 import img15 from "@/assets/photos/image15.jpg";
-import img73 from "@/assets/photos/image73.jpg";
+import img23 from "@/assets/photos/image23.jpg";
+import img28 from "@/assets/photos/image28.jpg";
+import img29 from "@/assets/photos/image29.jpg";
 import img31 from "@/assets/photos/image31.jpg";
+import img34 from "@/assets/photos/image34.jpg";
+import img39 from "@/assets/photos/image39.jpg";
+import img42 from "@/assets/photos/image42.jpg";
+import img49 from "@/assets/photos/image49.jpg";
+import img57 from "@/assets/photos/image57.jpg";
+import img58 from "@/assets/photos/image58.jpg";
+import img59 from "@/assets/photos/image59.jpg";
+import img60 from "@/assets/photos/image60.jpg";
 import img61 from "@/assets/photos/image61.jpg";
-import img80 from "@/assets/photos/image80.jpg";
+import img70 from "@/assets/photos/image70.jpg";
+import img71 from "@/assets/photos/image71.jpg";
+import img72 from "@/assets/photos/image72.jpg";
+import img73 from "@/assets/photos/image73.jpg";
+import img74 from "@/assets/photos/image74.jpg";
+import img76 from "@/assets/photos/image76.jpg";
 import img81 from "@/assets/photos/image81.jpg";
 import img82 from "@/assets/photos/image82.jpg";
 import img83 from "@/assets/photos/image83.jpg";
@@ -54,7 +69,7 @@ export const timeline: TimelineEntry[] = [
       "Installed in rural Andean community for basic electricity needs",
       "Initiated project to optimize battery systems, changing from VRLA lead-acid to AGM (gel) batteries",
     ],
-    photos: [img73],
+    photos: [img76, img74, img73],
   },
   {
     kind: "experience",
@@ -68,6 +83,7 @@ export const timeline: TimelineEntry[] = [
       "Lived with Bolivian host family",
       "Achieved B2-level Spanish from this foundation",
     ],
+    photos: [img70, img71, img72],
   },
   {
     kind: "education",
@@ -81,6 +97,7 @@ export const timeline: TimelineEntry[] = [
       "Engaged with guest lecturers on a wide range of rural and urban sustainability topics",
       "Field trips to marine and agricultural research centers, hydro and biogas power plants, and more.",
     ],
+    photos: [img58, img59, img60],
   },
   {
     kind: "education",
@@ -121,6 +138,15 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
+    year: "",
+    role: "Forum for Undergraduate Environmental Leadership (FUEL)",
+    location: "Stanford University",
+    bullets: [],
+    photos: [img57, img39, img42],
+  },
+  {
+    kind: "experience",
+    side: "right",
     year: "2024",
     role: "Teaching Assistant @ Earth Systems Dept.",
     location: "Stanford University",
@@ -156,7 +182,6 @@ export const timeline: TimelineEntry[] = [
       "Conducted literature reviews, capital cost estimations, and equipment sizing analysis",
       "Outcome: Techno-economic analysis indicated 2.8 years to breakeven, 3 years for payback, and 392.9% ROI netting >$200 million of profit over 10-years, producing 2000 tonnes of Li₂CO₃ per year",
     ],
-    photos: [img80],
   },
   {
     kind: "experience",
@@ -169,7 +194,7 @@ export const timeline: TimelineEntry[] = [
       "Synthesized polymer membranes for desalination from PET, tested with benchtop desalination setup",
       "Outcome: Developed greener synthesis method for desalination membranes by replacing NMP with Cyrene",
     ],
-    photos: [img80, img31],
+    photos: [img23, img31, img49],
   },
   {
     kind: "experience",
@@ -182,6 +207,15 @@ export const timeline: TimelineEntry[] = [
       "Oversaw safety of student projects after-hours, including handling of waste and mechanical/electrical equipment",
       "Proactively prevented dangerous situations, and managed uncertainties and emergencies",
     ],
+  },
+  {
+    kind: "experience",
+    side: "right",
+    year: "",
+    role: "ChemE Car",
+    location: "Stanford University",
+    bullets: [],
+    photos: [img34, img28, img04],
   },
   {
     kind: "experience",

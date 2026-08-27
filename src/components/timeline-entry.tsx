@@ -36,9 +36,11 @@ function PhotoPanel({ entry, tiltStart, align }: { entry: TimelineCardType; tilt
   const photos = entry.photos ?? [];
   if (photos.length === 0) return null;
 
+  const size = photos.length > 2 ? 160 : photos.length > 1 ? 185 : 235;
+
   return (
     <div className={`hidden md:flex md:items-center ${align === "start" ? "md:justify-start" : "md:justify-end"} h-full`}>
-      <PhotoStack photos={photos} tiltStart={tiltStart} size={photos.length > 1 ? 185 : 235} />
+      <PhotoStack photos={photos} tiltStart={tiltStart} size={size} />
     </div>
   );
 }
@@ -46,9 +48,10 @@ function PhotoPanel({ entry, tiltStart, align }: { entry: TimelineCardType; tilt
 function MobilePhoto({ entry, tiltStart }: { entry: TimelineCardType; tiltStart: number }) {
   const photos = entry.photos ?? [];
   if (photos.length === 0) return null;
+  const size = photos.length > 2 ? 110 : photos.length > 1 ? 150 : 195;
   return (
     <div className="mb-4 flex justify-center md:hidden">
-      <PhotoStack photos={photos} tiltStart={tiltStart} size={photos.length > 1 ? 150 : 195} />
+      <PhotoStack photos={photos} tiltStart={tiltStart} size={size} />
     </div>
   );
 }

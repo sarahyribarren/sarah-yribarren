@@ -34,7 +34,7 @@ import img93 from "@/assets/photos/image93.jpg";
 export type TimelineCard = {
   kind: "education" | "experience" | "credential";
   side: "left" | "right";
-  year: string;
+  yearMark?: string;
   role: string;
   location?: string;
   dateRange?: string;
@@ -50,7 +50,7 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    year: "2026",
+    yearMark: "2026",
     role: "Chemical Engineer @ Red Metals",
     location: "Charleston, SC",
     dateRange: "Jun 2026 – Present",
@@ -66,7 +66,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    year: "2025",
     role: "Rural Electrification Project Engineer @ WindAid",
     location: "Trujillo, La Libertad, Peru 🇵🇪",
     dateRange: "Nov 2025 – Jan 2026",
@@ -80,7 +79,7 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    year: "2025",
+    yearMark: "2025",
     role: "Spanish Language Intensive @ Local School",
     location: "Sucre, Chuquisaca, Bolivia 🇧🇴",
     dateRange: "Sep 2025 – Nov 2025",
@@ -94,7 +93,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "education",
     side: "left",
-    year: "2025",
     role: "Study Abroad @ Stanford Santiago Campus",
     location: "Santiago, Chile 🇨🇱",
     dateRange: "Aug 2025",
@@ -108,7 +106,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "education",
     side: "right",
-    year: "2024",
     role: "Master of Science in Earth Systems",
     location: "Stanford University",
     dateRange: "Jan 2024 – Jun 2025",
@@ -120,7 +117,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    year: "2025",
     role: "Teaching Assistant @ Energy Resource Engineering Dept.",
     location: "Stanford University",
     dateRange: "Mar 2025 – Jun 2025",
@@ -132,7 +128,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    year: "2025",
     role: "Teaching Assistant @ Earth System Science Dept.",
     location: "Stanford University",
     dateRange: "Mar 2025 – Jun 2025",
@@ -144,7 +139,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    year: "2025",
     role: "Environmental Leadership Forum (FUEL) @ TomKat Center",
     location: "Stanford University",
     dateRange: "Jan 2025 – Mar 2025",
@@ -158,7 +152,7 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    year: "2024",
+    yearMark: "2024",
     role: "Teaching Assistant @ Earth Systems Dept.",
     location: "Stanford University",
     dateRange: "Sep 2024 – Dec 2024",
@@ -170,7 +164,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "education",
     side: "left",
-    year: "2019",
     role: "Bachelor of Science in Chemical Engineering",
     location: "Stanford University",
     dateRange: "Sep 2019 – Jun 2024",
@@ -182,7 +175,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    year: "2024",
     role: "Direct Lithium Extraction Researcher (Capstone)",
     location: "Stanford University",
     dateRange: "Mar 2024 – Jun 2024",
@@ -197,7 +189,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    year: "2023",
     role: "Polymer Membrane Synthesis Researcher (Capstone)",
     location: "Stanford University",
     dateRange: "Nov 2023 – Mar 2024",
@@ -210,7 +201,7 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    year: "2023",
+    yearMark: "2023",
     role: "Lab Safety Officer @ Uytengsu Teaching Labs",
     location: "Stanford University",
     dateRange: "Sep 2023 – Mar 2025",
@@ -222,7 +213,17 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    year: "2023",
+    role: "ChemE Car",
+    location: "Stanford University",
+    bullets: [
+      "Refounded Stanford's Chem-E-Car team as a newly registered VSO, recruiting and training a team from scratch",
+      "Designed and built a shoebox-sized car powered by a zinc-air battery with a chemical stopping mechanism, integrated onto a 3-D printed chassis",
+      "Outcome: First competition season was experimental and the car wasn't functional, but the team walked away with critical engineering lessons that shaped future seasons",
+    ],
+  },
+  {
+    kind: "experience",
+    side: "right",
     role: "Process Optimization Intern @ Savor",
     location: "San Jose, CA",
     dateRange: "Jun 2023 – Sep 2023",
@@ -237,7 +238,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    year: "2022",
     role: "Electrochemical Separations Researcher @ Tarpeh Lab",
     location: "Stanford University",
     dateRange: "Sep 2022 – Dec 2023",
@@ -252,8 +252,8 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    year: "2022",
-    role: "Nanoparticle Synthesis @ Cargnello Group",
+    yearMark: "2022",
+    role: "Nanoparticle Synthesis Researcher @ Cargnello Group",
     location: "Stanford University",
     dateRange: "Jun 2022 – Sep 2022",
     bullets: [
@@ -265,7 +265,7 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    year: "2020",
+    yearMark: "2021",
     role: "Bioengineering Researcher @ Endy Lab / iGEM",
     location: "Stanford University",
     dateRange: "May 2020 – Jun 2021",

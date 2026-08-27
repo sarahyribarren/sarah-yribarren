@@ -1,9 +1,6 @@
-import img04 from "@/assets/photos/image04.jpg";
 import img23 from "@/assets/photos/image23.jpg";
-import img28 from "@/assets/photos/image28.jpg";
 import img29 from "@/assets/photos/image29.jpg";
 import img31 from "@/assets/photos/image31.jpg";
-import img34 from "@/assets/photos/image34.jpg";
 import img38 from "@/assets/photos/image38.jpg";
 import img39 from "@/assets/photos/image39.jpg";
 import img42 from "@/assets/photos/image42.jpg";
@@ -225,15 +222,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    year: "",
-    role: "ChemE Car",
-    location: "Stanford University",
-    bullets: [],
-    photos: [img34, img28, img04],
-  },
-  {
-    kind: "experience",
-    side: "right",
     year: "2023",
     role: "Process Optimization Intern @ Savor",
     location: "San Jose, CA",
@@ -259,7 +247,7 @@ export const timeline: TimelineEntry[] = [
       "Ran experiments using potentiostat & cyclic voltammetry, analysis with colorimetric flow-injection analysis (FIA)",
       "Outcome: Reported on effects of varying parameters on NH₄⁺ current efficiency to optimize annular cell operation",
     ],
-    photos: [img61, img62, img63],
+    photos: [img61, img63, img62],
   },
   {
     kind: "experience",
@@ -272,7 +260,7 @@ export const timeline: TimelineEntry[] = [
       "Synthesized high-entropy alloy (HEA) nanoparticles using Schlenk line synthesis techniques",
       "Outcome: Drew conclusions about mechanism of formation & influence of process variables on product",
     ],
-    photos: [img86, img38, img67],
+    photos: [img67, img38, img86],
   },
   {
     kind: "experience",
@@ -285,7 +273,7 @@ export const timeline: TimelineEntry[] = [
       "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence.",
       "Earned an iGEM Gold Medal, a $40K Med Catalyst grant, and filed provisional patent US63104140.",
     ],
-    photos: [img84, img43, img45],
+    photos: [img45, img43, img84],
   },
 ];
 

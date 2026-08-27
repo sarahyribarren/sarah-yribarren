@@ -3,42 +3,6 @@ import type { TimelineCard as TimelineCardType, TimelineEntry } from "@/content/
 
 const TILTS = ["rotate-[-3deg]", "rotate-[2.5deg]", "rotate-[-2deg]", "rotate-[3deg]"];
 
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
-function parseMonthYear(s: string): { month: number; year: number } | null {
-  const [name, yearStr] = s.trim().split(" ");
-  const month = MONTHS.indexOf(name);
-  const year = parseInt(yearStr, 10);
-  if (month === -1 || Number.isNaN(year)) return null;
-  return { month, year };
-}
-
-function formatDuration(dateRange?: string): string {
-  if (!dateRange) return "";
-  const [startStr, endStr] = dateRange.split("–").map((s) => s.trim());
-  const start = parseMonthYear(startStr);
-  if (!start) return "";
-
-  let end: { month: number; year: number };
-  if (!endStr || endStr.toLowerCase() === "present") {
-    const now = new Date();
-    end = { month: now.getMonth(), year: now.getFullYear() };
-  } else {
-    const parsed = parseMonthYear(endStr);
-    if (!parsed) return "";
-    end = parsed;
-  }
-
-  const months = (end.year - start.year) * 12 + (end.month - start.month) + 1;
-  if (months <= 0) return "";
-
-  const years = Math.floor(months / 12);
-  const remMonths = months % 12;
-  if (years === 0) return `${months} month${months === 1 ? "" : "s"}`;
-  if (remMonths === 0) return `${years} year${years === 1 ? "" : "s"}`;
-  return `${years} year${years === 1 ? "" : "s"} ${remMonths} month${remMonths === 1 ? "" : "s"}`;
-}
-
 function PhotoStack({
   photos,
   tiltStart,
@@ -155,8 +119,6 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
           tiltCounter += Math.max(photos.length, 0);
           const cardLeft = entry.side === "left";
 
-          const duration = formatDuration(entry.dateRange);
-
           return (
             <li key={i} className="relative">
               {/* Larger year separator between tiles where the year changes */}
@@ -169,28 +131,16 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
               )}
 
               <div className="relative">
-                {/* Dot + duration on rail */}
+                {/* Dot on rail */}
                 <div className="absolute left-4 top-6 z-10 -translate-x-1/2 md:left-1/2">
                   <RailDot blink={entry.current} />
                 </div>
-                {duration && (
-                  <div className="absolute left-4 top-12 z-10 hidden -translate-x-1/2 md:block md:left-1/2">
-                    <span className="rounded-full border border-border bg-background px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                      {duration}
-                    </span>
-                  </div>
-                )}
 
                 {/* Connector stub: rail -> card (mobile) */}
                 <span aria-hidden className="absolute left-4 top-[27px] hidden h-px w-8 bg-border max-md:block" />
 
                 {/* Mobile stacked layout */}
                 <div className="pl-12 md:hidden">
-                  {duration && (
-                    <p className="mb-3 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                      {duration}
-                    </p>
-                  )}
                   <MobilePhoto entry={entry} tiltStart={tiltStart} />
                   <Card entry={entry} />
                 </div>

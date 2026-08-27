@@ -1,11 +1,17 @@
+import img04 from "@/assets/photos/image04.jpg";
 import img23 from "@/assets/photos/image23.jpg";
+import img28 from "@/assets/photos/image28.jpg";
 import img29 from "@/assets/photos/image29.jpg";
 import img31 from "@/assets/photos/image31.jpg";
+import img34 from "@/assets/photos/image34.jpg";
 import img38 from "@/assets/photos/image38.jpg";
 import img39 from "@/assets/photos/image39.jpg";
 import img42 from "@/assets/photos/image42.jpg";
 import img43 from "@/assets/photos/image43.jpg";
 import img45 from "@/assets/photos/image45.jpg";
+import img46 from "@/assets/photos/image46.jpg";
+import img47 from "@/assets/photos/image47.jpg";
+import img48 from "@/assets/photos/image48.jpg";
 import img49 from "@/assets/photos/image49.jpg";
 import img57 from "@/assets/photos/image57.jpg";
 import img58 from "@/assets/photos/image58.jpg";
@@ -35,7 +41,7 @@ import img94 from "@/assets/photos/image94.jpg";
 export type TimelineCard = {
   kind: "education" | "experience" | "credential";
   side: "left" | "right";
-  yearMark?: string;
+  note?: string;
   role: string;
   location?: string;
   dateRange?: string;
@@ -51,7 +57,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    yearMark: "2026",
     role: "Chemical Engineer @ Red Metals",
     location: "Charleston, SC",
     dateRange: "Jun 2026 – Present",
@@ -67,6 +72,7 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
+    note: "Traveling, spending time with family, searching for the right role.",
     role: "Rural Electrification Project Engineer @ WindAid",
     location: "Trujillo, La Libertad, Peru 🇵🇪",
     dateRange: "Nov 2025 – Jan 2026",
@@ -80,7 +86,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    yearMark: "2025",
     role: "Spanish Language Intensive @ Local School",
     location: "Sucre, Chuquisaca, Bolivia 🇧🇴",
     dateRange: "Sep 2025 – Nov 2025",
@@ -153,7 +158,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    yearMark: "2024",
     role: "Teaching Assistant @ Earth Systems Dept.",
     location: "Stanford University",
     dateRange: "Sep 2024 – Dec 2024",
@@ -192,7 +196,7 @@ export const timeline: TimelineEntry[] = [
     side: "left",
     role: "Polymer Membrane Synthesis Researcher (Capstone)",
     location: "Stanford University",
-    dateRange: "Nov 2023 – Mar 2024",
+    dateRange: "Jan 2024 – Mar 2024",
     bullets: [
       "Synthesized polymer membranes for desalination from PET, tested with benchtop desalination setup",
       "Outcome: Developed greener synthesis method for desalination membranes by replacing NMP with Cyrene",
@@ -201,8 +205,19 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
+    side: "left",
+    role: "Biosynthesis Researcher (Capstone)",
+    location: "Stanford University",
+    dateRange: "Sep 2023 – Dec 2023",
+    bullets: [
+      "Engineered E. coli to biosynthesize fatty acid ethyl esters (FAEEs) as a renewable diesel-range biofuel",
+      "Outcome: Quantified FAEE yield via extraction and GC-MS analysis across strain and culture conditions",
+    ],
+    photos: [img48, img46, img47],
+  },
+  {
+    kind: "experience",
     side: "right",
-    yearMark: "2023",
     role: "Lab Safety Officer @ Uytengsu Teaching Labs",
     location: "Stanford University",
     dateRange: "Sep 2023 – Mar 2025",
@@ -222,6 +237,7 @@ export const timeline: TimelineEntry[] = [
       "Designed and built a shoebox-sized car powered by a zinc-air battery with a chemical stopping mechanism, integrated onto a 3-D printed chassis",
       "Outcome: First competition season was experimental and the car wasn't functional, but the team walked away with critical engineering lessons that shaped future seasons",
     ],
+    photos: [img34, img28, img04],
   },
   {
     kind: "experience",
@@ -254,7 +270,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    yearMark: "2022",
     role: "Nanoparticle Synthesis Researcher @ Cargnello Group",
     location: "Stanford University",
     dateRange: "Jun 2022 – Sep 2022",
@@ -267,7 +282,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    yearMark: "2021",
     role: "Bioengineering Researcher @ Endy Lab / iGEM",
     location: "Stanford University",
     dateRange: "May 2020 – Jun 2021",

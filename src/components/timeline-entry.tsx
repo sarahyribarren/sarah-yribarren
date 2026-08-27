@@ -94,10 +94,12 @@ function Card({ entry }: { entry: TimelineCardType }) {
 
 function RailDot({ blink }: { blink?: boolean }) {
   return (
-    <span
-      className={`block h-3 w-3 rounded-full bg-primary ring-4 ring-background ${blink ? "animate-pulse" : ""}`}
-      style={blink ? { animationDuration: "2.5s" } : undefined}
-    />
+    <span className="relative flex h-3 w-3">
+      {blink && (
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-90" />
+      )}
+      <span className="relative inline-flex h-3 w-3 rounded-full bg-primary ring-4 ring-background" />
+    </span>
   );
 }
 
@@ -121,11 +123,11 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
 
           return (
             <li key={i} className="relative">
-              {/* Larger year separator between tiles where the year changes */}
-              {entry.yearMark && (
-                <div className="relative mb-8 h-10 md:mb-10 md:h-14">
-                  <span className="absolute left-4 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-3 font-display text-3xl leading-none text-foreground md:left-1/2 md:text-4xl">
-                    {entry.yearMark}
+              {/* Small note above this entry */}
+              {entry.note && (
+                <div className="relative mb-4 pl-12 md:mb-6 md:flex md:justify-center md:pl-0">
+                  <span className="inline-block max-w-[280px] rounded-full border border-border bg-background px-3 py-1 text-[11px] italic leading-snug text-muted-foreground">
+                    {entry.note}
                   </span>
                 </div>
               )}

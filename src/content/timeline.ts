@@ -17,11 +17,13 @@ export type TimelineCard = {
   description?: string;
   bullets: string[];
   photo?: string;
+  current?: boolean;
 };
 
 export type TimelineNote = {
   kind: "note";
-  text: string;
+  dateRange: string;
+  lines: [string, string];
 };
 
 export type TimelineEntry = TimelineCard | TimelineNote;
@@ -33,6 +35,7 @@ export const timeline: TimelineEntry[] = [
     role: "Chemical Engineer @ Red Metals",
     location: "Charleston, SC",
     dateRange: "Jun 2026 – Present",
+    current: true,
     bullets: [
       "Designing unit processes and factory layout for industrial process (scrap Cu → Cu rod)",
       "Building PFDs and process simulations; running energy and mass balances",
@@ -42,7 +45,8 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "note",
-    text: "spending time with family, searching for the right role",
+    dateRange: "Jan 2026 – Jun 2026",
+    lines: ["spending time with family,", "searching for the right role"],
   },
   {
     kind: "experience",
@@ -53,7 +57,7 @@ export const timeline: TimelineEntry[] = [
     bullets: [
       "Constructed off-grid wind turbine in workshop (welding, casting resin, building generator, etc.)",
       "Installed in rural Andean community for basic electricity needs",
-      "Initiated project to optimize battery systems, changing from VRLA lead-acid to AGM (gel)",
+      "Initiated project to optimize battery systems, changing from VRLA lead-acid to AGM (gel) batteries",
     ],
     photo: img73,
   },
@@ -216,10 +220,10 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    year: "2022",
+    year: "2020",
     role: "Bioengineering Researcher @ Endy Lab / iGEM",
     location: "Stanford University",
-    dateRange: "Jun 2022 – Sep 2022",
+    dateRange: "May 2020 – Jun 2021",
     bullets: [
       "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence.",
       "Earned an iGEM Gold Medal, a $40K Med Catalyst grant, and filed provisional patent US63104140.",

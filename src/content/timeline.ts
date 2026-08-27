@@ -4,26 +4,35 @@ import img73 from "@/assets/photos/image73.jpg";
 import img03 from "@/assets/photos/image03.jpg";
 import img02 from "@/assets/photos/image02.jpg";
 import img06 from "@/assets/photos/image06.jpg";
+import img31 from "@/assets/photos/image31.jpg";
 import img61 from "@/assets/photos/image61.jpg";
 import img32 from "@/assets/photos/image32.jpg";
 import img45 from "@/assets/photos/image45.jpg";
+import img80 from "@/assets/photos/image80.jpg";
+import img81 from "@/assets/photos/image81.jpg";
+import img82 from "@/assets/photos/image82.jpg";
+import img83 from "@/assets/photos/image83.jpg";
+import img84 from "@/assets/photos/image84.jpg";
+import img85 from "@/assets/photos/image85.jpg";
+import img86 from "@/assets/photos/image86.jpg";
 
 export type TimelineCard = {
   kind: "education" | "experience" | "credential";
+  side: "left" | "right";
   year: string;
   role: string;
   location?: string;
   dateRange?: string;
   description?: string;
   bullets: string[];
-  photo?: string;
+  photos?: string[];
   current?: boolean;
 };
 
 export type TimelineNote = {
   kind: "note";
   dateRange: string;
-  lines: [string, string];
+  lines: string[];
 };
 
 export type TimelineEntry = TimelineCard | TimelineNote;
@@ -31,6 +40,7 @@ export type TimelineEntry = TimelineCard | TimelineNote;
 export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
+    side: "right",
     year: "2026",
     role: "Chemical Engineer @ Red Metals",
     location: "Charleston, SC",
@@ -42,14 +52,16 @@ export const timeline: TimelineEntry[] = [
       "Procuring process equipment, coordinating commissioning, writing safe SOPs",
       "Prolific building with AI systems (Claude, Gemini) to streamline research and factory workflow",
     ],
+    photos: [img82],
   },
   {
     kind: "note",
-    dateRange: "Jan 2026 – Jun 2026",
-    lines: ["spending time with family,", "searching for the right role"],
+    dateRange: "Feb 2026 – May 2026",
+    lines: ["searching for the right role", "spending time with family", "personal projects"],
   },
   {
     kind: "experience",
+    side: "left",
     year: "2025",
     role: "Rural Electrification Project Engineer @ WindAid",
     location: "Trujillo, La Libertad, Peru 🇵🇪",
@@ -59,10 +71,11 @@ export const timeline: TimelineEntry[] = [
       "Installed in rural Andean community for basic electricity needs",
       "Initiated project to optimize battery systems, changing from VRLA lead-acid to AGM (gel) batteries",
     ],
-    photo: img73,
+    photos: [img73],
   },
   {
     kind: "experience",
+    side: "left",
     year: "2025",
     role: "Spanish Language Intensive @ Local School",
     location: "Sucre, Chuquisaca, Bolivia 🇧🇴",
@@ -75,6 +88,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "education",
+    side: "left",
     year: "2025",
     role: "Study Abroad @ Stanford Santiago Campus",
     location: "Santiago, Chile 🇨🇱",
@@ -87,6 +101,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "education",
+    side: "right",
     year: "2024",
     role: "Master of Science in Earth Systems",
     location: "Stanford University",
@@ -94,10 +109,11 @@ export const timeline: TimelineEntry[] = [
     bullets: [
       "Interdisciplinary masters program with emphasis on Technology Supply Chains",
     ],
-    photo: img29,
+    photos: [img29, img83],
   },
   {
     kind: "experience",
+    side: "right",
     year: "2025",
     role: "Teaching Assistant @ Energy Resource Engineering Dept.",
     location: "Stanford University",
@@ -106,10 +122,11 @@ export const timeline: TimelineEntry[] = [
       "\"Fundamentals of Renewable Power\"",
       "Survey course deep-diving into engineering and related issues for wind, solar, biomass, geothermal, tidal and wave power technologies.",
     ],
-    photo: img06,
+    photos: [img06],
   },
   {
     kind: "experience",
+    side: "right",
     year: "2025",
     role: "Teaching Assistant @ Earth System Science Dept.",
     location: "Stanford University",
@@ -121,6 +138,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
+    side: "right",
     year: "2024",
     role: "Teaching Assistant @ Earth Systems Dept.",
     location: "Stanford University",
@@ -132,6 +150,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "education",
+    side: "left",
     year: "2019",
     role: "Bachelor of Science in Chemical Engineering",
     location: "Stanford University",
@@ -139,10 +158,11 @@ export const timeline: TimelineEntry[] = [
     bullets: [
       "Graduated from the Notation in Science Communication program, with Distinction",
     ],
-    photo: img15,
+    photos: [img15],
   },
   {
     kind: "experience",
+    side: "left",
     year: "2024",
     role: "Direct Lithium Extraction Researcher @ ChemE Capstone",
     location: "Stanford University",
@@ -154,10 +174,11 @@ export const timeline: TimelineEntry[] = [
       "Conducted literature reviews, capital cost estimations, and equipment sizing analysis",
       "Outcome: Techno-economic analysis indicated 2.8 years to breakeven, 3 years for payback, and 392.9% ROI netting >$200 million of profit over 10-years, producing 2000 tonnes of Li₂CO₃ per year",
     ],
-    photo: img03,
+    photos: [img03, img80],
   },
   {
     kind: "experience",
+    side: "left",
     year: "2023",
     role: "Polymer Membrane Synthesis Researcher @ ChemE Capstone",
     location: "Stanford University",
@@ -166,10 +187,11 @@ export const timeline: TimelineEntry[] = [
       "Synthesized polymer membranes for desalination from PET, tested with benchtop desalination setup",
       "Outcome: Developed greener synthesis method for desalination membranes by replacing NMP with Cyrene",
     ],
-    photo: img02,
+    photos: [img02, img80],
   },
   {
     kind: "experience",
+    side: "right",
     year: "2023",
     role: "Lab Safety Officer @ Uytengsu Teaching Labs",
     location: "Stanford University",
@@ -178,9 +200,11 @@ export const timeline: TimelineEntry[] = [
       "Oversaw safety of student projects after-hours, including handling of waste and mechanical/electrical equipment",
       "Proactively prevented dangerous situations, and managed uncertainties and emergencies",
     ],
+    photos: [img31],
   },
   {
     kind: "experience",
+    side: "right",
     year: "2023",
     role: "Process Optimization Intern @ Savor",
     location: "San Jose, CA",
@@ -191,9 +215,11 @@ export const timeline: TimelineEntry[] = [
       "Navigated various dynamic tasks in startup environment, including reactor and equipment setup",
       "Outcome: Delivered actionable data on 4 primary variables to inform engineering decisions about process design",
     ],
+    photos: [img81],
   },
   {
     kind: "experience",
+    side: "left",
     year: "2022",
     role: "Electrochemical Separations Researcher @ Tarpeh Lab",
     location: "Stanford University",
@@ -204,10 +230,11 @@ export const timeline: TimelineEntry[] = [
       "Ran experiments using potentiostat & cyclic voltammetry, analysis with colorimetric flow-injection analysis (FIA)",
       "Outcome: Reported on effects of varying parameters on NH₄⁺ current efficiency to optimize annular cell operation",
     ],
-    photo: img61,
+    photos: [img61, img85],
   },
   {
     kind: "experience",
+    side: "left",
     year: "2022",
     role: "Nanoparticle Synthesis @ Cargnello Group",
     location: "Stanford University",
@@ -216,10 +243,11 @@ export const timeline: TimelineEntry[] = [
       "Synthesized high-entropy alloy (HEA) nanoparticles using Schlenk line synthesis techniques",
       "Outcome: Drew conclusions about mechanism of formation & influence of process variables on product",
     ],
-    photo: img32,
+    photos: [img32, img86],
   },
   {
     kind: "experience",
+    side: "left",
     year: "2020",
     role: "Bioengineering Researcher @ Endy Lab / iGEM",
     location: "Stanford University",
@@ -228,7 +256,7 @@ export const timeline: TimelineEntry[] = [
       "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence.",
       "Earned an iGEM Gold Medal, a $40K Med Catalyst grant, and filed provisional patent US63104140.",
     ],
-    photo: img45,
+    photos: [img45, img84],
   },
 ];
 
@@ -237,8 +265,7 @@ export const awards = [
   "Outstanding Service for the Earth Systems Program",
   "Cap & Gown Society Leader Award",
   "Alumni Association Award of Excellence",
-  "SDSS Dean's Coterminal Fellowship",
-  "Academic Distinction — Notation in Science Communication",
+  "Academic Distinction in Notation in Science Communication Program",
   "iGEM Gold Medal",
 ];
 

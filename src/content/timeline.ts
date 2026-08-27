@@ -30,6 +30,10 @@ import img82 from "@/assets/photos/image82.jpg";
 import img83 from "@/assets/photos/image83.jpg";
 import img84 from "@/assets/photos/image84.jpg";
 import img86 from "@/assets/photos/image86.jpg";
+import img87 from "@/assets/photos/image87.jpg";
+import img88 from "@/assets/photos/image88.jpg";
+import img89 from "@/assets/photos/image89.jpg";
+import img90 from "@/assets/photos/image90.jpg";
 
 export type TimelineCard = {
   kind: "education" | "experience" | "credential";
@@ -61,7 +65,7 @@ export const timeline: TimelineEntry[] = [
       "Procuring process equipment, coordinating commissioning, writing safe SOPs",
       "Prolific building with AI systems (Claude, Gemini) to streamline research and factory workflow",
     ],
-    photos: [img82],
+    photos: [img87, img82],
   },
   {
     kind: "experience",
@@ -128,6 +132,7 @@ export const timeline: TimelineEntry[] = [
       "\"Fundamentals of Renewable Power\"",
       "Survey course deep-diving into engineering and related issues for wind, solar, biomass, geothermal, tidal and wave power technologies.",
     ],
+    photos: [img88],
   },
   {
     kind: "experience",
@@ -140,6 +145,7 @@ export const timeline: TimelineEntry[] = [
       "\"Will Technology Save the World?: Environmental Ethics and Techno-Optimism\"",
       "Interdisciplinary course teaching applied environmental ethics and critical analysis of the risks, benefits, and societal impacts of technological solutions to environmental problems.",
     ],
+    photos: [img89],
   },
   {
     kind: "experience",
@@ -166,6 +172,7 @@ export const timeline: TimelineEntry[] = [
       "\"Human Society and Environmental Change\"",
       "Interdisciplinary examination of human-environment interactions through the lenses of economics, policy, culture, history, and governance.",
     ],
+    photos: [img90],
   },
   {
     kind: "education",

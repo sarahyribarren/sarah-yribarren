@@ -41,22 +41,20 @@ export function ProjectGrid({ children }: { children: React.ReactNode }) {
 
 export function CourseTile({ course }: { course: Course }) {
   return (
-    <article className="flex flex-col gap-2 rounded-lg border border-border bg-card p-5">
-      <div className="flex items-start justify-between gap-2">
-        <h3 className="font-display text-lg leading-tight text-foreground">{course.title}</h3>
-        <span className="shrink-0 whitespace-nowrap rounded-full border border-border bg-background px-2 py-0.5 text-[10px] uppercase tracking-[0.1em] text-muted-foreground">
-          {course.code}
-        </span>
-      </div>
-      <p className="text-[12.5px] leading-relaxed text-muted-foreground">{course.description}</p>
+    <article className="flex items-start justify-between gap-2 rounded-md border border-border bg-card px-3.5 py-3">
+      <h3 className="font-body text-[11.5px] font-semibold uppercase leading-snug tracking-[0.03em] text-foreground">
+        {course.title}
+      </h3>
+      <span className="shrink-0 whitespace-nowrap rounded-full border border-border bg-background px-2 py-0.5 text-[10px] uppercase tracking-[0.1em] text-muted-foreground">
+        {course.code}
+      </span>
     </article>
   );
 }
 
-export function PageHeader({ eyebrow, title, blurb }: { eyebrow: string; title: string; blurb?: string }) {
+export function PageHeader({ title, blurb }: { title: string; blurb?: string }) {
   return (
     <header className="mb-10 max-w-3xl">
-      <p className="mb-3 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">{eyebrow}</p>
       <h1 className="font-display text-4xl leading-tight text-foreground md:text-5xl">{title}</h1>
       {blurb && <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{blurb}</p>}
     </header>

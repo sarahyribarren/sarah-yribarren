@@ -10,9 +10,8 @@ function Page() {
   return (
     <PageShell>
       <PageHeader
-        eyebrow="⚖️ Law, Policy & Environmental Justice"
-        title="Interdisciplinary work on natural resources."
-        blurb="Resource boomtown economics, geochemical fingerprinting for ESG law, an ESG plan for the Nevada Li-B mine, global sanitation & water access, and technology & worker exploitation."
+        title="Law, Policy, and Environmental Justice"
+        blurb="Interdisciplinary work on natural resources"
       />
       <ProjectGrid>
         {lawPolicyProjects.map((p) => (

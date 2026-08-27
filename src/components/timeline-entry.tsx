@@ -38,7 +38,7 @@ function PhotoPanel({ entry, tiltStart, align }: { entry: TimelineCardType; tilt
 
   return (
     <div className={`hidden md:flex md:items-center ${align === "start" ? "md:justify-start" : "md:justify-end"} h-full`}>
-      <PhotoStack photos={photos} tiltStart={tiltStart} size={photos.length > 1 ? 150 : 190} />
+      <PhotoStack photos={photos} tiltStart={tiltStart} size={photos.length > 1 ? 185 : 235} />
     </div>
   );
 }
@@ -48,7 +48,7 @@ function MobilePhoto({ entry, tiltStart }: { entry: TimelineCardType; tiltStart:
   if (photos.length === 0) return null;
   return (
     <div className="mb-4 flex justify-center md:hidden">
-      <PhotoStack photos={photos} tiltStart={tiltStart} size={photos.length > 1 ? 120 : 160} />
+      <PhotoStack photos={photos} tiltStart={tiltStart} size={photos.length > 1 ? 150 : 195} />
     </div>
   );
 }
@@ -111,26 +111,6 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
 
       <ol className="space-y-10 md:space-y-14">
         {entries.map((entry, i) => {
-          if (entry.kind === "note") {
-            return (
-              <li key={i} className="relative flex justify-center py-1">
-                <div className="rounded-xl border border-border/70 bg-background/80 px-6 py-3">
-                  <p className="text-center text-[9px] uppercase tracking-[0.2em] text-muted-foreground/70">
-                    {entry.dateRange}
-                  </p>
-                  <ul className="mt-1.5 space-y-0.5">
-                    {entry.lines.map((line, li) => (
-                      <li key={li} className="flex items-center gap-1.5 text-[11px] italic leading-snug text-muted-foreground">
-                        <span aria-hidden className="h-1 w-1 shrink-0 rounded-full bg-primary" />
-                        {line}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            );
-          }
-
           const photos = entry.photos ?? [];
           const tiltStart = tiltCounter;
           tiltCounter += Math.max(photos.length, 0);

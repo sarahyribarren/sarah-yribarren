@@ -34,8 +34,10 @@ function Index() {
             sustainable, equitable, and just world.
           </p>
           <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-foreground/80">
-            This website is a portfolio of my education at Stanford. Do not hesitate to reach
-            out if you want to connect. Always open to new opportunities.
+            This website is a portfolio of my time at Stanford.
+          </p>
+          <p className="mt-1 max-w-xl text-[16px] leading-relaxed text-foreground/80">
+            Always open to new opportunities and connections.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -43,7 +45,7 @@ function Index() {
               href="mailto:sarahyribarren@gmail.com"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-[15px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
             >
-              sarahyribarren@gmail.com
+              Email
             </a>
             <a
               href="https://www.linkedin.com/in/sarah-yribarren/"
@@ -59,7 +61,7 @@ function Index() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-[15px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
             >
-              NSC ePortfolio <span aria-hidden>→</span>
+              Science Communication ePortfolio <span aria-hidden>→</span>
             </a>
           </div>
         </div>
@@ -102,23 +104,23 @@ function Index() {
         <p className="mb-10 text-[14px] leading-relaxed text-foreground/80">
           My current position is as a Chemical Process Engineer at Red Metals, a copper
           refining startup in Charleston, SC. As one of the first hires, I have a lot of
-          ownership, making important design decisions, setting up process models, procuring
-          and commissioning equipment, and transforming our factory from empty to
+          ownership, making design decisions, setting up process models, procuring and
+          commissioning equipment, and transforming our factory from empty to
           production-scale. Before starting this job in June 2026, I spent 7 months in South
           America between August 2025 and March 2026. After finishing my final Stanford course
           studying abroad in Chile, I enrolled in a local Spanish school in Bolivia and
           volunteered for a renewable energy nonprofit in Peru. Before that, I was finishing my
-          MS in Earth Systems at Stanford, where I was a Teaching Assistant for three courses
-          and took on interdisciplinary coursework and projects focused on technology supply
-          chains. My BS was in Chemical Engineering, where in my senior year I completed three
-          substantial capstone projects. During my junior and senior years, I was a Lab Safety
-          Officer in the teaching labs, refounded the Stanford ChemE Car team, and worked
-          part-time as a research assistant studying electrochemical separations. Two full-time
-          summer experiences were spent as a research assistant on a catalytic nanoparticle
-          synthesis project, and as a Process Optimization at an early-stage climate tech
-          startup called Savor. My first scientific research position was from May 2020 to
-          June 2021, where I took a gap year during the pandemic, directly after my freshman
-          year, to work in a bioengineering lab on the Stanford campus.
+          MS in Earth Systems at Stanford, where I TA'd three courses and took on
+          interdisciplinary coursework and projects focused on technology supply chains. My BS
+          was in Chemical Engineering, where in my senior year I completed three capstone
+          projects. During my junior and senior years, I was a Lab Safety Officer in the
+          teaching labs, refounded the Stanford ChemE Car team, and worked part-time as a
+          research assistant studying electrochemical separations. Two full-time summers were
+          spent as a research assistant on a catalytic nanoparticle synthesis project, and as a
+          Process Optimization Intern at an early-stage climate tech startup called Savor. My
+          first scientific research position was from May 2020 to June 2021, when I took a gap
+          year during the pandemic, right after my freshman year, to work in a bioengineering
+          lab at Stanford.
         </p>
 
         <TimelineList entries={timeline} />

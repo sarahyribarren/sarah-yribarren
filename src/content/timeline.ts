@@ -1,19 +1,13 @@
 import img29 from "@/assets/photos/image29.jpg";
 import img15 from "@/assets/photos/image15.jpg";
 import img73 from "@/assets/photos/image73.jpg";
-import img03 from "@/assets/photos/image03.jpg";
-import img02 from "@/assets/photos/image02.jpg";
-import img06 from "@/assets/photos/image06.jpg";
 import img31 from "@/assets/photos/image31.jpg";
 import img61 from "@/assets/photos/image61.jpg";
-import img32 from "@/assets/photos/image32.jpg";
-import img45 from "@/assets/photos/image45.jpg";
 import img80 from "@/assets/photos/image80.jpg";
 import img81 from "@/assets/photos/image81.jpg";
 import img82 from "@/assets/photos/image82.jpg";
 import img83 from "@/assets/photos/image83.jpg";
 import img84 from "@/assets/photos/image84.jpg";
-import img85 from "@/assets/photos/image85.jpg";
 import img86 from "@/assets/photos/image86.jpg";
 
 export type TimelineCard = {
@@ -29,13 +23,7 @@ export type TimelineCard = {
   current?: boolean;
 };
 
-export type TimelineNote = {
-  kind: "note";
-  dateRange: string;
-  lines: string[];
-};
-
-export type TimelineEntry = TimelineCard | TimelineNote;
+export type TimelineEntry = TimelineCard;
 
 export const timeline: TimelineEntry[] = [
   {
@@ -53,11 +41,6 @@ export const timeline: TimelineEntry[] = [
       "Prolific building with AI systems (Claude, Gemini) to streamline research and factory workflow",
     ],
     photos: [img82],
-  },
-  {
-    kind: "note",
-    dateRange: "Feb 2026 – May 2026",
-    lines: ["searching for the right role", "spending time with family", "personal projects"],
   },
   {
     kind: "experience",
@@ -122,7 +105,6 @@ export const timeline: TimelineEntry[] = [
       "\"Fundamentals of Renewable Power\"",
       "Survey course deep-diving into engineering and related issues for wind, solar, biomass, geothermal, tidal and wave power technologies.",
     ],
-    photos: [img06],
   },
   {
     kind: "experience",
@@ -164,7 +146,7 @@ export const timeline: TimelineEntry[] = [
     kind: "experience",
     side: "left",
     year: "2024",
-    role: "Direct Lithium Extraction Researcher @ ChemE Capstone",
+    role: "Direct Lithium Extraction Researcher (Capstone)",
     location: "Stanford University",
     dateRange: "Mar 2024 – Jun 2024",
     bullets: [
@@ -174,20 +156,20 @@ export const timeline: TimelineEntry[] = [
       "Conducted literature reviews, capital cost estimations, and equipment sizing analysis",
       "Outcome: Techno-economic analysis indicated 2.8 years to breakeven, 3 years for payback, and 392.9% ROI netting >$200 million of profit over 10-years, producing 2000 tonnes of Li₂CO₃ per year",
     ],
-    photos: [img03, img80],
+    photos: [img80],
   },
   {
     kind: "experience",
     side: "left",
     year: "2023",
-    role: "Polymer Membrane Synthesis Researcher @ ChemE Capstone",
+    role: "Polymer Membrane Synthesis Researcher (Capstone)",
     location: "Stanford University",
     dateRange: "Nov 2023 – Mar 2024",
     bullets: [
       "Synthesized polymer membranes for desalination from PET, tested with benchtop desalination setup",
       "Outcome: Developed greener synthesis method for desalination membranes by replacing NMP with Cyrene",
     ],
-    photos: [img02, img80],
+    photos: [img80, img31],
   },
   {
     kind: "experience",
@@ -200,7 +182,6 @@ export const timeline: TimelineEntry[] = [
       "Oversaw safety of student projects after-hours, including handling of waste and mechanical/electrical equipment",
       "Proactively prevented dangerous situations, and managed uncertainties and emergencies",
     ],
-    photos: [img31],
   },
   {
     kind: "experience",
@@ -230,7 +211,7 @@ export const timeline: TimelineEntry[] = [
       "Ran experiments using potentiostat & cyclic voltammetry, analysis with colorimetric flow-injection analysis (FIA)",
       "Outcome: Reported on effects of varying parameters on NH₄⁺ current efficiency to optimize annular cell operation",
     ],
-    photos: [img61, img85],
+    photos: [img61],
   },
   {
     kind: "experience",
@@ -243,7 +224,7 @@ export const timeline: TimelineEntry[] = [
       "Synthesized high-entropy alloy (HEA) nanoparticles using Schlenk line synthesis techniques",
       "Outcome: Drew conclusions about mechanism of formation & influence of process variables on product",
     ],
-    photos: [img32, img86],
+    photos: [img86],
   },
   {
     kind: "experience",
@@ -256,7 +237,7 @@ export const timeline: TimelineEntry[] = [
       "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence.",
       "Earned an iGEM Gold Medal, a $40K Med Catalyst grant, and filed provisional patent US63104140.",
     ],
-    photos: [img45, img84],
+    photos: [img84],
   },
 ];
 
@@ -266,7 +247,6 @@ export const awards = [
   "Cap & Gown Society Leader Award",
   "Alumni Association Award of Excellence",
   "Academic Distinction in Notation in Science Communication Program",
-  "iGEM Gold Medal",
 ];
 
 export const leadership = [

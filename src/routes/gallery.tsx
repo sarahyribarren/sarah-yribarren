@@ -9,7 +9,7 @@ export const Route = createFileRoute("/gallery")({
 function Page() {
   return (
     <PageShell>
-      <PageHeader eyebrow="📸 Photo Gallery" title="Life at Stanford, in frames." blurb={galleryIntro} />
+      <PageHeader title="Photo Gallery" blurb={galleryIntro} />
 
       <div className="space-y-16">
         {gallerySections.map((section) => (

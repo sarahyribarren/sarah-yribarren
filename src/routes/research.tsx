@@ -10,9 +10,8 @@ function Page() {
   return (
     <PageShell>
       <PageHeader
-        eyebrow="🧪 Engineering Research"
-        title="Laboratory research with faculty mentors."
-        blurb="Electrochemical stripping of ammonia, colloidal nanoparticle synthesis, and bacterial diagnostics for viruses."
+        title="Engineering Research"
+        blurb="Laboratory research with faculty mentors"
       />
       <ProjectGrid>
         {researchProjects.map((p) => (

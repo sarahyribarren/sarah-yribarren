@@ -10,9 +10,8 @@ function Page() {
   return (
     <PageShell>
       <PageHeader
-        eyebrow="⚙️ Senior Capstone Projects"
-        title="ChemE major: three quarters, three projects."
-        blurb="Direct lithium extraction plant design, desalination membranes from PET, and biofuel production in E. coli."
+        title="Senior Capstone Projects"
+        blurb="ChemE major: three quarters, three projects"
       />
       <ProjectGrid>
         {capstoneProjects.map((p) => (

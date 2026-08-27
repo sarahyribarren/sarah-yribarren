@@ -10,9 +10,8 @@ function Page() {
   return (
     <PageShell>
       <PageHeader
-        eyebrow="🌎 Earth System Science & Systems Thinking"
-        title="Systems-level investigations."
-        blurb="Lithium scarcity in the EV industry, semiconductor supply chains, LCA of lightweight materials for EVs, and ocean acidification & climate change."
+        title="Earth Systems Science & Systems Thinking"
+        blurb="Systems-level investigations"
       />
       <ProjectGrid>
         {earthSystemsProjects.map((p) => (

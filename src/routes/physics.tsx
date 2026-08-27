@@ -10,9 +10,8 @@ function Page() {
   return (
     <PageShell>
       <PageHeader
-        eyebrow="⚛️ Physics & Technology"
-        title="Quantitative explorations of cool tech."
-        blurb="Aqueous organic flow batteries, biomass-derived graphite, plastic production from waste biogas, helium mining on the Moon, and Haber-Bosch energy consumption."
+        title="Physics & Technology"
+        blurb="Quantitative explorations of cool tech"
       />
       <ProjectGrid>
         {physicsProjects.map((p) => (

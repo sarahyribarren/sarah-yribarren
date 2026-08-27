@@ -42,7 +42,7 @@ export function ProjectGrid({ children }: { children: React.ReactNode }) {
 export function CourseTile({ course }: { course: Course }) {
   return (
     <article className="flex items-start justify-between gap-2 rounded-md border border-border bg-card px-3.5 py-3">
-      <h3 className="font-body text-[11.5px] font-semibold uppercase leading-snug tracking-[0.03em] text-foreground">
+      <h3 className="font-body text-[13px] font-medium leading-snug text-foreground">
         {course.title}
       </h3>
       <span className="shrink-0 whitespace-nowrap rounded-full border border-border bg-background px-2 py-0.5 text-[10px] uppercase tracking-[0.1em] text-muted-foreground">

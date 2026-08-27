@@ -27,11 +27,9 @@ function Index() {
             Sarah Yribarren
           </h1>
           <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-foreground/80">
-            I'm a chemical engineer and Earth systems scientist working at the intersection of
-            technological innovation and environmental systems. I love being in dynamic and
-            fast-moving environments where I have no choice but to learn something new every
-            day. I am passionate about designing processes and building systems for a more
-            sustainable, equitable, and just world.
+            I'm a Chemical Engineer and Earth Systems Scientist working at the intersection of
+            technological innovation and environmental systems, passionate about building
+            towards a more sustainable, equitable, and just world.
           </p>
           <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-foreground/80">
             This website is a portfolio of my time at Stanford.
@@ -45,7 +43,7 @@ function Index() {
               href="mailto:sarahyribarren@gmail.com"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-[15px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
             >
-              Email
+              email me
             </a>
             <a
               href="https://www.linkedin.com/in/sarah-yribarren/"

@@ -5,14 +5,20 @@ import img28 from "@/assets/photos/image28.jpg";
 import img29 from "@/assets/photos/image29.jpg";
 import img31 from "@/assets/photos/image31.jpg";
 import img34 from "@/assets/photos/image34.jpg";
+import img38 from "@/assets/photos/image38.jpg";
 import img39 from "@/assets/photos/image39.jpg";
 import img42 from "@/assets/photos/image42.jpg";
+import img43 from "@/assets/photos/image43.jpg";
+import img45 from "@/assets/photos/image45.jpg";
 import img49 from "@/assets/photos/image49.jpg";
 import img57 from "@/assets/photos/image57.jpg";
 import img58 from "@/assets/photos/image58.jpg";
 import img59 from "@/assets/photos/image59.jpg";
 import img60 from "@/assets/photos/image60.jpg";
 import img61 from "@/assets/photos/image61.jpg";
+import img62 from "@/assets/photos/image62.jpg";
+import img63 from "@/assets/photos/image63.jpg";
+import img67 from "@/assets/photos/image67.jpg";
 import img70 from "@/assets/photos/image70.jpg";
 import img71 from "@/assets/photos/image71.jpg";
 import img72 from "@/assets/photos/image72.jpg";
@@ -83,7 +89,7 @@ export const timeline: TimelineEntry[] = [
       "Lived with Bolivian host family",
       "Achieved B2-level Spanish from this foundation",
     ],
-    photos: [img70, img71, img72],
+    photos: [img72, img71, img70],
   },
   {
     kind: "education",
@@ -97,7 +103,7 @@ export const timeline: TimelineEntry[] = [
       "Engaged with guest lecturers on a wide range of rural and urban sustainability topics",
       "Field trips to marine and agricultural research centers, hydro and biogas power plants, and more.",
     ],
-    photos: [img58, img59, img60],
+    photos: [img60, img59, img58],
   },
   {
     kind: "education",
@@ -142,7 +148,7 @@ export const timeline: TimelineEntry[] = [
     role: "Forum for Undergraduate Environmental Leadership (FUEL)",
     location: "Stanford University",
     bullets: [],
-    photos: [img57, img39, img42],
+    photos: [img57, img42, img39],
   },
   {
     kind: "experience",
@@ -245,7 +251,7 @@ export const timeline: TimelineEntry[] = [
       "Ran experiments using potentiostat & cyclic voltammetry, analysis with colorimetric flow-injection analysis (FIA)",
       "Outcome: Reported on effects of varying parameters on NH₄⁺ current efficiency to optimize annular cell operation",
     ],
-    photos: [img61],
+    photos: [img61, img62, img63],
   },
   {
     kind: "experience",
@@ -258,7 +264,7 @@ export const timeline: TimelineEntry[] = [
       "Synthesized high-entropy alloy (HEA) nanoparticles using Schlenk line synthesis techniques",
       "Outcome: Drew conclusions about mechanism of formation & influence of process variables on product",
     ],
-    photos: [img86],
+    photos: [img86, img38, img67],
   },
   {
     kind: "experience",
@@ -271,7 +277,7 @@ export const timeline: TimelineEntry[] = [
       "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence.",
       "Earned an iGEM Gold Medal, a $40K Med Catalyst grant, and filed provisional patent US63104140.",
     ],
-    photos: [img84],
+    photos: [img84, img43, img45],
   },
 ];
 

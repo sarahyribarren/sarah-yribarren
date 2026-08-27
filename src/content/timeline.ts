@@ -41,7 +41,6 @@ import img94 from "@/assets/photos/image94.jpg";
 export type TimelineCard = {
   kind: "education" | "experience" | "credential";
   side: "left" | "right";
-  note?: string;
   role: string;
   location?: string;
   dateRange?: string;
@@ -72,7 +71,6 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    note: "Traveling, spending time with family, searching for the right role.",
     role: "Rural Electrification Project Engineer @ WindAid",
     location: "Trujillo, La Libertad, Peru 🇵🇪",
     dateRange: "Nov 2025 – Jan 2026",

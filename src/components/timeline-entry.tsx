@@ -123,15 +123,6 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
 
           return (
             <li key={i} className="relative">
-              {/* Small note above this entry */}
-              {entry.note && (
-                <div className="relative mb-4 pl-12 md:mb-6 md:flex md:justify-center md:pl-0">
-                  <span className="inline-block max-w-[280px] rounded-full border border-border bg-background px-3 py-1 text-[11px] italic leading-snug text-muted-foreground">
-                    {entry.note}
-                  </span>
-                </div>
-              )}
-
               <div className="relative">
                 {/* Dot on rail */}
                 <div className="absolute left-4 top-6 z-10 -translate-x-1/2 md:left-1/2">

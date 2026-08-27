@@ -103,9 +103,7 @@ function Index() {
           {[
             "My current position is as a Chemical Process Engineer at Red Metals, a copper refining startup in Charleston, SC. As one of the first hires, I have a lot of ownership, making design decisions, setting up process models, procuring and commissioning equipment, and transforming our factory from empty to production-scale.",
             "Before starting this job in June 2026, I spent 7 months in South America between August 2025 and March 2026. After finishing my final Stanford course studying abroad in Chile, I enrolled in a local Spanish school in Bolivia and volunteered for a renewable energy nonprofit in Peru.",
-            "Before that, I was finishing my MS in Earth Systems at Stanford, where I TA'd three courses and took on interdisciplinary coursework and projects focused on technology supply chains.",
-            "My BS was in Chemical Engineering, where in my senior year I completed three capstone projects.",
-            "During my junior and senior years, I was a Lab Safety Officer in the teaching labs, refounded the Stanford ChemE Car team, and worked part-time as a research assistant studying electrochemical separations.",
+            "Before that, I finished my MS in Earth Systems at Stanford (TA'ing three courses, focused on technology supply chains) and my BS in Chemical Engineering — three capstone projects senior year, plus junior/senior years as a Lab Safety Officer, ChemE Car team founder, and electrochemical separations researcher.",
             "Two full-time summers were spent as a research assistant on a catalytic nanoparticle synthesis project, and as a Process Optimization Intern at an early-stage climate tech startup called Savor. My first scientific research position was from May 2020 to June 2021, when I took a gap year during the pandemic, right after my freshman year, to work in a bioengineering lab at Stanford.",
           ].map((line, i) => (
             <li key={i} className="flex gap-2.5 text-[14px] leading-relaxed text-foreground/80">

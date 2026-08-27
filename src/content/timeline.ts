@@ -30,6 +30,7 @@ import img87 from "@/assets/photos/image87.jpg";
 import img91 from "@/assets/photos/image91.jpg";
 import img92 from "@/assets/photos/image92.jpg";
 import img93 from "@/assets/photos/image93.jpg";
+import img94 from "@/assets/photos/image94.jpg";
 
 export type TimelineCard = {
   kind: "education" | "experience" | "credential";
@@ -97,8 +98,8 @@ export const timeline: TimelineEntry[] = [
     location: "Santiago, Chile 🇨🇱",
     dateRange: "Aug 2025",
     bullets: [
-      "Completed final course for M.S. degree: \"Chile's Pathway to a Sustainable Future\"",
-      "Engaged with guest lecturers on a wide range of rural and urban sustainability topics",
+      "Completed final course for degree: \"Chile's Pathway to a Sustainable Future\"",
+      "Engaged with guest lecturers on a wide range of urban/rural sustainability topics",
       "Field trips to marine and agricultural research centers, hydro and biogas power plants, and more.",
     ],
     photos: [img60, img59, img58],
@@ -168,7 +169,7 @@ export const timeline: TimelineEntry[] = [
     location: "Stanford University",
     dateRange: "Sep 2019 – Jun 2024",
     bullets: [
-      "Graduated from the Notation in Science Communication program, with Distinction",
+      "Notation in Science Communication Certificate, with Distinction",
     ],
     photos: [img92, img93, img91],
   },
@@ -179,10 +180,10 @@ export const timeline: TimelineEntry[] = [
     location: "Stanford University",
     dateRange: "Mar 2024 – Jun 2024",
     bullets: [
-      "Designed plant from scratch which recovers lithium carbonate from oil and gas wastewater",
-      "Built PFD and PF&ID diagrams for extraction, separation, and purification processes",
-      "Modeled energy and mass balances for unit operation design and simulated in AspenPlus",
-      "Conducted literature reviews, capital cost estimations, and equipment sizing analysis",
+      "Designed plant that recovers lithium carbonate from oil and gas wastewater",
+      "Built PFD / PF&ID diagrams for extraction, separation, purification processes",
+      "Modeled energy and mass balances for unit operations, simulated in Aspen",
+      "Conducted literature reviews, capital cost estimations, equipment sizing analysis",
       "Outcome: Techno-economic analysis indicated 2.8 years to breakeven, 3 years for payback, and 392.9% ROI netting >$200 million of profit over 10-years, producing 2000 tonnes of Li₂CO₃ per year",
     ],
   },
@@ -209,6 +210,7 @@ export const timeline: TimelineEntry[] = [
       "Oversaw safety of student projects after-hours, including handling of waste and mechanical/electrical equipment",
       "Proactively prevented dangerous situations, and managed uncertainties and emergencies",
     ],
+    photos: [img94],
   },
   {
     kind: "experience",

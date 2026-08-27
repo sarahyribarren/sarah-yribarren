@@ -144,10 +144,15 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    year: "",
-    role: "Forum for Undergraduate Environmental Leadership (FUEL)",
+    year: "2025",
+    role: "Environmental Leadership Forum (FUEL) @ TomKat Center",
     location: "Stanford University",
-    bullets: [],
+    dateRange: "Jan 2025 – Mar 2025",
+    bullets: [
+      "Visited crop and dairy farms to speak with farmers and ranchers (Marin and Salinas)",
+      "Met with policymakers and lawyers at the Capitol in Sacramento to discuss agricultural policy",
+      "Attended guest lectures from other stakeholders, e.g. former Head of CA Department of Water Resources",
+    ],
     photos: [img57, img42, img39],
   },
   {

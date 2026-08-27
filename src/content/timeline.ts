@@ -1,5 +1,4 @@
 import img04 from "@/assets/photos/image04.jpg";
-import img15 from "@/assets/photos/image15.jpg";
 import img23 from "@/assets/photos/image23.jpg";
 import img28 from "@/assets/photos/image28.jpg";
 import img29 from "@/assets/photos/image29.jpg";
@@ -31,9 +30,9 @@ import img83 from "@/assets/photos/image83.jpg";
 import img84 from "@/assets/photos/image84.jpg";
 import img86 from "@/assets/photos/image86.jpg";
 import img87 from "@/assets/photos/image87.jpg";
-import img88 from "@/assets/photos/image88.jpg";
-import img89 from "@/assets/photos/image89.jpg";
-import img90 from "@/assets/photos/image90.jpg";
+import img91 from "@/assets/photos/image91.jpg";
+import img92 from "@/assets/photos/image92.jpg";
+import img93 from "@/assets/photos/image93.jpg";
 
 export type TimelineCard = {
   kind: "education" | "experience" | "credential";
@@ -132,7 +131,6 @@ export const timeline: TimelineEntry[] = [
       "\"Fundamentals of Renewable Power\"",
       "Survey course deep-diving into engineering and related issues for wind, solar, biomass, geothermal, tidal and wave power technologies.",
     ],
-    photos: [img88],
   },
   {
     kind: "experience",
@@ -145,7 +143,6 @@ export const timeline: TimelineEntry[] = [
       "\"Will Technology Save the World?: Environmental Ethics and Techno-Optimism\"",
       "Interdisciplinary course teaching applied environmental ethics and critical analysis of the risks, benefits, and societal impacts of technological solutions to environmental problems.",
     ],
-    photos: [img89],
   },
   {
     kind: "experience",
@@ -172,7 +169,6 @@ export const timeline: TimelineEntry[] = [
       "\"Human Society and Environmental Change\"",
       "Interdisciplinary examination of human-environment interactions through the lenses of economics, policy, culture, history, and governance.",
     ],
-    photos: [img90],
   },
   {
     kind: "education",
@@ -184,7 +180,7 @@ export const timeline: TimelineEntry[] = [
     bullets: [
       "Graduated from the Notation in Science Communication program, with Distinction",
     ],
-    photos: [img15],
+    photos: [img92, img93, img91],
   },
   {
     kind: "experience",

@@ -41,13 +41,11 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader className="px-4 pt-6 pb-3">
         <Link to="/" className="block">
-          <div className="font-display text-2xl leading-none text-foreground">
-            Sarah
-            <br />
-            Yribarren
+          <div className="font-display text-2xl leading-none text-foreground whitespace-nowrap">
+            Sarah Yribarren
           </div>
-          <div className="mt-2 text-[11px] uppercase tracking-[0.15em] text-muted-foreground">
-            ChemE · Earth Systems
+          <div className="mt-2 text-[11px] tracking-wide text-muted-foreground">
+            ChemE BS · Earth Systems MS
           </div>
         </Link>
       </SidebarHeader>

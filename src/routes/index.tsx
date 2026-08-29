@@ -17,6 +17,9 @@ function Index() {
           <div className="overflow-hidden rounded-lg border border-border bg-muted shadow-[0_20px_60px_-30px_rgba(58,74,58,0.4)]">
             <img src={headshot} alt="Sarah Yribarren" className="aspect-[4/5] w-full object-cover" />
           </div>
+          <p className="mt-2 text-center text-[11px] tracking-wide text-muted-foreground">
+            ChemE BS · Earth Systems MS
+          </p>
         </div>
 
         <div>
@@ -39,7 +42,7 @@ function Index() {
           <div className="mt-6 flex flex-wrap gap-3">
             <a
               href="mailto:sarahyribarren@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-[15px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-[15px] font-medium text-primary-foreground shadow-[0_8px_20px_-8px_rgba(58,74,58,0.5)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_-8px_rgba(58,74,58,0.55)]"
             >
               Email
             </a>
@@ -47,7 +50,7 @@ function Index() {
               href="https://www.linkedin.com/in/sarah-yribarren/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-[15px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex items-center gap-2 rounded-full bg-forest px-5 py-2.5 text-[15px] font-medium text-cream shadow-[0_8px_20px_-8px_rgba(58,74,58,0.5)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_-8px_rgba(58,74,58,0.55)]"
             >
               LinkedIn <span aria-hidden>→</span>
             </a>
@@ -55,7 +58,7 @@ function Index() {
               href="https://stanford.digication.com/sarahyribarren-eportfolio/home"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-[15px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-primary bg-sage px-5 py-2.5 text-[15px] font-medium text-forest shadow-[0_8px_20px_-8px_rgba(58,74,58,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_-8px_rgba(58,74,58,0.4)]"
             >
               Science Communication ePortfolio <span aria-hidden>→</span>
             </a>

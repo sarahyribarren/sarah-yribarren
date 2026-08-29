@@ -64,6 +64,7 @@ export type TimelineCard = {
   photos?: string[];
   current?: boolean;
   awards?: string[];
+  leadershipRoles?: string[];
   banner?: string;
   bannerColor?: "default" | "green";
 };
@@ -268,6 +269,7 @@ export const timeline: TimelineEntry[] = [
       "Designed and built a shoebox-sized car powered by a zinc-air battery, with a chemically-controlled stopping mechanism, integrated onto a 3-D printed chassis",
       "Outcome: First competition season was experimental and the car wasn't functional; the team walked away with critical engineering lessons that shaped a win the following year",
     ],
+    leadershipRoles: ["Founder & Captain"],
     photos: [img34, img28, img04],
   },
   {
@@ -378,6 +380,7 @@ export const extracurriculars: TimelineEntry[] = [
       "Played tenor saxophone at football games and other athletic events",
       "Led section as Section Leader",
     ],
+    leadershipRoles: ["Section Leader"],
     photos: [img22, img16, img50],
   },
   {
@@ -388,7 +391,9 @@ export const extracurriculars: TimelineEntry[] = [
     bullets: [
       "Team Captain — first year winning Regionals (virtual competition)",
       "Became Coach — helped extend an ongoing 4-year CA champion streak",
+      "Also President for Stanford Practical Ethics Club (SPEC)",
     ],
+    leadershipRoles: ["Team Captain", "Coach"],
     photos: [img30, img24, img52],
   },
   {

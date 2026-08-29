@@ -1,4 +1,4 @@
-import { Award, Calendar, MapPin } from "lucide-react";
+import { Award, Calendar, MapPin, User } from "lucide-react";
 import type { TimelineCard as TimelineCardType, TimelineEntry } from "@/content/timeline";
 
 const TILTS = ["rotate-[-3deg]", "rotate-[2.5deg]", "rotate-[-2deg]", "rotate-[3deg]"];
@@ -88,6 +88,20 @@ function Card({ entry }: { entry: TimelineCardType }) {
           </li>
         ))}
       </ul>
+
+      {entry.leadershipRoles && entry.leadershipRoles.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {entry.leadershipRoles.map((r, i) => (
+            <span
+              key={i}
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-sage px-2.5 py-1 text-[11px] font-medium leading-none text-forest"
+            >
+              <User className="h-3.5 w-3.5 shrink-0 text-primary" aria-hidden />
+              {r}
+            </span>
+          ))}
+        </div>
+      )}
 
       {entry.awards && entry.awards.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-2">

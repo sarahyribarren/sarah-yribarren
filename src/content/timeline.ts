@@ -52,6 +52,11 @@ import img91 from "@/assets/photos/image91.jpg";
 import img92 from "@/assets/photos/image92.jpg";
 import img93 from "@/assets/photos/image93.jpg";
 import img94 from "@/assets/photos/image94.jpg";
+import img95 from "@/assets/photos/image95.jpg";
+import img96 from "@/assets/photos/image96.jpg";
+import img97 from "@/assets/photos/image97.jpg";
+import img98 from "@/assets/photos/image98.jpg";
+import img99 from "@/assets/photos/image99.jpg";
 
 export type TimelineCard = {
   kind: "education" | "experience" | "credential" | "milestone";
@@ -316,6 +321,7 @@ export const timeline: TimelineEntry[] = [
       "Coordinated humanities-themed events for students (e.g. guest speakers, field trips)",
       "Managed building issues and resident conflicts throughout the year",
     ],
+    photos: [img96],
   },
   {
     kind: "experience",
@@ -340,6 +346,7 @@ export const timeline: TimelineEntry[] = [
       "Mentored students taking pre-calculus and chemistry during transition",
       "Coordinated events, tutoring sessions, and socials",
     ],
+    photos: [img95],
   },
   {
     kind: "experience",
@@ -426,7 +433,12 @@ export const extracurriculars: TimelineEntry[] = [
     side: "right",
     role: "Bonus Stanford Experiences!",
     location: "Stanford University",
-    bullets: [],
+    bullets: [
+      "Explored the campus steam tunnels",
+      "Full Moon on the Quad — a Stanford tradition",
+      "Late nights with friends in the teaching labs",
+    ],
+    photos: [img97, img98, img99],
   },
 ];
 

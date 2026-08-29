@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Award, User } from "lucide-react";
 import { PageShell } from "@/components/project-tile";
-import { timeline, extracurriculars, leadership } from "@/content/timeline";
+import { timeline, extracurriculars } from "@/content/timeline";
 import { headshot } from "@/content/projects";
 import { TimelineList } from "@/components/timeline-entry";
 
@@ -58,7 +58,7 @@ function Index() {
           <div className="mt-6 flex flex-wrap gap-3">
             <a
               href="mailto:sarahyribarren@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-[15px] font-medium text-primary-foreground shadow-[0_8px_20px_-8px_rgba(58,74,58,0.5)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_-8px_rgba(58,74,58,0.55)]"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-sage px-5 py-2.5 text-[15px] font-medium text-forest transition-colors duration-200 hover:border-primary/50 hover:bg-sage/70"
             >
               Email
             </a>
@@ -66,7 +66,7 @@ function Index() {
               href="https://www.linkedin.com/in/sarah-yribarren/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-forest px-5 py-2.5 text-[15px] font-medium text-cream shadow-[0_8px_20px_-8px_rgba(58,74,58,0.5)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_-8px_rgba(58,74,58,0.55)]"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-sage px-5 py-2.5 text-[15px] font-medium text-forest transition-colors duration-200 hover:border-primary/50 hover:bg-sage/70"
             >
               LinkedIn <span aria-hidden>→</span>
             </a>
@@ -74,24 +74,12 @@ function Index() {
               href="https://stanford.digication.com/sarahyribarren-eportfolio/home"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-primary bg-sage px-5 py-2.5 text-[15px] font-medium text-forest shadow-[0_8px_20px_-8px_rgba(58,74,58,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_26px_-8px_rgba(58,74,58,0.4)]"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-sage px-5 py-2.5 text-[15px] font-medium text-forest transition-colors duration-200 hover:border-primary/50 hover:bg-sage/70"
             >
               Science Communication ePortfolio <span aria-hidden>→</span>
             </a>
           </div>
         </div>
-      </section>
-
-      {/* Leadership — compact, subtle */}
-      <section className="mt-14">
-        <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-muted-foreground/70">
-          Leadership
-        </p>
-        <ul className="space-y-1 text-[12px] leading-relaxed text-muted-foreground">
-          {leadership.map((l) => (
-            <li key={l.org}>{l.role}, {l.org}</li>
-          ))}
-        </ul>
       </section>
 
       {/* Timeline */}

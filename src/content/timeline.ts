@@ -131,11 +131,12 @@ export const timeline: TimelineEntry[] = [
     side: "right",
     role: "Master of Science in Earth Systems",
     location: "Stanford University",
-    dateRange: "Jan 2024 – Jun 2025",
+    dateRange: "Jan 2024 – Aug 2025",
     bullets: [
       "Interdisciplinary self-designed program with emphasis on Technology Supply Chains (Advisor: Scott Fendorf)",
     ],
     awards: ["Outstanding Service for the Earth Systems Program"],
+    leadershipRoles: ["Wellness Liaison (Stipend Role)"],
     photos: [img29, img83],
   },
   {
@@ -186,14 +187,6 @@ export const timeline: TimelineEntry[] = [
   },
 
   {
-    kind: "milestone",
-    side: "right",
-    role: "End of Tenure as President of Stanford's AIChE Chapter",
-    banner: "End of Tenure as President of Stanford's AIChE Chapter",
-    bannerColor: "green",
-    bullets: [],
-  },
-  {
     kind: "education",
     side: "left",
     role: "Bachelor of Science in Chemical Engineering",
@@ -205,6 +198,7 @@ export const timeline: TimelineEntry[] = [
       "Alumni Association Award of Excellence",
       "Cap & Gown Society Leader Award",
     ],
+    leadershipRoles: ["President of Stanford's AIChE Chapter (Junior and Senior Year)"],
     photos: [img93, img91],
   },
   {
@@ -300,7 +294,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "right",
+    side: "left",
     role: "Electrochemical Separations Researcher @ Tarpeh Lab",
     location: "Stanford University",
     dateRange: "Sep 2022 – Dec 2023",
@@ -314,7 +308,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "left",
+    side: "right",
     role: "Residential Assistant @ Ng Humanities House",
     location: "Stanford University",
     dateRange: "Sep 2022 – Jun 2023",
@@ -325,7 +319,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "right",
+    side: "left",
     role: "Nanoparticle Synthesis Researcher @ Cargnello Group",
     location: "Stanford University",
     dateRange: "Jun 2022 – Sep 2022",
@@ -336,16 +330,8 @@ export const timeline: TimelineEntry[] = [
     photos: [img67, img38, img86],
   },
   {
-    kind: "milestone",
-    side: "right",
-    role: "Beginning of Tenure as President of Stanford's Undergraduate AIChE Chapter",
-    banner: "Beginning of Tenure as President of Stanford's Undergraduate AIChE Chapter",
-    bannerColor: "green",
-    bullets: [],
-  },
-  {
     kind: "experience",
-    side: "left",
+    side: "right",
     role: "Residential Assistant @ Engineering Academy",
     location: "Stanford University",
     dateRange: "Jun 2022 – Aug 2022",
@@ -357,7 +343,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "right",
+    side: "left",
     role: "Bioengineering Researcher @ Endy Lab / iGEM",
     location: "Stanford University",
     dateRange: "May 2020 – Jun 2021",

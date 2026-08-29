@@ -29,7 +29,6 @@ const navGroups = [
     label: "Bonus",
     items: [
       { title: "Coursework", url: "/coursework", emoji: "📝" },
-      { title: "Photo Gallery", url: "/gallery", emoji: "📸" },
     ],
   },
 ];

@@ -72,6 +72,7 @@ export type TimelineCard = {
   awards?: string[];
   leadershipRoles?: string[];
   mutedRoles?: string[];
+  links?: { label: string; url: string }[];
   banner?: string;
   bannerColor?: "default" | "green";
 };
@@ -219,6 +220,9 @@ export const timeline: TimelineEntry[] = [
       "Took specific co-curricular courses, and completed digital ePortfolio",
     ],
     awards: ["with Distinction"],
+    links: [
+      { label: "ePortfolio", url: "https://stanford.digication.com/sarahyribarren-eportfolio/home" },
+    ],
     photos: [img92],
   },
   {
@@ -234,6 +238,10 @@ export const timeline: TimelineEntry[] = [
       "Conducted literature reviews, capital cost estimations, equipment sizing analysis",
       "Outcome: Techno-economic analysis indicated 2.8 years to breakeven, 3 years for payback, and 392.9% ROI netting >$200 million of profit over 10-years, producing 2000 tonnes of Li₂CO₃ per year",
     ],
+    links: [
+      { label: "Final Report", url: "https://drive.google.com/file/d/1CNYiRwq9Z3uGfxm36vzyUuoptc06sqEh/view?usp=sharing" },
+      { label: "Final Slide Deck", url: "https://drive.google.com/file/d/1iSU-2xwVs2Q45xDo9oMTQyoKLsqIhM6O/view?usp=sharing" },
+    ],
   },
   {
     kind: "experience",
@@ -244,6 +252,11 @@ export const timeline: TimelineEntry[] = [
     bullets: [
       "Synthesized polymer membranes for desalination from PET, tested with benchtop desalination setup",
       "Outcome: Developed greener synthesis method for desalination membranes by replacing NMP with Cyrene",
+    ],
+    links: [
+      { label: "Project Proposal", url: "https://drive.google.com/file/d/1_Aw3BWpNW_3CDEiQSdBwrp3szVNrfFy9/view?usp=sharing" },
+      { label: "Final Slide Deck", url: "https://drive.google.com/file/d/1y0xopeeSOrwK-dypi_Dp4ERGKD7YvypS/view?usp=sharing" },
+      { label: "Final Presentation", url: "https://drive.google.com/file/d/1SQ3MAjKC1deayANsTTfI-RqxgpgiLkPO/view?usp=sharing" },
     ],
     photos: [img23, img31, img49],
   },
@@ -256,6 +269,10 @@ export const timeline: TimelineEntry[] = [
     bullets: [
       "Engineered E. coli to biosynthesize fatty acid ethyl esters (FAEEs) as a renewable diesel-range biofuel",
       "Outcome: Quantified FAEE yield via extraction and GC-MS analysis across strain and culture conditions",
+    ],
+    links: [
+      { label: "Final Report", url: "https://drive.google.com/file/d/1b66zc_P3jdWkD9KKSSydYDGS707oDDTQ/view?usp=sharing" },
+      { label: "Final Slide Deck", url: "https://drive.google.com/file/d/1vUcQW3Ffg8diB6uSjV7iG2s_WieWYYIl/view?usp=sharing" },
     ],
     photos: [img48, img46, img47],
   },
@@ -311,6 +328,11 @@ export const timeline: TimelineEntry[] = [
       "Ran experiments using potentiostat & cyclic voltammetry, analysis with colorimetric flow-injection analysis (FIA)",
       "Outcome: Reported on effects of varying parameters on NH₄⁺ current efficiency to optimize annular cell operation",
     ],
+    links: [
+      { label: "Abstract", url: "https://iopscience.iop.org/article/10.1149/MA2023-01271763mtgabs" },
+      { label: "Mid-Year Update Slides", url: "https://drive.google.com/file/d/1gd5G-As0zuAPUBThoyxV2xGTZJWp0JFS/view?usp=sharing" },
+      { label: "Tableau Map", url: "https://public.tableau.com/app/profile/sarah.yribarren/viz/MapofTarpehLabContactsAroundtheWorldRefreshedDaily/Sheet1" },
+    ],
     photos: [img61, img63, img62],
   },
   {
@@ -334,6 +356,9 @@ export const timeline: TimelineEntry[] = [
     bullets: [
       "Synthesized high-entropy alloy (HEA) nanoparticles using Schlenk line synthesis techniques",
       "Outcome: Drew conclusions about mechanism of formation & influence of process variables on product",
+    ],
+    links: [
+      { label: "Final Poster", url: "https://drive.google.com/file/d/1WcEJ_tGeN_-AHlsAKoxaFNgxE5U0ArXZ/view?usp=sharing" },
     ],
     photos: [img67, img38, img86],
   },
@@ -361,6 +386,10 @@ export const timeline: TimelineEntry[] = [
       "Outcome: Earned an iGEM Gold Medal, a $40K translational research grant (Stanford Med Catalyst), and filed provisional patent US63104140",
     ],
     awards: ["Gold Medal @ iGEM Jamboree", "Best Education", "Nominated for Best Diagnostic"],
+    links: [
+      { label: "Website", url: "https://2020.igem.org/Team:Stanford" },
+      { label: "Poster", url: "https://2020.igem.org/Team:Stanford/Poster" },
+    ],
     photos: [img45, img43, img84],
   },
 ];

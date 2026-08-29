@@ -129,6 +129,22 @@ function Card({ entry }: { entry: TimelineCardType }) {
           ))}
         </div>
       )}
+
+      {entry.links && entry.links.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2 border-t border-border pt-4">
+          {entry.links.map((l) => (
+            <a
+              key={l.url}
+              href={l.url}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 rounded-full border border-border bg-background/60 px-3 py-1 text-[12px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              {l.label} <span aria-hidden>→</span>
+            </a>
+          ))}
+        </div>
+      )}
     </article>
   );
 }

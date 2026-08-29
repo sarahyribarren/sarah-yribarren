@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ResearchRouteImport } from './routes/research'
 import { Route as PhysicsRouteImport } from './routes/physics'
 import { Route as LawPolicyRouteImport } from './routes/law-policy'
-import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as EarthSystemsRouteImport } from './routes/earth-systems'
 import { Route as CourseworkRouteImport } from './routes/coursework'
 import { Route as CapstoneRouteImport } from './routes/capstone'
@@ -31,11 +30,6 @@ const PhysicsRoute = PhysicsRouteImport.update({
 const LawPolicyRoute = LawPolicyRouteImport.update({
   id: '/law-policy',
   path: '/law-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GalleryRoute = GalleryRouteImport.update({
-  id: '/gallery',
-  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EarthSystemsRoute = EarthSystemsRouteImport.update({
@@ -64,7 +58,6 @@ export interface FileRoutesByFullPath {
   '/capstone': typeof CapstoneRoute
   '/coursework': typeof CourseworkRoute
   '/earth-systems': typeof EarthSystemsRoute
-  '/gallery': typeof GalleryRoute
   '/law-policy': typeof LawPolicyRoute
   '/physics': typeof PhysicsRoute
   '/research': typeof ResearchRoute
@@ -74,7 +67,6 @@ export interface FileRoutesByTo {
   '/capstone': typeof CapstoneRoute
   '/coursework': typeof CourseworkRoute
   '/earth-systems': typeof EarthSystemsRoute
-  '/gallery': typeof GalleryRoute
   '/law-policy': typeof LawPolicyRoute
   '/physics': typeof PhysicsRoute
   '/research': typeof ResearchRoute
@@ -85,7 +77,6 @@ export interface FileRoutesById {
   '/capstone': typeof CapstoneRoute
   '/coursework': typeof CourseworkRoute
   '/earth-systems': typeof EarthSystemsRoute
-  '/gallery': typeof GalleryRoute
   '/law-policy': typeof LawPolicyRoute
   '/physics': typeof PhysicsRoute
   '/research': typeof ResearchRoute
@@ -97,7 +88,6 @@ export interface FileRouteTypes {
     | '/capstone'
     | '/coursework'
     | '/earth-systems'
-    | '/gallery'
     | '/law-policy'
     | '/physics'
     | '/research'
@@ -107,7 +97,6 @@ export interface FileRouteTypes {
     | '/capstone'
     | '/coursework'
     | '/earth-systems'
-    | '/gallery'
     | '/law-policy'
     | '/physics'
     | '/research'
@@ -117,7 +106,6 @@ export interface FileRouteTypes {
     | '/capstone'
     | '/coursework'
     | '/earth-systems'
-    | '/gallery'
     | '/law-policy'
     | '/physics'
     | '/research'
@@ -128,7 +116,6 @@ export interface RootRouteChildren {
   CapstoneRoute: typeof CapstoneRoute
   CourseworkRoute: typeof CourseworkRoute
   EarthSystemsRoute: typeof EarthSystemsRoute
-  GalleryRoute: typeof GalleryRoute
   LawPolicyRoute: typeof LawPolicyRoute
   PhysicsRoute: typeof PhysicsRoute
   ResearchRoute: typeof ResearchRoute
@@ -155,13 +142,6 @@ declare module '@tanstack/react-router' {
       path: '/law-policy'
       fullPath: '/law-policy'
       preLoaderRoute: typeof LawPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gallery': {
-      id: '/gallery'
-      path: '/gallery'
-      fullPath: '/gallery'
-      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/earth-systems': {
@@ -200,7 +180,6 @@ const rootRouteChildren: RootRouteChildren = {
   CapstoneRoute: CapstoneRoute,
   CourseworkRoute: CourseworkRoute,
   EarthSystemsRoute: EarthSystemsRoute,
-  GalleryRoute: GalleryRoute,
   LawPolicyRoute: LawPolicyRoute,
   PhysicsRoute: PhysicsRoute,
   ResearchRoute: ResearchRoute,

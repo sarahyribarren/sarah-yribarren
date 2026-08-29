@@ -1,8 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Award, User } from "lucide-react";
 import { PageShell } from "@/components/project-tile";
 import { timeline, extracurriculars, leadership } from "@/content/timeline";
 import { headshot } from "@/content/projects";
 import { TimelineList } from "@/components/timeline-entry";
+
+function BadgeLegend() {
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <span className="inline-flex items-center gap-1.5 rounded-full border border-[oklch(0.72_0.1_85)] bg-[oklch(0.93_0.05_88)] px-2.5 py-1 text-[11px] font-medium leading-none text-[oklch(0.4_0.08_70)]">
+        <Award className="h-3.5 w-3.5 shrink-0 text-[oklch(0.62_0.16_82)]" aria-hidden />
+        Awards & Honors
+      </span>
+      <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-sage px-2.5 py-1 text-[11px] font-medium leading-none text-forest">
+        <User className="h-3.5 w-3.5 shrink-0 text-primary" aria-hidden />
+        Leadership
+      </span>
+    </div>
+  );
+}
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -80,11 +96,9 @@ function Index() {
 
       {/* Timeline */}
       <section className="mt-14">
-        <div className="mb-6 flex items-baseline justify-between border-b border-border pb-3">
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-border pb-3">
           <h2 className="font-display text-3xl text-foreground">Timeline</h2>
-          <span className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-            2020 → present
-          </span>
+          <BadgeLegend />
         </div>
 
         <TimelineList entries={timeline} />

@@ -76,17 +76,6 @@ function Card({ entry }: { entry: TimelineCardType }) {
 
       <h3 className="mt-3 font-display text-2xl leading-tight text-foreground">{entry.role}</h3>
 
-      {entry.awards && entry.awards.length > 0 && (
-        <div className="mt-3 flex flex-col gap-1.5 rounded-md border border-amber-300/70 bg-amber-50 px-3 py-2">
-          {entry.awards.map((a, i) => (
-            <div key={i} className="flex items-start gap-2 text-[12px] font-medium leading-snug text-amber-900">
-              <Award className="mt-[1px] h-3.5 w-3.5 shrink-0 text-amber-500" aria-hidden />
-              <span>{a}</span>
-            </div>
-          ))}
-        </div>
-      )}
-
       {entry.description && (
         <p className="mt-2 text-[14px] leading-relaxed text-foreground/80">{entry.description}</p>
       )}
@@ -99,6 +88,20 @@ function Card({ entry }: { entry: TimelineCardType }) {
           </li>
         ))}
       </ul>
+
+      {entry.awards && entry.awards.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {entry.awards.map((a, i) => (
+            <span
+              key={i}
+              className="inline-flex items-center gap-1.5 rounded-full border border-[oklch(0.72_0.1_85)] bg-[oklch(0.93_0.05_88)] px-2.5 py-1 text-[11px] font-medium leading-none text-[oklch(0.4_0.08_70)]"
+            >
+              <Award className="h-3.5 w-3.5 shrink-0 text-[oklch(0.62_0.16_82)]" aria-hidden />
+              {a}
+            </span>
+          ))}
+        </div>
+      )}
     </article>
   );
 }

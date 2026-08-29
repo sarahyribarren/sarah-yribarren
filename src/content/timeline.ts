@@ -173,13 +173,11 @@ export const timeline: TimelineEntry[] = [
     role: "Bachelor of Science in Chemical Engineering",
     location: "Stanford University",
     dateRange: "Sep 2019 – Jun 2024",
-    bullets: [
-      "Notation in Science Communication Certificate, with Distinction",
-    ],
+    bullets: [],
     awards: [
-      "AIChE Distinguished Service Award (for role as President)",
-      "Alumni Association Award of Excellence (top 10% of leadership in graduating class)",
-      "Cap & Gown Society Leader Award (one of 10 women leaders honored annually at Stanford)",
+      "AIChE Distinguished Service Award",
+      "Alumni Association Award of Excellence",
+      "Cap & Gown Society Leader Award",
     ],
     photos: [img93, img91],
   },
@@ -193,7 +191,7 @@ export const timeline: TimelineEntry[] = [
       "Certificate through the Program for Writing & Rhetoric department",
       "Took specific science communication coursework, and completed a digital ePortfolio",
     ],
-    awards: ["Academic Distinction in Notation in Science Communication Program"],
+    awards: ["with Distinction"],
     photos: [img92],
   },
   {
@@ -308,6 +306,7 @@ export const timeline: TimelineEntry[] = [
       "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence.",
       "Outcome: Earned an iGEM Gold Medal, a $40K translational research grant (Stanford Med Catalyst), and filed provisional patent US63104140",
     ],
+    awards: ["Gold Medal @ iGEM Jamboree", "Best Education", "Nominated for Best Diagnostic"],
     photos: [img45, img43, img84],
   },
 ];

@@ -136,7 +136,7 @@ export const timeline: TimelineEntry[] = [
       "Interdisciplinary self-designed program with emphasis on Technology Supply Chains (Advisor: Scott Fendorf)",
     ],
     awards: ["Outstanding Service for the Earth Systems Program"],
-    leadershipRoles: ["Wellness Liaison (Stipend Role)"],
+    leadershipRoles: ["Wellness Liaison (Coterm)"],
     photos: [img29, img83],
   },
   {
@@ -198,7 +198,7 @@ export const timeline: TimelineEntry[] = [
       "Alumni Association Award of Excellence",
       "Cap & Gown Society Leader Award",
     ],
-    leadershipRoles: ["President of Stanford's AIChE Chapter (Junior and Senior Year)"],
+    leadershipRoles: ["President of Stanford's AIChE Chapter (Junior, Senior)"],
     photos: [img93, img91],
   },
   {
@@ -263,7 +263,7 @@ export const timeline: TimelineEntry[] = [
       "Designed and built a shoebox-sized car powered by a zinc-air battery, with a chemically-controlled stopping mechanism, integrated onto a 3-D printed chassis",
       "Outcome: First competition season was experimental and the car wasn't functional; the team walked away with critical engineering lessons that shaped a win the following year",
     ],
-    leadershipRoles: ["Founder & Captain"],
+    leadershipRoles: ["Founder (Junior)", "Coordinator (Senior)"],
     photos: [img34, img28, img04],
   },
   {
@@ -362,11 +362,12 @@ export const extracurriculars: TimelineEntry[] = [
     side: "left",
     role: "Section Leader @ Leland Stanford Junior University Marching Band (LSJUMB)",
     location: "Stanford University",
+    dateRange: "Sep 2022 – Jun 2025",
     bullets: [
       "Played tenor saxophone at football games and other athletic events",
       "Led section as Section Leader",
     ],
-    leadershipRoles: ["Section Leader"],
+    leadershipRoles: ["Section Leader (Senior Year)"],
     photos: [img22, img16, img50],
   },
   {
@@ -374,19 +375,21 @@ export const extracurriculars: TimelineEntry[] = [
     side: "right",
     role: "Captain & Coach @ Stanford Ethics Bowl",
     location: "Stanford University",
+    dateRange: "Sep 2019 – Mar 2025",
     bullets: [
-      "Team Captain — first year winning Regionals (virtual competition)",
-      "Became Coach — helped extend an ongoing 4-year CA champion streak",
-      "Also President for Stanford Practical Ethics Club (SPEC)",
+      "Competed for three years in a collaborative, debate-style competition focused on modeling civil discourse",
+      "Constructed and argued philosophical frameworks for wide variety of social, economic, political, and ethical issues",
+      "Outcome: team won CA Regionals as Team Captain, streak continued during time as Coach (now at 5-year win streak)",
     ],
-    leadershipRoles: ["Team Captain", "Coach"],
+    leadershipRoles: ["Team Captain (Sophomore)", "Coach (Junior, Coterm)"],
     photos: [img30, img24, img52],
   },
   {
     kind: "experience",
     side: "left",
-    role: "President @ AIChE (American Institute of Chemical Engineers)",
+    role: "Co-President @ Stanford's Undergraduate AIChE (American Institute of Chemical Engineers) Chapter",
     location: "Stanford University",
+    dateRange: "Sep 2022 – Jun 2024",
     bullets: [
       "Bi-annual activities fair recruiting",
       "Signature event — quarterly ChemE trivia for the undergraduate community",
@@ -417,6 +420,13 @@ export const extracurriculars: TimelineEntry[] = [
       "Explored the largest high-altitude geothermal geyser field in the Atacama Desert, Chile",
     ],
     photos: [img33, img77, img79],
+  },
+  {
+    kind: "experience",
+    side: "right",
+    role: "Bonus Stanford Experiences!",
+    location: "Stanford University",
+    bullets: [],
   },
 ];
 

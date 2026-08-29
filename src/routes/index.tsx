@@ -12,9 +12,9 @@ function BadgeLegend() {
         <Award className="h-3.5 w-3.5 shrink-0 text-[oklch(0.62_0.16_82)]" aria-hidden />
         Awards & Honors
       </span>
-      <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-sage px-2.5 py-1 text-[11px] font-medium leading-none text-forest">
-        <User className="h-3.5 w-3.5 shrink-0 text-primary" aria-hidden />
-        Leadership
+      <span className="inline-flex items-center gap-1.5 rounded-full border border-[oklch(0.72_0.1_145)] bg-[oklch(0.93_0.05_148)] px-2.5 py-1 text-[11px] font-medium leading-none text-[oklch(0.4_0.08_130)]">
+        <User className="h-3.5 w-3.5 shrink-0 text-[oklch(0.62_0.16_145)]" aria-hidden />
+        Leadership (Years In Role)
       </span>
     </div>
   );
@@ -33,9 +33,6 @@ function Index() {
           <div className="overflow-hidden rounded-lg border border-border bg-muted shadow-[0_20px_60px_-30px_rgba(58,74,58,0.4)]">
             <img src={headshot} alt="Sarah Yribarren" className="aspect-[4/5] w-full object-cover" />
           </div>
-          <p className="mt-2 text-center text-[11px] tracking-wide text-muted-foreground">
-            ChemE BS · Earth Systems MS
-          </p>
         </div>
 
         <div>

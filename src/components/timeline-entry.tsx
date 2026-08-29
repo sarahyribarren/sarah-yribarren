@@ -94,9 +94,9 @@ function Card({ entry }: { entry: TimelineCardType }) {
           {entry.leadershipRoles.map((r, i) => (
             <span
               key={i}
-              className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-sage px-2.5 py-1 text-[11px] font-medium leading-none text-forest"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[oklch(0.72_0.1_145)] bg-[oklch(0.93_0.05_148)] px-2.5 py-1 text-[11px] font-medium leading-none text-[oklch(0.4_0.08_130)]"
             >
-              <User className="h-3.5 w-3.5 shrink-0 text-primary" aria-hidden />
+              <User className="h-3.5 w-3.5 shrink-0 text-[oklch(0.62_0.16_145)]" aria-hidden />
               {r}
             </span>
           ))}

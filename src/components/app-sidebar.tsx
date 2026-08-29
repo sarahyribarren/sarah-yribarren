@@ -45,7 +45,7 @@ export function AppSidebar() {
             Sarah Yribarren
           </div>
           <div className="mt-2 text-[11px] tracking-wide text-muted-foreground">
-            ChemE BS · Earth Systems MS
+            Stanford · ChemE BS · Earth Systems MS
           </div>
         </Link>
       </SidebarHeader>

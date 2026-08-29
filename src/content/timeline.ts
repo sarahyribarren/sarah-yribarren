@@ -57,6 +57,7 @@ import img96 from "@/assets/photos/image96.jpg";
 import img97 from "@/assets/photos/image97.jpg";
 import img98 from "@/assets/photos/image98.jpg";
 import img99 from "@/assets/photos/image99.jpg";
+import img100 from "@/assets/photos/image100.jpg";
 
 export type TimelineCard = {
   kind: "education" | "experience" | "credential" | "milestone";
@@ -281,7 +282,7 @@ export const timeline: TimelineEntry[] = [
       "Oversaw safety of student projects after-hours, including handling of waste and mechanical/electrical equipment",
       "Proactively prevented dangerous situations, and managed uncertainties and emergencies (including once evacuating for a gas leak)",
     ],
-    photos: [img94],
+    photos: [img94, img99],
   },
   {
     kind: "experience",
@@ -435,10 +436,10 @@ export const extracurriculars: TimelineEntry[] = [
     location: "Stanford University",
     bullets: [
       "Explored the campus steam tunnels",
-      "Full Moon on the Quad — a Stanford tradition",
-      "Late nights with friends in the teaching labs",
+      "Fountain hopping around campus",
+      "Indoor rock climbing",
     ],
-    photos: [img97, img98, img99],
+    photos: [img97, img98, img100],
   },
 ];
 

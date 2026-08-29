@@ -81,7 +81,7 @@ function Index() {
 
       {/* Timeline */}
       <section className="mt-14">
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-b border-border pb-3">
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-y border-border py-3">
           <h2 className="font-display text-3xl text-foreground">Timeline</h2>
           <BadgeLegend />
         </div>
@@ -91,7 +91,7 @@ function Index() {
 
       {/* Extracurriculars & Bonus Content */}
       <section className="mt-14">
-        <div className="mb-6 flex items-baseline justify-between border-b border-border pb-3">
+        <div className="mb-6 flex items-baseline justify-between border-y border-border py-3">
           <h2 className="font-display text-3xl text-foreground">Extracurriculars & Bonus Content</h2>
         </div>
 

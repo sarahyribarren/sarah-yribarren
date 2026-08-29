@@ -61,7 +61,7 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Jun 2026 – Present",
     current: true,
     bullets: [
-      "Designing unit processes and factory layout for industrial process (scrap Cu → Cu rod)",
+      "Designing unit processes and factory layout for industrial process (scrap Cu → Cu rod) focusing on metallurgical refining",
       "Building PFDs and process simulations; running energy and mass balances",
       "Procuring process equipment, coordinating commissioning, writing safe SOPs",
       "Prolific building with AI systems (Claude, Gemini) to streamline research and factory workflow",
@@ -115,6 +115,7 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Jan 2024 – Jun 2025",
     bullets: [
       "Interdisciplinary masters program with emphasis on Technology Supply Chains",
+      "Received award for <i>Outstanding Service for the Earth Systems Program</i>"
     ],
     photos: [img29, img83],
   },
@@ -164,6 +165,7 @@ export const timeline: TimelineEntry[] = [
       "Interdisciplinary examination of human-environment interactions through the lenses of economics, policy, culture, history, and governance.",
     ],
   },
+
   {
     kind: "education",
     side: "left",
@@ -172,8 +174,23 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Sep 2019 – Jun 2024",
     bullets: [
       "Notation in Science Communication Certificate, with Distinction",
+      "Received <i>AIChE Distinguished Service</i> award for role as President",
+      "Received <i>Alumni Association Award of Excellence</i> for top 10% of leadership in graduating class",
+      "Received <i>Leader Award</i> from Cap & Gown Society, given annually to 10 women leaders at Stanford"
     ],
-    photos: [img92, img93, img91],
+    photos: [img93, img91],
+  },
+  {
+    kind: "education",
+    side: "left",
+    role: "Notation in Science Communication",
+    location: "Stanford University",
+    dateRange: "Sep 2022 – May 2024",
+    bullets: [
+      "Certificate through the Program for Writing & Rhetoric department",
+      "Took specific science communication coursework, and completed a digital ePortfolio",
+    ],
+    photos: [img92],
   },
   {
     kind: "experience",
@@ -221,7 +238,7 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Sep 2023 – Mar 2025",
     bullets: [
       "Oversaw safety of student projects after-hours, including handling of waste and mechanical/electrical equipment",
-      "Proactively prevented dangerous situations, and managed uncertainties and emergencies",
+      "Proactively prevented dangerous situations, and managed uncertainties and emergencies (including once evacuating for a gas leak)",
     ],
     photos: [img94],
   },
@@ -231,9 +248,9 @@ export const timeline: TimelineEntry[] = [
     role: "ChemE Car",
     location: "Stanford University",
     bullets: [
-      "Refounded Stanford's Chem-E-Car team as a newly registered VSO, recruiting and training a team from scratch",
-      "Designed and built a shoebox-sized car powered by a zinc-air battery with a chemical stopping mechanism, integrated onto a 3-D printed chassis",
-      "Outcome: First competition season was experimental and the car wasn't functional, but the team walked away with critical engineering lessons that shaped future seasons",
+      "Refounded Stanford's Chem-E-Car team as a newly registered VSO, recruited and trained a team from scratch, and obtained $7,000 annual grant",
+      "Designed and built a shoebox-sized car powered by a zinc-air battery, with a chemically-controlled stopping mechanism, integrated onto a 3-D printed chassis",
+      "Outcome: First competition season was experimental and the car wasn't functional; the team walked away with critical engineering lessons that shaped a win the following year",
     ],
     photos: [img34, img28, img04],
   },
@@ -285,7 +302,7 @@ export const timeline: TimelineEntry[] = [
     dateRange: "May 2020 – Jun 2021",
     bullets: [
       "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence.",
-      "Earned an iGEM Gold Medal, a $40K Med Catalyst grant, and filed provisional patent US63104140.",
+      "Outcome: Earned an iGEM Gold Medal, a $40K translational research grant (Stanford Med Catalyst), and filed provisional patent US63104140",
     ],
     photos: [img45, img43, img84],
   },

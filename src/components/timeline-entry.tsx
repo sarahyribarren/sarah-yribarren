@@ -106,6 +106,21 @@ function Card({ entry }: { entry: TimelineCardType }) {
   );
 }
 
+function Banner({ text, color }: { text: string; color?: "default" | "green" }) {
+  const isGreen = color === "green";
+  return (
+    <span
+      className={
+        isGreen
+          ? "inline-block rounded-full border border-primary/40 bg-sage px-4 py-2 text-[13px] font-medium leading-snug text-forest"
+          : "inline-block rounded-full border border-border bg-background px-4 py-2 text-[13px] italic leading-snug text-muted-foreground"
+      }
+    >
+      {text}
+    </span>
+  );
+}
+
 function RailDot({ blink }: { blink?: boolean }) {
   return (
     <span className="relative flex h-3 w-3">
@@ -134,6 +149,7 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
           const tiltStart = tiltCounter;
           tiltCounter += Math.max(photos.length, 0);
           const cardLeft = entry.side === "left";
+          const isMilestone = entry.kind === "milestone";
 
           return (
             <li key={i} className="relative">
@@ -148,12 +164,30 @@ export function TimelineList({ entries }: { entries: TimelineEntry[] }) {
 
                 {/* Mobile stacked layout */}
                 <div className="pl-12 md:hidden">
-                  <MobilePhoto entry={entry} tiltStart={tiltStart} />
-                  <Card entry={entry} />
+                  {isMilestone ? (
+                    <Banner text={entry.banner ?? entry.role} color={entry.bannerColor} />
+                  ) : (
+                    <>
+                      <MobilePhoto entry={entry} tiltStart={tiltStart} />
+                      <Card entry={entry} />
+                    </>
+                  )}
                 </div>
 
                 {/* Desktop layout */}
-                {photos.length > 0 ? (
+                {isMilestone ? (
+                  cardLeft ? (
+                    <div className="relative hidden md:block md:pr-[calc(50%+2.5rem)]">
+                      <span aria-hidden className="absolute right-1/2 top-[13px] h-px w-10 bg-border" />
+                      <Banner text={entry.banner ?? entry.role} color={entry.bannerColor} />
+                    </div>
+                  ) : (
+                    <div className="relative hidden md:block md:pl-[calc(50%+2.5rem)]">
+                      <span aria-hidden className="absolute left-1/2 top-[13px] h-px w-10 bg-border" />
+                      <Banner text={entry.banner ?? entry.role} color={entry.bannerColor} />
+                    </div>
+                  )
+                ) : photos.length > 0 ? (
                   <div className="hidden md:grid md:grid-cols-2 md:gap-10">
                     {cardLeft ? (
                       <>

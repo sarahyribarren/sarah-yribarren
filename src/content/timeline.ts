@@ -1,7 +1,12 @@
 import img04 from "@/assets/photos/image04.jpg";
+import img06 from "@/assets/photos/image06.jpg";
+import img16 from "@/assets/photos/image16.jpg";
+import img22 from "@/assets/photos/image22.jpg";
 import img23 from "@/assets/photos/image23.jpg";
+import img24 from "@/assets/photos/image24.jpg";
 import img28 from "@/assets/photos/image28.jpg";
 import img29 from "@/assets/photos/image29.jpg";
+import img30 from "@/assets/photos/image30.jpg";
 import img31 from "@/assets/photos/image31.jpg";
 import img34 from "@/assets/photos/image34.jpg";
 import img38 from "@/assets/photos/image38.jpg";
@@ -13,6 +18,10 @@ import img46 from "@/assets/photos/image46.jpg";
 import img47 from "@/assets/photos/image47.jpg";
 import img48 from "@/assets/photos/image48.jpg";
 import img49 from "@/assets/photos/image49.jpg";
+import img50 from "@/assets/photos/image50.jpg";
+import img52 from "@/assets/photos/image52.jpg";
+import img53 from "@/assets/photos/image53.jpg";
+import img54 from "@/assets/photos/image54.jpg";
 import img57 from "@/assets/photos/image57.jpg";
 import img58 from "@/assets/photos/image58.jpg";
 import img59 from "@/assets/photos/image59.jpg";
@@ -39,7 +48,7 @@ import img93 from "@/assets/photos/image93.jpg";
 import img94 from "@/assets/photos/image94.jpg";
 
 export type TimelineCard = {
-  kind: "education" | "experience" | "credential";
+  kind: "education" | "experience" | "credential" | "milestone";
   side: "left" | "right";
   role: string;
   location?: string;
@@ -49,6 +58,8 @@ export type TimelineCard = {
   photos?: string[];
   current?: boolean;
   awards?: string[];
+  banner?: string;
+  bannerColor?: "default" | "green";
 };
 
 export type TimelineEntry = TimelineCard;
@@ -115,8 +126,7 @@ export const timeline: TimelineEntry[] = [
     location: "Stanford University",
     dateRange: "Jan 2024 – Jun 2025",
     bullets: [
-      "Interdisciplinary self-designed program with emphasis on Technology Supply Chains",
-      "Advisor: Dr. Scott Fendorf",
+      "Interdisciplinary self-designed program with emphasis on Technology Supply Chains (Advisor: Scott Fendorf)",
     ],
     awards: ["Outstanding Service for the Earth Systems Program"],
     photos: [img29, img83],
@@ -145,8 +155,8 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "right",
-    role: "Environmental Leadership Forum (FUEL) @ TomKat Center",
+    side: "left",
+    role: "Environmental Leadership Forum @ TomKat Center",
     location: "Stanford University",
     dateRange: "Jan 2025 – Mar 2025",
     bullets: [
@@ -168,6 +178,13 @@ export const timeline: TimelineEntry[] = [
     ],
   },
 
+  {
+    kind: "milestone",
+    side: "right",
+    role: "End of Tenure as President of Stanford's AIChE Chapter",
+    banner: "End of Tenure as President of Stanford's AIChE Chapter",
+    bullets: [],
+  },
   {
     kind: "education",
     side: "left",
@@ -234,8 +251,29 @@ export const timeline: TimelineEntry[] = [
     photos: [img48, img46, img47],
   },
   {
+    kind: "milestone",
+    side: "right",
+    role: "Elected President of Stanford's Undergraduate AIChE Chapter",
+    banner: "Elected President of Stanford's Undergraduate AIChE Chapter",
+    bannerColor: "green",
+    bullets: [],
+  },
+  {
     kind: "experience",
     side: "right",
+    role: "ChemE Car",
+    location: "Stanford University",
+    dateRange: "Sep 2023 – Mar 2025",
+    bullets: [
+      "Refounded Stanford's Chem-E-Car team as a newly registered VSO, recruited and trained a team from scratch, and obtained $7,000 annual grant",
+      "Designed and built a shoebox-sized car powered by a zinc-air battery, with a chemically-controlled stopping mechanism, integrated onto a 3-D printed chassis",
+      "Outcome: First competition season was experimental and the car wasn't functional; the team walked away with critical engineering lessons that shaped a win the following year",
+    ],
+    photos: [img34, img28, img04],
+  },
+  {
+    kind: "experience",
+    side: "left",
     role: "Lab Safety Officer @ Uytengsu Teaching Labs",
     location: "Stanford University",
     dateRange: "Sep 2023 – Mar 2025",
@@ -244,19 +282,6 @@ export const timeline: TimelineEntry[] = [
       "Proactively prevented dangerous situations, and managed uncertainties and emergencies (including once evacuating for a gas leak)",
     ],
     photos: [img94],
-  },
-  {
-    kind: "experience",
-    side: "right",
-    role: "ChemE Car",
-    location: "Stanford University",
-    dateRange: "Oct 2023 – Mar 2025",
-    bullets: [
-      "Refounded Stanford's Chem-E-Car team as a newly registered VSO, recruited and trained a team from scratch, and obtained $7,000 annual grant",
-      "Designed and built a shoebox-sized car powered by a zinc-air battery, with a chemically-controlled stopping mechanism, integrated onto a 3-D printed chassis",
-      "Outcome: First competition season was experimental and the car wasn't functional; the team walked away with critical engineering lessons that shaped a win the following year",
-    ],
-    photos: [img34, img28, img04],
   },
   {
     kind: "experience",
@@ -273,8 +298,20 @@ export const timeline: TimelineEntry[] = [
     photos: [img81],
   },
   {
-    kind: "experience",
+    kind: "education",
     side: "left",
+    role: "\"Understand Energy\" Course",
+    location: "Stanford University",
+    dateRange: "Sep 2022 – Dec 2023",
+    bullets: [
+      "Took field trips to a decommissioned nuclear plant, The Geysers geothermal power plant, and Shasta Dam",
+      "Made a big impact in my intellectual journey by fostering interest in energy technologies and industries",
+    ],
+    photos: [img06, img53, img54],
+  },
+  {
+    kind: "experience",
+    side: "right",
     role: "Electrochemical Separations Researcher @ Tarpeh Lab",
     location: "Stanford University",
     dateRange: "Sep 2022 – Dec 2023",
@@ -288,7 +325,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "right",
+    side: "left",
     role: "Residential Assistant @ Ng Humanities House",
     location: "Stanford University",
     dateRange: "Sep 2022 – Jun 2023",
@@ -299,7 +336,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "left",
+    side: "right",
     role: "Nanoparticle Synthesis Researcher @ Cargnello Group",
     location: "Stanford University",
     dateRange: "Jun 2022 – Sep 2022",
@@ -311,7 +348,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "right",
+    side: "left",
     role: "Residential Assistant @ Engineering Academy",
     location: "Stanford University",
     dateRange: "Jun 2022 – Aug 2022",
@@ -323,7 +360,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "left",
+    side: "right",
     role: "Bioengineering Researcher @ Endy Lab / iGEM",
     location: "Stanford University",
     dateRange: "May 2020 – Jun 2021",
@@ -333,6 +370,31 @@ export const timeline: TimelineEntry[] = [
     ],
     awards: ["Gold Medal @ iGEM Jamboree", "Best Education", "Nominated for Best Diagnostic"],
     photos: [img45, img43, img84],
+  },
+];
+
+export const extracurriculars: TimelineEntry[] = [
+  {
+    kind: "experience",
+    side: "left",
+    role: "Section Leader @ Leland Stanford Junior University Marching Band (LSJUMB)",
+    location: "Stanford University",
+    bullets: [
+      "Played tenor saxophone at football games and other athletic events",
+      "Led section as Section Leader",
+    ],
+    photos: [img22, img16, img50],
+  },
+  {
+    kind: "experience",
+    side: "right",
+    role: "Captain & Coach @ Stanford Ethics Bowl",
+    location: "Stanford University",
+    bullets: [
+      "Team Captain — first year winning Regionals (virtual competition)",
+      "Became Coach — helped extend an ongoing 4-year CA champion streak",
+    ],
+    photos: [img30, img24, img52],
   },
 ];
 

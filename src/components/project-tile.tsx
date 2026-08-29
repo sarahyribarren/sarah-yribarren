@@ -41,13 +41,13 @@ export function ProjectGrid({ children }: { children: React.ReactNode }) {
 
 export function CourseTile({ course }: { course: Course }) {
   return (
-    <article className="flex items-start justify-between gap-2 rounded-md border border-border bg-card px-3.5 py-3">
+    <article className="flow-root rounded-md border border-border bg-card px-3.5 py-3">
       <h3 className="font-display text-[16px] leading-snug text-foreground">
         {course.title}
+        <span className="float-right ml-2 mt-[3px] shrink-0 whitespace-nowrap rounded-full border border-border bg-background px-2 py-0.5 text-[10px] uppercase tracking-[0.1em] text-muted-foreground">
+          {course.code}
+        </span>
       </h3>
-      <span className="shrink-0 whitespace-nowrap rounded-full border border-border bg-background px-2 py-0.5 text-[10px] uppercase tracking-[0.1em] text-muted-foreground">
-        {course.code}
-      </span>
     </article>
   );
 }

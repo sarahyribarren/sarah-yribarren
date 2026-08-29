@@ -299,6 +299,29 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
+    role: "Residential Assistant @ Engineering Academy",
+    location: "Stanford University",
+    dateRange: "Jun 2022 – Aug 2022",
+    bullets: [
+      "Stanford Summer Engineering Academy (SSEA) was designed for pre-frosh from low-income and/or first-generation backgrounds",
+      "Mentored students taking pre-calculus and chemistry during transition",
+      "Coordinated events, tutoring sessions, and socials",
+    ],
+  },
+  {
+    kind: "experience",
+    side: "left",
+    role: "Residential Assistant @ Ng Humanities House",
+    location: "Stanford University",
+    dateRange: "Sep 2022 – Jun 2023",
+    bullets: [
+      "Coordinated humanities-themed events for students (e.g. guest speakers, field trips)",
+      "Managed building issues and resident conflicts throughout the year",
+    ],
+  },
+  {
+    kind: "experience",
+    side: "left",
     role: "Bioengineering Researcher @ Endy Lab / iGEM",
     location: "Stanford University",
     dateRange: "May 2020 – Jun 2021",

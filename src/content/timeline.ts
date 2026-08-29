@@ -104,7 +104,7 @@ export const timeline: TimelineEntry[] = [
     bullets: [
       "Completed final course for degree: \"Chile's Pathway to a Sustainable Future\"",
       "Engaged with guest lecturers on a wide range of urban/rural sustainability topics",
-      "Field trips to marine and agricultural research centers, hydro and biogas power plants, and more.",
+      "Field trips to marine and agricultural research centers, hydro and biogas power plants, and more",
     ],
     photos: [img60, img59, img58],
   },
@@ -128,7 +128,7 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Mar 2025 – Jun 2025",
     bullets: [
       "\"Fundamentals of Renewable Power\"",
-      "Survey course deep-diving into engineering and related issues for wind, solar, biomass, geothermal, tidal and wave power technologies.",
+      "Survey course deep-diving into engineering and related issues for wind, solar, biomass, geothermal, tidal and wave power technologies",
     ],
   },
   {
@@ -139,7 +139,7 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Mar 2025 – Jun 2025",
     bullets: [
       "\"Will Technology Save the World?: Environmental Ethics and Techno-Optimism\"",
-      "Interdisciplinary course teaching applied environmental ethics and critical analysis of the risks, benefits, and societal impacts of technological solutions to environmental problems.",
+      "Interdisciplinary course teaching applied environmental ethics and critical analysis of the risks, benefits, and societal impacts of technological solutions to environmental problems",
     ],
   },
   {
@@ -163,7 +163,7 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Sep 2024 – Dec 2024",
     bullets: [
       "\"Human Society and Environmental Change\"",
-      "Interdisciplinary examination of human-environment interactions through the lenses of economics, policy, culture, history, and governance.",
+      "Interdisciplinary examination of human-environment interactions through the lenses of economics, policy, culture, history, and governance",
     ],
   },
 
@@ -303,7 +303,7 @@ export const timeline: TimelineEntry[] = [
     location: "Stanford University",
     dateRange: "May 2020 – Jun 2021",
     bullets: [
-      "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence.",
+      "Engineered B. subtilis to fluoresce upon detecting a specific DNA sequence",
       "Outcome: Earned an iGEM Gold Medal, a $40K translational research grant (Stanford Med Catalyst), and filed provisional patent US63104140",
     ],
     awards: ["Gold Medal @ iGEM Jamboree", "Best Education", "Nominated for Best Diagnostic"],

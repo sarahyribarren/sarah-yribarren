@@ -8,6 +8,7 @@ import img28 from "@/assets/photos/image28.jpg";
 import img29 from "@/assets/photos/image29.jpg";
 import img30 from "@/assets/photos/image30.jpg";
 import img31 from "@/assets/photos/image31.jpg";
+import img33 from "@/assets/photos/image33.jpg";
 import img34 from "@/assets/photos/image34.jpg";
 import img38 from "@/assets/photos/image38.jpg";
 import img39 from "@/assets/photos/image39.jpg";
@@ -19,9 +20,12 @@ import img47 from "@/assets/photos/image47.jpg";
 import img48 from "@/assets/photos/image48.jpg";
 import img49 from "@/assets/photos/image49.jpg";
 import img50 from "@/assets/photos/image50.jpg";
+import img51 from "@/assets/photos/image51.jpg";
 import img52 from "@/assets/photos/image52.jpg";
 import img53 from "@/assets/photos/image53.jpg";
 import img54 from "@/assets/photos/image54.jpg";
+import img55 from "@/assets/photos/image55.jpg";
+import img56 from "@/assets/photos/image56.jpg";
 import img57 from "@/assets/photos/image57.jpg";
 import img58 from "@/assets/photos/image58.jpg";
 import img59 from "@/assets/photos/image59.jpg";
@@ -36,6 +40,8 @@ import img72 from "@/assets/photos/image72.jpg";
 import img73 from "@/assets/photos/image73.jpg";
 import img74 from "@/assets/photos/image74.jpg";
 import img76 from "@/assets/photos/image76.jpg";
+import img77 from "@/assets/photos/image77.jpg";
+import img79 from "@/assets/photos/image79.jpg";
 import img81 from "@/assets/photos/image81.jpg";
 import img82 from "@/assets/photos/image82.jpg";
 import img83 from "@/assets/photos/image83.jpg";
@@ -183,6 +189,7 @@ export const timeline: TimelineEntry[] = [
     side: "right",
     role: "End of Tenure as President of Stanford's AIChE Chapter",
     banner: "End of Tenure as President of Stanford's AIChE Chapter",
+    bannerColor: "green",
     bullets: [],
   },
   {
@@ -251,14 +258,6 @@ export const timeline: TimelineEntry[] = [
     photos: [img48, img46, img47],
   },
   {
-    kind: "milestone",
-    side: "right",
-    role: "Elected President of Stanford's Undergraduate AIChE Chapter",
-    banner: "Elected President of Stanford's Undergraduate AIChE Chapter",
-    bannerColor: "green",
-    bullets: [],
-  },
-  {
     kind: "experience",
     side: "right",
     role: "ChemE Car",
@@ -298,18 +297,6 @@ export const timeline: TimelineEntry[] = [
     photos: [img81],
   },
   {
-    kind: "education",
-    side: "left",
-    role: "\"Understand Energy\" Course",
-    location: "Stanford University",
-    dateRange: "Sep 2022 – Dec 2023",
-    bullets: [
-      "Took field trips to a decommissioned nuclear plant, The Geysers geothermal power plant, and Shasta Dam",
-      "Made a big impact in my intellectual journey by fostering interest in energy technologies and industries",
-    ],
-    photos: [img06, img53, img54],
-  },
-  {
     kind: "experience",
     side: "right",
     role: "Electrochemical Separations Researcher @ Tarpeh Lab",
@@ -345,6 +332,14 @@ export const timeline: TimelineEntry[] = [
       "Outcome: Drew conclusions about mechanism of formation & influence of process variables on product",
     ],
     photos: [img67, img38, img86],
+  },
+  {
+    kind: "milestone",
+    side: "right",
+    role: "Beginning of Tenure as President of Stanford's Undergraduate AIChE Chapter",
+    banner: "Beginning of Tenure as President of Stanford's Undergraduate AIChE Chapter",
+    bannerColor: "green",
+    bullets: [],
   },
   {
     kind: "experience",
@@ -395,6 +390,42 @@ export const extracurriculars: TimelineEntry[] = [
       "Became Coach — helped extend an ongoing 4-year CA champion streak",
     ],
     photos: [img30, img24, img52],
+  },
+  {
+    kind: "experience",
+    side: "left",
+    role: "President @ AIChE (American Institute of Chemical Engineers)",
+    location: "Stanford University",
+    bullets: [
+      "Bi-annual activities fair recruiting",
+      "Signature event — quarterly ChemE trivia for the undergraduate community",
+      "AIChE bonfire — one of many socials",
+    ],
+    photos: [img55, img51, img56],
+  },
+  {
+    kind: "education",
+    side: "right",
+    role: "\"Understand Energy\" Course",
+    location: "Stanford University",
+    dateRange: "Sep 2022 – Dec 2023",
+    bullets: [
+      "Took field trips to a decommissioned nuclear plant, The Geysers geothermal power plant, and Shasta Dam",
+      "Made a big impact in my intellectual journey by fostering interest in energy technologies and industries",
+    ],
+    photos: [img06, img53, img54],
+  },
+  {
+    kind: "experience",
+    side: "left",
+    role: "Bonus Abroad Experiences!",
+    location: "Bolivia 🇧🇴 · Peru 🇵🇪 · Chile 🇨🇱",
+    bullets: [
+      "Toured an active artisanal mine in Potosí, Bolivia",
+      "Visited the Maras Salt Mines in southeast Peru, overlooking evaporation ponds",
+      "Explored the largest high-altitude geothermal geyser field in the Atacama Desert, Chile",
+    ],
+    photos: [img33, img77, img79],
   },
 ];
 

@@ -115,7 +115,8 @@ export const timeline: TimelineEntry[] = [
     location: "Stanford University",
     dateRange: "Jan 2024 – Jun 2025",
     bullets: [
-      "Interdisciplinary masters program with emphasis on Technology Supply Chains",
+      "Interdisciplinary self-designed program with emphasis on Technology Supply Chains",
+      "Advisor: Dr. Scott Fendorf",
     ],
     awards: ["Outstanding Service for the Earth Systems Program"],
     photos: [img29, img83],
@@ -149,7 +150,7 @@ export const timeline: TimelineEntry[] = [
     location: "Stanford University",
     dateRange: "Jan 2025 – Mar 2025",
     bullets: [
-      "Visited crop and dairy farms to speak with farmers and ranchers (Marin and Salinas)",
+      "Visited crop and dairy farms to speak with farmers and ranchers",
       "Met with policymakers and lawyers at the Capitol in Sacramento to discuss agricultural policy",
       "Attended guest lectures from other stakeholders, e.g. former Head of CA Department of Water Resources",
     ],
@@ -189,7 +190,7 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Sep 2022 – May 2024",
     bullets: [
       "Certificate through the Program for Writing & Rhetoric department",
-      "Took specific science communication coursework, and completed a digital ePortfolio",
+      "Took specific co-curricular courses, and completed digital ePortfolio",
     ],
     awards: ["with Distinction"],
     photos: [img92],
@@ -249,6 +250,7 @@ export const timeline: TimelineEntry[] = [
     side: "right",
     role: "ChemE Car",
     location: "Stanford University",
+    dateRange: "Oct 2023 – Mar 2025",
     bullets: [
       "Refounded Stanford's Chem-E-Car team as a newly registered VSO, recruited and trained a team from scratch, and obtained $7,000 annual grant",
       "Designed and built a shoebox-sized car powered by a zinc-air battery, with a chemically-controlled stopping mechanism, integrated onto a 3-D printed chassis",
@@ -286,6 +288,17 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
+    side: "right",
+    role: "Residential Assistant @ Ng Humanities House",
+    location: "Stanford University",
+    dateRange: "Sep 2022 – Jun 2023",
+    bullets: [
+      "Coordinated humanities-themed events for students (e.g. guest speakers, field trips)",
+      "Managed building issues and resident conflicts throughout the year",
+    ],
+  },
+  {
+    kind: "experience",
     side: "left",
     role: "Nanoparticle Synthesis Researcher @ Cargnello Group",
     location: "Stanford University",
@@ -298,7 +311,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "experience",
-    side: "left",
+    side: "right",
     role: "Residential Assistant @ Engineering Academy",
     location: "Stanford University",
     dateRange: "Jun 2022 – Aug 2022",
@@ -306,17 +319,6 @@ export const timeline: TimelineEntry[] = [
       "Stanford Summer Engineering Academy (SSEA) was designed for pre-frosh from low-income and/or first-generation backgrounds",
       "Mentored students taking pre-calculus and chemistry during transition",
       "Coordinated events, tutoring sessions, and socials",
-    ],
-  },
-  {
-    kind: "experience",
-    side: "left",
-    role: "Residential Assistant @ Ng Humanities House",
-    location: "Stanford University",
-    dateRange: "Sep 2022 – Jun 2023",
-    bullets: [
-      "Coordinated humanities-themed events for students (e.g. guest speakers, field trips)",
-      "Managed building issues and resident conflicts throughout the year",
     ],
   },
   {

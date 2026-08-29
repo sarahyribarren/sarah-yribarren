@@ -32,10 +32,8 @@ function Index() {
             towards a more sustainable, equitable, and just world.
           </p>
           <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-foreground/80">
-            Welcome to my Stanford project portfolio! View in sidebar.
-          </p>
-          <p className="mt-1 max-w-xl text-[16px] leading-relaxed text-foreground/80">
-            Instead of reading my resume, check out the timeline below for a better experience.
+            Welcome to my Stanford portfolio! View my past projects grouped by topic in the
+            sidebar, and peruse a dynamic version of my resume below.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -91,8 +89,7 @@ function Index() {
             "My current position is as a Chemical Process Engineer at Red Metals, a copper refining startup in Charleston, SC. As one of the first hires, I have a lot of ownership, making design decisions, setting up process models, procuring and commissioning equipment, and transforming our factory from empty to production-scale.",
             "Before starting this job in June 2026, I spent 7 months in South America between August 2025 and March 2026. After finishing my final Stanford course studying abroad in Chile, I enrolled in a local Spanish school in Bolivia and volunteered for a renewable energy nonprofit in Peru.",
             "Before that, I was finishing my MS in Earth Systems, taking on interdisciplinary coursework focused on technology supply chains, and was a teaching assistant for three courses.",
-            "My BS is in Chemical Engineering, where I completed three substantial capstone projects senior year, plus junior/senior years as a Lab Safety Officer, ChemE Car team founder, and electrochemical separations researcher.",
-            "Two undergraduate summers were spent as a research assistant on a catalytic nanoparticle synthesis project, and as a process optimization intern at an early-stage climate tech startup. My first scientific research position was from May 2020 to June 2021, when I took a gap year during the pandemic, right after my freshman year, to work in a bioengineering lab at Stanford.",
+            "My BS is in Chemical Engineering, where I completed three substantial capstone projects senior year, plus junior/senior years as a Lab Safety Officer, ChemE Car team founder, and electrochemical separations researcher. Two undergraduate summers were spent as a research assistant on a catalytic nanoparticle synthesis project, and as a process optimization intern at an early-stage climate tech startup. My first scientific research position was from May 2020 to June 2021, when I took a gap year during the pandemic, right after my freshman year, to work in a bioengineering lab at Stanford.",
           ].map((line, i) => (
             <li key={i} className="flex gap-2.5 text-[14px] leading-relaxed text-foreground/80">
               <span aria-hidden className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-primary" />

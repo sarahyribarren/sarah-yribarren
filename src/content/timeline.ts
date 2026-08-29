@@ -398,6 +398,25 @@ export const extracurriculars: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
+    role: "Captain & Coach @ Stanford Ethics Bowl",
+    location: "Stanford University",
+    dateRange: "Sep 2019 – Mar 2025",
+    bullets: [
+      "Competed for three years in a collaborative, debate-style competition focused on modeling civil discourse",
+      "Constructed and argued philosophical frameworks for wide variety of social, economic, political, and ethical issues",
+      "Outcome: team won CA Regionals as Team Captain, streak continued during time as Coach (now at 5-year win streak)",
+      "Bonus Outcome: as Captain, was interviewed by Bulletin of Atomic Scientists for framework on ethics of science communication for the Doomsday Clock",
+    ],
+    leadershipRoles: ["Team Captain (Sophomore)", "Coach (Junior, Coterm)"],
+    mutedRoles: ["Competitor (Frosh, Gap)"],
+    links: [
+      { label: "Bulletin of the Atomic Scientists", url: "https://thebulletin.org/2022/06/some-disagree-that-it-is-100-seconds-to-midnight-these-undergrads-held-a-debate/" },
+    ],
+    photos: [img30, img24, img52],
+  },
+  {
+    kind: "experience",
+    side: "right",
     role: "Section Leader @ Leland Stanford Junior University Marching Band (LSJUMB)",
     location: "Stanford University",
     dateRange: "Sep 2022 – Jun 2025",
@@ -407,21 +426,6 @@ export const extracurriculars: TimelineEntry[] = [
     ],
     leadershipRoles: ["Section Leader (Senior)"],
     photos: [img22, img16, img50],
-  },
-  {
-    kind: "experience",
-    side: "right",
-    role: "Captain & Coach @ Stanford Ethics Bowl",
-    location: "Stanford University",
-    dateRange: "Sep 2019 – Mar 2025",
-    bullets: [
-      "Competed for three years in a collaborative, debate-style competition focused on modeling civil discourse",
-      "Constructed and argued philosophical frameworks for wide variety of social, economic, political, and ethical issues",
-      "Outcome: team won CA Regionals as Team Captain, streak continued during time as Coach (now at 5-year win streak)",
-    ],
-    leadershipRoles: ["Team Captain (Sophomore)", "Coach (Junior, Coterm)"],
-    mutedRoles: ["Competitor (Frosh, Gap)"],
-    photos: [img30, img24, img52],
   },
   {
     kind: "experience",

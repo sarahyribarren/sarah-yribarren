@@ -48,6 +48,7 @@ export type TimelineCard = {
   bullets: string[];
   photos?: string[];
   current?: boolean;
+  awards?: string[];
 };
 
 export type TimelineEntry = TimelineCard;
@@ -115,8 +116,8 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Jan 2024 – Jun 2025",
     bullets: [
       "Interdisciplinary masters program with emphasis on Technology Supply Chains",
-      "Received award for <i>Outstanding Service for the Earth Systems Program</i>"
     ],
+    awards: ["Outstanding Service for the Earth Systems Program"],
     photos: [img29, img83],
   },
   {
@@ -174,9 +175,11 @@ export const timeline: TimelineEntry[] = [
     dateRange: "Sep 2019 – Jun 2024",
     bullets: [
       "Notation in Science Communication Certificate, with Distinction",
-      "Received <i>AIChE Distinguished Service</i> award for role as President",
-      "Received <i>Alumni Association Award of Excellence</i> for top 10% of leadership in graduating class",
-      "Received <i>Leader Award</i> from Cap & Gown Society, given annually to 10 women leaders at Stanford"
+    ],
+    awards: [
+      "AIChE Distinguished Service Award (for role as President)",
+      "Alumni Association Award of Excellence (top 10% of leadership in graduating class)",
+      "Cap & Gown Society Leader Award (one of 10 women leaders honored annually at Stanford)",
     ],
     photos: [img93, img91],
   },
@@ -190,6 +193,7 @@ export const timeline: TimelineEntry[] = [
       "Certificate through the Program for Writing & Rhetoric department",
       "Took specific science communication coursework, and completed a digital ePortfolio",
     ],
+    awards: ["Academic Distinction in Notation in Science Communication Program"],
     photos: [img92],
   },
   {
@@ -306,14 +310,6 @@ export const timeline: TimelineEntry[] = [
     ],
     photos: [img45, img43, img84],
   },
-];
-
-export const awards = [
-  "AIChE Distinguished Service Award",
-  "Outstanding Service for the Earth Systems Program",
-  "Cap & Gown Society Leader Award",
-  "Alumni Association Award of Excellence",
-  "Academic Distinction in Notation in Science Communication Program",
 ];
 
 export const leadership = [

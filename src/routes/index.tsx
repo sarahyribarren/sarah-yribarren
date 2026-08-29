@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/project-tile";
-import { timeline, awards, leadership } from "@/content/timeline";
+import { timeline, leadership } from "@/content/timeline";
 import { headshot } from "@/content/projects";
 import { TimelineList } from "@/components/timeline-entry";
 
@@ -65,29 +65,16 @@ function Index() {
         </div>
       </section>
 
-      {/* Awards & Leadership — compact, subtle */}
-      <section className="mt-14 flex flex-wrap gap-x-16 gap-y-6">
-        <div>
-          <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-muted-foreground/70">
-            Awards & Honors
-          </p>
-          <ul className="space-y-1 text-[12px] leading-relaxed text-muted-foreground">
-            {awards.map((a) => (
-              <li key={a}>{a}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-muted-foreground/70">
-            Leadership
-          </p>
-          <ul className="space-y-1 text-[12px] leading-relaxed text-muted-foreground">
-            {leadership.map((l) => (
-              <li key={l.org}>{l.role}, {l.org}</li>
-            ))}
-          </ul>
-        </div>
+      {/* Leadership — compact, subtle */}
+      <section className="mt-14">
+        <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-muted-foreground/70">
+          Leadership
+        </p>
+        <ul className="space-y-1 text-[12px] leading-relaxed text-muted-foreground">
+          {leadership.map((l) => (
+            <li key={l.org}>{l.role}, {l.org}</li>
+          ))}
+        </ul>
       </section>
 
       {/* Timeline */}

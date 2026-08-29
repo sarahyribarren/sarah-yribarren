@@ -57,6 +57,10 @@ function MobilePhoto({ entry, tiltStart }: { entry: TimelineCardType; tiltStart:
 }
 
 function Card({ entry }: { entry: TimelineCardType }) {
+  const hasLeadershipRow =
+    (entry.leadershipRoles && entry.leadershipRoles.length > 0) ||
+    (entry.mutedRoles && entry.mutedRoles.length > 0);
+
   return (
     <article className="group rounded-lg border border-border bg-card p-6 transition-shadow duration-300 hover:shadow-[0_20px_50px_-25px_rgba(58,74,58,0.4)]">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[12px] text-muted-foreground">
@@ -89,14 +93,23 @@ function Card({ entry }: { entry: TimelineCardType }) {
         ))}
       </ul>
 
-      {entry.leadershipRoles && entry.leadershipRoles.length > 0 && (
+      {hasLeadershipRow && (
         <div className="mt-4 flex flex-wrap gap-2">
-          {entry.leadershipRoles.map((r, i) => (
+          {entry.leadershipRoles?.map((r, i) => (
             <span
-              key={i}
+              key={`lr-${i}`}
               className="inline-flex items-center gap-1.5 rounded-full border border-[oklch(0.72_0.1_145)] bg-[oklch(0.93_0.05_148)] px-2.5 py-1 text-[11px] font-medium leading-none text-[oklch(0.4_0.08_130)]"
             >
               <User className="h-3.5 w-3.5 shrink-0 text-[oklch(0.62_0.16_145)]" aria-hidden />
+              {r}
+            </span>
+          ))}
+          {entry.mutedRoles?.map((r, i) => (
+            <span
+              key={`mr-${i}`}
+              className="inline-flex items-center gap-1.5 rounded-full border border-[oklch(0.72_0.01_260)] bg-[oklch(0.92_0.01_260)] px-2.5 py-1 text-[11px] font-medium leading-none text-[oklch(0.4_0.01_260)]"
+            >
+              <User className="h-3.5 w-3.5 shrink-0 text-[oklch(0.55_0.01_260)]" aria-hidden />
               {r}
             </span>
           ))}
@@ -104,7 +117,7 @@ function Card({ entry }: { entry: TimelineCardType }) {
       )}
 
       {entry.awards && entry.awards.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className={`${hasLeadershipRow ? "mt-2" : "mt-4"} flex flex-wrap gap-2`}>
           {entry.awards.map((a, i) => (
             <span
               key={i}

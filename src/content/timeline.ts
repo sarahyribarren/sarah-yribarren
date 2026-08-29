@@ -71,6 +71,7 @@ export type TimelineCard = {
   current?: boolean;
   awards?: string[];
   leadershipRoles?: string[];
+  mutedRoles?: string[];
   banner?: string;
   bannerColor?: "default" | "green";
 };
@@ -139,7 +140,7 @@ export const timeline: TimelineEntry[] = [
     location: "Stanford University",
     dateRange: "Jan 2024 – Aug 2025",
     bullets: [
-      "Interdisciplinary self-designed program with emphasis on Technology Supply Chains (Advisor: Scott Fendorf)",
+      "Interdisciplinary self-designed program with emphasis on Technology Supply Chains (Advisor: Scott Fendorf) - Coterminal Degree",
     ],
     awards: ["Outstanding Service for the Earth Systems Program"],
     leadershipRoles: ["Wellness Liaison (Coterm)"],
@@ -375,7 +376,7 @@ export const extracurriculars: TimelineEntry[] = [
       "Played tenor saxophone at football games and other athletic events",
       "Led section as Section Leader",
     ],
-    leadershipRoles: ["Section Leader (Senior Year)"],
+    leadershipRoles: ["Section Leader (Senior)"],
     photos: [img22, img16, img50],
   },
   {
@@ -390,6 +391,7 @@ export const extracurriculars: TimelineEntry[] = [
       "Outcome: team won CA Regionals as Team Captain, streak continued during time as Coach (now at 5-year win streak)",
     ],
     leadershipRoles: ["Team Captain (Sophomore)", "Coach (Junior, Coterm)"],
+    mutedRoles: ["Competitor (Frosh, Gap)"],
     photos: [img30, img24, img52],
   },
   {

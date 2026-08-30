@@ -108,7 +108,7 @@ export const courseworkCategories: CourseCategory[] = [
       },
       {
         title: "Law and Governance in ESG Strategy",
-        code: "LAW 1068",
+        code: "LAW 1088",
         links: [{ label: "Paper", url: "https://drive.google.com/file/d/1L_0i-XxJb6rFX9zVQ93Y5GH59k-pZbtf/view?usp=sharing" }],
       },
       { title: "Elements of Policy Analysis", code: "LAW 7846" },

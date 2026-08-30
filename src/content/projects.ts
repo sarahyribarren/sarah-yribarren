@@ -116,7 +116,7 @@ export const physicsProjects: Project[] = [
   },
   {
     title: "Techno-Economic Analysis of the Microbial Production of PHB",
-    subtitle: "CHEMENG 85Q: Chemical Engineering for Sustainability",
+    subtitle: "CHEMENG 65Q: Chemical Engineering for Sustainability",
     image: img11,
     links: [{ label: "Techno-Economic Analysis", url: "https://drive.google.com/file/d/1ZvaIr7vBD53NhKSqDwkf-HYrYbwTE6Ka/view?usp=sharing" }],
   },

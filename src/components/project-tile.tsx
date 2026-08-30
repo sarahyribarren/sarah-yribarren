@@ -42,22 +42,22 @@ export function ProjectGrid({ children }: { children: React.ReactNode }) {
 export function CourseTile({ course }: { course: Course }) {
   return (
     <article className="flow-root rounded-md border border-border bg-card px-3.5 py-3">
-      <h3 className="font-display text-[16px] leading-snug text-foreground">
+      <h3 className="font-body text-[14px] font-medium leading-snug text-foreground">
         {course.title}
-        <span className="float-right ml-2 mt-[3px] shrink-0 whitespace-nowrap rounded-full border border-border bg-background px-2 py-0.5 text-[10px] uppercase tracking-[0.1em] text-muted-foreground">
+        <span className="float-right ml-2 mt-[1px] shrink-0 whitespace-nowrap rounded-full border border-primary/40 bg-sage px-2 py-0.5 font-body text-[10px] font-medium uppercase tracking-[0.1em] text-forest">
           {course.code}
         </span>
       </h3>
 
       {course.links && course.links.length > 0 && (
-        <div className="mt-2 flex flex-wrap gap-1.5">
+        <div className="mt-2 flex flex-wrap gap-1.5 border-t border-border pt-2">
           {course.links.map((l) => (
             <a
               key={l.url}
               href={l.url}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 rounded-full border border-border bg-background/60 px-2 py-0.5 text-[10px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-sage px-2 py-0.5 text-[10px] font-medium text-forest transition-colors hover:border-primary hover:bg-sage/70"
             >
               {l.label} <span aria-hidden>→</span>
             </a>

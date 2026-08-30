@@ -13,7 +13,7 @@ export type CourseCategory = {
 
 export const courseworkCategories: CourseCategory[] = [
   {
-    title: "🧪 Chemical Engineering",
+    title: "Chemical Engineering",
     courses: [
       { title: "Introduction to Chemical Engineering", code: "CHEMENG 20" },
       {
@@ -58,7 +58,7 @@ export const courseworkCategories: CourseCategory[] = [
     ],
   },
   {
-    title: "🌍 Interdisciplinary Earth and Environmental Sciences",
+    title: "Interdisciplinary Earth and Environmental Sciences",
     courses: [
       { title: "Understand Energy", code: "EARTHSYS 103" },
       { title: "Environmental Science and Technology", code: "CEE 70" },
@@ -87,7 +87,7 @@ export const courseworkCategories: CourseCategory[] = [
     ],
   },
   {
-    title: "⚗️ Chemistry",
+    title: "Chemistry",
     courses: [
       { title: "Chemical Principles: From Molecules to Solids", code: "CHEM 31M" },
       { title: "Structure and Reactivity of Organic Molecules", code: "CHEM 33" },
@@ -95,7 +95,7 @@ export const courseworkCategories: CourseCategory[] = [
     ],
   },
   {
-    title: "⚖️ Law and Policy",
+    title: "Law and Policy",
     courses: [
       { title: "Natural Resources Law & Policy", code: "LAW 2506" },
       {
@@ -120,7 +120,7 @@ export const courseworkCategories: CourseCategory[] = [
     ],
   },
   {
-    title: "📐 Physics and Math",
+    title: "Physics and Math",
     courses: [
       { title: "Mechanics", code: "PHYSICS 41E" },
       { title: "Electricity & Magnetism", code: "PHYSICS 43" },
@@ -139,7 +139,7 @@ export const courseworkCategories: CourseCategory[] = [
     ],
   },
   {
-    title: "🧬 Biology and Bioengineering",
+    title: "Biology and Bioengineering",
     courses: [
       { title: "Biochemistry & Molecular Biology", code: "BIO 83" },
       { title: "Cell Biology", code: "BIO 86" },
@@ -148,7 +148,7 @@ export const courseworkCategories: CourseCategory[] = [
     ],
   },
   {
-    title: "✍️ Science Communication",
+    title: "Science Communication",
     courses: [
       { title: "Intermediate Writing: Introduction to Science Communication", code: "PWR 91NSC" },
       {

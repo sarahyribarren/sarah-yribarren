@@ -11,22 +11,19 @@ function slugify(title: string) {
 }
 
 function Page() {
-  const courseCount = courseworkCategories.reduce((sum, c) => sum + c.courses.length, 0);
-
   return (
     <PageShell>
-      <PageHeader title="Stanford Coursework" />
+      <PageHeader
+        title="Stanford Coursework"
+        blurb="Courses from my B.S. in Chemical Engineering and M.S. in Earth Systems, grouped by subject area."
+      />
 
-      <p className="-mt-6 mb-8 text-[12px] uppercase tracking-[0.2em] text-muted-foreground/70">
-        {courseCount} courses across {courseworkCategories.length} areas
-      </p>
-
-      <nav className="mb-12 flex flex-wrap gap-3">
+      <nav className="mb-12 flex flex-wrap gap-2">
         {courseworkCategories.map((category) => (
           <a
             key={category.title}
             href={`#${slugify(category.title)}`}
-            className="rounded-full border border-border bg-background px-4 py-2 text-[14px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+            className="rounded-full border border-border bg-background px-3 py-1 text-[11px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
           >
             {category.title}
           </a>
@@ -39,7 +36,7 @@ function Page() {
             <h2 className="mb-5 font-display text-2xl text-foreground border-b border-border pb-2">
               {category.title}
             </h2>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {category.courses.map((course) => (
                 <CourseTile key={course.code} course={course} />
               ))}

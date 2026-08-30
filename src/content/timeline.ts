@@ -75,6 +75,7 @@ export type TimelineCard = {
   leadershipRoles?: string[];
   mutedRoles?: string[];
   links?: { label: string; url: string }[];
+  orgUrl?: string;
   banner?: string;
   bannerColor?: "default" | "green";
 };
@@ -86,6 +87,7 @@ export const timeline: TimelineEntry[] = [
     kind: "experience",
     side: "right",
     role: "Chemical Engineer @ Red Metals",
+    orgUrl: "https://www.redmetals.com/",
     location: "Charleston, SC",
     dateRange: "Jun 2026 – Present",
     current: true,
@@ -101,6 +103,7 @@ export const timeline: TimelineEntry[] = [
     kind: "experience",
     side: "left",
     role: "Rural Electrification Project Engineer @ WindAid",
+    orgUrl: "https://www.windaid.org/",
     location: "Trujillo, La Libertad, Peru 🇵🇪",
     dateRange: "Nov 2025 – Jan 2026",
     bullets: [
@@ -113,7 +116,8 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "left",
-    role: "Spanish Language Intensive @ Local School",
+    role: "Spanish Language Intensive @ Inti Spanish School",
+    orgUrl: "https://www.intispanishschool.com/",
     location: "Sucre, Chuquisaca, Bolivia 🇧🇴",
     dateRange: "Sep 2025 – Nov 2025",
     bullets: [
@@ -175,6 +179,7 @@ export const timeline: TimelineEntry[] = [
     kind: "experience",
     side: "left",
     role: "Environmental Leadership Forum @ TomKat Center",
+    orgUrl: "https://tomkat.stanford.edu/",
     location: "Stanford University",
     dateRange: "Jan 2025 – Mar 2025",
     bullets: [
@@ -281,7 +286,8 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "experience",
     side: "right",
-    role: "ChemE Car",
+    role: "Founder @ Stanford ChemE Car",
+    orgUrl: "https://chemecar.stanford.edu/",
     location: "Stanford University",
     dateRange: "Sep 2023 – Mar 2025",
     bullets: [
@@ -308,6 +314,7 @@ export const timeline: TimelineEntry[] = [
     kind: "experience",
     side: "right",
     role: "Process Optimization Intern @ Savor",
+    orgUrl: "https://savor.it/",
     location: "San Jose, CA",
     dateRange: "Jun 2023 – Sep 2023",
     bullets: [
@@ -427,7 +434,7 @@ export const extracurriculars: TimelineEntry[] = [
       "Led section as Section Leader",
     ],
     leadershipRoles: ["Section Leader (Senior)"],
-    photos: [img22, img16, img50],
+    photos: [img50, img16, img22],
   },
   {
     kind: "experience",
@@ -455,6 +462,16 @@ export const extracurriculars: TimelineEntry[] = [
     photos: [img06, img53, img54],
   },
   {
+    kind: "education",
+    side: "left",
+    role: "Science of Soils",
+    location: "Stanford University",
+    bullets: [
+      "Dug soil pits and analyzed profiles for hands-on fieldwork (EARTHSYS 155)",
+    ],
+    photos: [img101],
+  },
+  {
     kind: "experience",
     side: "left",
     role: "Bonus Abroad Experiences!",
@@ -463,9 +480,9 @@ export const extracurriculars: TimelineEntry[] = [
       "Toured an active artisanal mine in Potosí, Bolivia",
       "Visited the Maras Salt Mines in southeast Peru, overlooking evaporation ponds",
       "Explored the largest high-altitude geothermal geyser field in the Atacama Desert, Chile",
-      "Dug soil pits and analyzed profiles for Science of Soils (EARTHSYS 155)",
+      "Climbed Zorro Glacier on Huayna Potosí outside of La Paz, Bolivia",
     ],
-    photos: [img33, img77, img79, img102, img101],
+    photos: [img33, img77, img79, img102],
   },
   {
     kind: "experience",

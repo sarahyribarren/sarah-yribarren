@@ -3,6 +3,27 @@ import type { TimelineCard as TimelineCardType, TimelineEntry } from "@/content/
 
 const TILTS = ["rotate-[-3deg]", "rotate-[2.5deg]", "rotate-[-2deg]", "rotate-[3deg]"];
 
+function renderRole(role: string, orgUrl?: string) {
+  if (!orgUrl) return role;
+  const atIndex = role.lastIndexOf(" @ ");
+  if (atIndex === -1) return role;
+  const prefix = role.slice(0, atIndex + 3);
+  const org = role.slice(atIndex + 3);
+  return (
+    <>
+      {prefix}
+      <a
+        href={orgUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="text-forest underline decoration-primary/50 underline-offset-2 transition-colors hover:decoration-primary"
+      >
+        {org}
+      </a>
+    </>
+  );
+}
+
 function PhotoStack({
   photos,
   tiltStart,
@@ -78,7 +99,9 @@ function Card({ entry }: { entry: TimelineCardType }) {
         )}
       </div>
 
-      <h3 className="mt-3 font-display text-2xl leading-tight text-foreground">{entry.role}</h3>
+      <h3 className="mt-3 font-display text-2xl leading-tight text-foreground">
+        {renderRole(entry.role, entry.orgUrl)}
+      </h3>
 
       {entry.description && (
         <p className="mt-2 text-[14px] leading-relaxed text-foreground/80">{entry.description}</p>

@@ -1,4 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
+import { History } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -12,7 +13,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-const topNav = [{ title: "Timeline", url: "/", emoji: "🕰️" }];
+const topNav = [{ title: "Timeline", url: "/", icon: History }];
 
 const navGroups = [
   {
@@ -54,7 +55,7 @@ export function AppSidebar() {
                   <SidebarMenuItem key={item.url}>
                     <SidebarMenuButton asChild isActive={isActive} className="font-body">
                       <Link to={item.url} className="flex items-center gap-3">
-                        <span className="text-sm w-4 text-center">{item.emoji}</span>
+                        <item.icon className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden />
                         <span className="text-[14px]">{item.title}</span>
                       </Link>
                     </SidebarMenuButton>

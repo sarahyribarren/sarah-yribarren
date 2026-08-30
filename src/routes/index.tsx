@@ -54,12 +54,6 @@ function Index() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
-              href="mailto:sarahyribarren@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-sage px-5 py-2.5 text-[15px] font-medium text-forest transition-colors duration-200 hover:border-primary/50 hover:bg-sage/70"
-            >
-              Email
-            </a>
-            <a
               href="https://www.linkedin.com/in/sarah-yribarren/"
               target="_blank"
               rel="noreferrer"

@@ -58,6 +58,7 @@ import img97 from "@/assets/photos/image97.jpg";
 import img98 from "@/assets/photos/image98.jpg";
 import img99 from "@/assets/photos/image99.jpg";
 import img100 from "@/assets/photos/image100.jpg";
+import imgAlaska from "@/assets/photos/alaska-glacier.jpg";
 
 export type TimelineCard = {
   kind: "education" | "experience" | "credential" | "milestone";
@@ -360,7 +361,7 @@ export const timeline: TimelineEntry[] = [
     links: [
       { label: "Final Poster", url: "https://drive.google.com/file/d/1WcEJ_tGeN_-AHlsAKoxaFNgxE5U0ArXZ/view?usp=sharing" },
     ],
-    photos: [img67, img38, img86],
+    photos: [img67, img86, img38],
   },
   {
     kind: "experience",
@@ -410,7 +411,7 @@ export const extracurriculars: TimelineEntry[] = [
     leadershipRoles: ["Team Captain (Sophomore)", "Coach (Junior, Coterm)"],
     mutedRoles: ["Competitor (Frosh, Gap)"],
     links: [
-      { label: "Bulletin of the Atomic Scientists", url: "https://thebulletin.org/2022/06/some-disagree-that-it-is-100-seconds-to-midnight-these-undergrads-held-a-debate/" },
+      { label: "Feature Interview by the Bulletin of Atomic Scientists", url: "https://thebulletin.org/2022/06/some-disagree-that-it-is-100-seconds-to-midnight-these-undergrads-held-a-debate/" },
     ],
     photos: [img30, img24, img52],
   },
@@ -438,7 +439,7 @@ export const extracurriculars: TimelineEntry[] = [
       "Signature event — quarterly ChemE trivia for the undergraduate community",
       "AIChE bonfire — one of many socials",
     ],
-    photos: [img55, img51, img56],
+    photos: [img56, img51, img55],
   },
   {
     kind: "education",
@@ -461,8 +462,9 @@ export const extracurriculars: TimelineEntry[] = [
       "Toured an active artisanal mine in Potosí, Bolivia",
       "Visited the Maras Salt Mines in southeast Peru, overlooking evaporation ponds",
       "Explored the largest high-altitude geothermal geyser field in the Atacama Desert, Chile",
+      "Studied glacial soils near Juneau, Alaska for Science of Soils (EARTHSYS 155)",
     ],
-    photos: [img33, img77, img79],
+    photos: [img33, img77, img79, imgAlaska],
   },
   {
     kind: "experience",

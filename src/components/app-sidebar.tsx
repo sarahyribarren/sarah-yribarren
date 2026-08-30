@@ -12,7 +12,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-const topNav = [{ title: "About", url: "/", emoji: "✿" }];
+const topNav = [{ title: "Timeline", url: "/", emoji: "🕰️" }];
 
 const navGroups = [
   {
@@ -23,11 +23,6 @@ const navGroups = [
       { title: "Physics & Technology", url: "/physics", emoji: "⚛️" },
       { title: "Earth Systems", url: "/earth-systems", emoji: "🌎" },
       { title: "Law, Policy & EJ", url: "/law-policy", emoji: "⚖️" },
-    ],
-  },
-  {
-    label: "Bonus",
-    items: [
       { title: "Coursework", url: "/coursework", emoji: "📝" },
     ],
   },

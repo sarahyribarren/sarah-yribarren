@@ -48,6 +48,22 @@ export function CourseTile({ course }: { course: Course }) {
           {course.code}
         </span>
       </h3>
+
+      {course.links && course.links.length > 0 && (
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {course.links.map((l) => (
+            <a
+              key={l.url}
+              href={l.url}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1 rounded-full border border-border bg-background/60 px-2 py-0.5 text-[10px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              {l.label} <span aria-hidden>→</span>
+            </a>
+          ))}
+        </div>
+      )}
     </article>
   );
 }

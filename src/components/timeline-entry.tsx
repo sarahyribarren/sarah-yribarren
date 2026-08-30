@@ -103,6 +103,12 @@ function Card({ entry }: { entry: TimelineCardType }) {
         {renderRole(entry.role, entry.orgUrl)}
       </h3>
 
+      {entry.extraRoles?.map((r, i) => (
+        <h4 key={i} className="mt-1 font-display text-lg leading-tight text-foreground/80">
+          {renderRole(r.text, r.orgUrl)}
+        </h4>
+      ))}
+
       {entry.description && (
         <p className="mt-2 text-[14px] leading-relaxed text-foreground/80">{entry.description}</p>
       )}

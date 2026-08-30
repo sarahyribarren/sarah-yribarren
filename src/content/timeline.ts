@@ -76,6 +76,7 @@ export type TimelineCard = {
   mutedRoles?: string[];
   links?: { label: string; url: string }[];
   orgUrl?: string;
+  extraRoles?: { text: string; orgUrl?: string }[];
   banner?: string;
   bannerColor?: "default" | "green";
 };
@@ -410,6 +411,13 @@ export const extracurriculars: TimelineEntry[] = [
     kind: "experience",
     side: "left",
     role: "Captain & Coach @ Stanford Ethics Bowl",
+    orgUrl: "https://www.appe-ethics.org/about-ethics-bowl-appe-ieb/",
+    extraRoles: [
+      {
+        text: "President @ Stanford Practical Ethics Club (SPEC)",
+        orgUrl: "https://ethicsinsociety.stanford.edu/undergraduate/stanford-practical-ethics-club-and-ethics-bowl",
+      },
+    ],
     location: "Stanford University",
     dateRange: "Sep 2019 – Mar 2025",
     bullets: [
@@ -418,7 +426,7 @@ export const extracurriculars: TimelineEntry[] = [
       "Outcome: team won CA Regionals as Team Captain, streak continued during time as Coach (now at 5-year win streak)",
       "Bonus Outcome: as Captain, was interviewed by Bulletin of Atomic Scientists for framework on ethics of science communication for the Doomsday Clock",
     ],
-    leadershipRoles: ["Team Captain (Sophomore)", "Coach (Junior, Coterm)"],
+    leadershipRoles: ["Team Captain (Sophomore)", "Coach (Junior, Coterm)", "SPEC President (Junior)"],
     mutedRoles: ["Competitor (Frosh, Gap)"],
     links: [
       { label: "Feature Interview by the Bulletin of Atomic Scientists", url: "https://thebulletin.org/2022/06/some-disagree-that-it-is-100-seconds-to-midnight-these-undergrads-held-a-debate/" },

@@ -329,6 +329,7 @@ export const timeline: TimelineEntry[] = [
     kind: "experience",
     side: "left",
     role: "Electrochemical Separations Researcher @ Tarpeh Lab",
+    orgUrl: "https://www.tarpehlab.com/",
     location: "Stanford University",
     dateRange: "Sep 2022 – Dec 2023",
     bullets: [
@@ -360,6 +361,7 @@ export const timeline: TimelineEntry[] = [
     kind: "experience",
     side: "left",
     role: "Nanoparticle Synthesis Researcher @ Cargnello Group",
+    orgUrl: "https://cargnellogroup.stanford.edu/",
     location: "Stanford University",
     dateRange: "Jun 2022 – Sep 2022",
     bullets: [

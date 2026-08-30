@@ -58,7 +58,8 @@ import img97 from "@/assets/photos/image97.jpg";
 import img98 from "@/assets/photos/image98.jpg";
 import img99 from "@/assets/photos/image99.jpg";
 import img100 from "@/assets/photos/image100.jpg";
-import imgAlaska from "@/assets/photos/alaska-glacier.jpg";
+import img101 from "@/assets/photos/image101.jpg";
+import img102 from "@/assets/photos/image102.jpg";
 
 export type TimelineCard = {
   kind: "education" | "experience" | "credential" | "milestone";
@@ -462,9 +463,9 @@ export const extracurriculars: TimelineEntry[] = [
       "Toured an active artisanal mine in Potosí, Bolivia",
       "Visited the Maras Salt Mines in southeast Peru, overlooking evaporation ponds",
       "Explored the largest high-altitude geothermal geyser field in the Atacama Desert, Chile",
-      "Studied glacial soils near Juneau, Alaska for Science of Soils (EARTHSYS 155)",
+      "Dug soil pits and analyzed profiles for Science of Soils (EARTHSYS 155)",
     ],
-    photos: [img33, img77, img79, imgAlaska],
+    photos: [img33, img77, img79, img102, img101],
   },
   {
     kind: "experience",

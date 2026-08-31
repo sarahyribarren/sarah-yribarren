@@ -39,7 +39,7 @@ function Index() {
           <p className="mb-3 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
             Hello, I'm
           </p>
-          <h1 className="font-display text-5xl leading-[1.05] text-foreground md:text-6xl">
+          <h1 className="font-display text-5xl leading-[1.05] tracking-[0.02em] text-foreground md:text-6xl">
             Sarah Yribarren
           </h1>
           <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-foreground/80">

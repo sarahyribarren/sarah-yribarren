@@ -36,7 +36,7 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarHeader className="px-4 pt-6 pb-3">
         <Link to="/" className="block">
-          <div className="font-display text-2xl leading-none text-foreground whitespace-nowrap">
+          <div className="font-display text-2xl leading-none tracking-[0.02em] text-foreground whitespace-nowrap">
             Sarah Yribarren
           </div>
           <div className="mt-2 text-[11px] tracking-wide text-muted-foreground">

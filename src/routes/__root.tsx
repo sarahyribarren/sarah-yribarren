@@ -81,7 +81,7 @@ function RootComponent() {
         <SidebarInset>
           <header className="flex h-12 items-center border-b border-border/60 px-3 md:hidden">
             <SidebarTrigger />
-            <span className="ml-3 font-display text-lg">Sarah Yribarren</span>
+            <span className="ml-3 font-display text-lg tracking-[0.02em]">Sarah Yribarren</span>
           </header>
           <main className="fade-in min-h-screen">
             <Outlet />

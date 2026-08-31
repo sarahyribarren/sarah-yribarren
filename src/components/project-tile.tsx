@@ -1,9 +1,16 @@
 import type { Project } from "@/content/projects";
 import type { Course } from "@/content/coursework";
 
+export function slugify(title: string) {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 export function ProjectTile({ project }: { project: Project }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-[0_10px_40px_-20px_rgba(58,74,58,0.35)]">
+    <article
+      id={slugify(project.title)}
+      className="group scroll-mt-24 flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-[0_10px_40px_-20px_rgba(58,74,58,0.35)]"
+    >
       <div className="aspect-[4/3] overflow-hidden bg-muted">
         <img
           src={project.image}
@@ -41,29 +48,17 @@ export function ProjectGrid({ children }: { children: React.ReactNode }) {
 
 export function CourseTile({ course }: { course: Course }) {
   return (
-    <article className="flow-root rounded-md border border-border bg-card px-3.5 py-3">
+    <article className="rounded-md border border-border bg-card px-3.5 py-3">
       <h3 className="font-body text-[14px] font-medium leading-snug text-foreground">
-        {course.title}
-        <span className="float-right ml-2 mt-[1px] shrink-0 whitespace-nowrap rounded-full border border-primary/40 bg-sage px-2 py-0.5 font-body text-[10px] font-medium uppercase tracking-[0.1em] text-forest">
-          {course.code}
-        </span>
+        <a
+          href={`https://explorecourses.stanford.edu/search?q=${course.code.replace(/\s+/g, "")}&academicYear=${course.academicYear ?? "20242025"}`}
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-border underline-offset-2 transition-colors hover:text-primary hover:decoration-primary"
+        >
+          {course.title}
+        </a>
       </h3>
-
-      {course.links && course.links.length > 0 && (
-        <div className="mt-1.5 flex flex-wrap gap-1.5">
-          {course.links.map((l) => (
-            <a
-              key={l.url}
-              href={l.url}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1 rounded-full border border-border bg-background/60 px-2 py-0.5 text-[10px] font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
-            >
-              {l.label} <span aria-hidden>→</span>
-            </a>
-          ))}
-        </div>
-      )}
     </article>
   );
 }

@@ -482,6 +482,17 @@ export const extracurriculars: TimelineEntry[] = [
     photos: [img101],
   },
   {
+    kind: "education",
+    side: "right",
+    role: "BIOME",
+    location: "Stanford University",
+    bullets: [
+      "Placeholder bullet — replace with actual detail",
+      "Placeholder bullet — replace with actual detail",
+      "Placeholder bullet — replace with actual detail",
+    ],
+  },
+  {
     kind: "experience",
     side: "left",
     role: "Bonus Abroad Experiences!",

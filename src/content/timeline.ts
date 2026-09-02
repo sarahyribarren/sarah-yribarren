@@ -58,7 +58,6 @@ import img97 from "@/assets/photos/image97.jpg";
 import img98 from "@/assets/photos/image98.jpg";
 import img99 from "@/assets/photos/image99.jpg";
 import img100 from "@/assets/photos/image100.jpg";
-import img101 from "@/assets/photos/image101.jpg";
 import img102 from "@/assets/photos/image102.jpg";
 
 export type TimelineCard = {
@@ -470,27 +469,6 @@ export const extracurriculars: TimelineEntry[] = [
       "Made a big impact in my intellectual journey by fostering interest in energy technologies and industries",
     ],
     photos: [img06, img53, img54],
-  },
-  {
-    kind: "education",
-    side: "left",
-    role: "Science of Soils",
-    location: "Stanford University",
-    bullets: [
-      "Dug soil pits and analyzed profiles for hands-on fieldwork (EARTHSYS 155)",
-    ],
-    photos: [img101],
-  },
-  {
-    kind: "education",
-    side: "right",
-    role: "BIOME",
-    location: "Stanford University",
-    bullets: [
-      "Placeholder bullet — replace with actual detail",
-      "Placeholder bullet — replace with actual detail",
-      "Placeholder bullet — replace with actual detail",
-    ],
   },
   {
     kind: "experience",

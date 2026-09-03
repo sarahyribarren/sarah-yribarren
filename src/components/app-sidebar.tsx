@@ -1,32 +1,28 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { History } from "lucide-react";
+import { ChevronRight, History } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarFooter,
   SidebarMenu,
+  SidebarMenuAction,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 
-const topNav = [{ title: "Timeline", url: "/", icon: History }];
-
-const navGroups = [
-  {
-    label: "Portfolio",
-    items: [
-      { title: "Senior Capstone", url: "/capstone", emoji: "⚙️" },
-      { title: "Engineering Research", url: "/research", emoji: "🧪" },
-      { title: "Physics & Technology", url: "/physics", emoji: "⚛️" },
-      { title: "Earth Systems", url: "/earth-systems", emoji: "🌎" },
-      { title: "Law, Policy & EJ", url: "/law-policy", emoji: "⚖️" },
-      { title: "Coursework", url: "/coursework", emoji: "📝" },
-    ],
-  },
+const portfolioSections = [
+  { title: "Senior Capstone", hash: "capstone" },
+  { title: "Engineering Research", hash: "research" },
+  { title: "Physics & Technology", hash: "physics" },
+  { title: "Earth Systems", hash: "earth-systems" },
+  { title: "Law, Policy & Environmental Justice", hash: "law-policy" },
 ];
 
 export function AppSidebar() {
@@ -49,47 +45,56 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {topNav.map((item) => {
-                const isActive = item.url === "/" ? pathname === "/" : pathname.startsWith(item.url);
-                return (
-                  <SidebarMenuItem key={item.url}>
-                    <SidebarMenuButton asChild isActive={isActive} className="font-body">
-                      <Link to={item.url} className="flex items-center gap-3">
-                        <item.icon className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden />
-                        <span className="text-[14px]">{item.title}</span>
-                      </Link>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                );
-              })}
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild isActive={pathname === "/"} className="font-body">
+                  <Link to="/" className="flex items-center gap-3">
+                    <History className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden />
+                    <span className="text-[14px]">Timeline</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+
+              <Collapsible defaultOpen={pathname.startsWith("/portfolio")} className="group/collapsible">
+                <SidebarMenuItem>
+                  <SidebarMenuButton asChild isActive={pathname.startsWith("/portfolio")} className="font-body">
+                    <Link to="/portfolio" className="flex items-center gap-3">
+                      <span className="text-sm w-4 text-center">📁</span>
+                      <span className="text-[14px]">Portfolio</span>
+                    </Link>
+                  </SidebarMenuButton>
+                  <CollapsibleTrigger asChild>
+                    <SidebarMenuAction className="transition-transform group-data-[state=open]/collapsible:rotate-90">
+                      <ChevronRight />
+                      <span className="sr-only">Toggle portfolio sections</span>
+                    </SidebarMenuAction>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent>
+                    <SidebarMenuSub>
+                      {portfolioSections.map((section) => (
+                        <SidebarMenuSubItem key={section.hash}>
+                          <SidebarMenuSubButton asChild className="font-body">
+                            <Link to="/portfolio" hash={section.hash}>
+                              <span className="text-[13px]">{section.title}</span>
+                            </Link>
+                          </SidebarMenuSubButton>
+                        </SidebarMenuSubItem>
+                      ))}
+                    </SidebarMenuSub>
+                  </CollapsibleContent>
+                </SidebarMenuItem>
+              </Collapsible>
+
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild isActive={pathname.startsWith("/coursework")} className="font-body">
+                  <Link to="/coursework" className="flex items-center gap-3">
+                    <span className="text-sm w-4 text-center">📝</span>
+                    <span className="text-[14px]">Coursework</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-
-        {navGroups.map((group) => (
-          <SidebarGroup key={group.label}>
-            <SidebarGroupLabel className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              {group.label}
-            </SidebarGroupLabel>
-            <SidebarGroupContent>
-              <SidebarMenu>
-                {group.items.map((item) => {
-                  const isActive = pathname.startsWith(item.url);
-                  return (
-                    <SidebarMenuItem key={item.url}>
-                      <SidebarMenuButton asChild isActive={isActive} className="font-body">
-                        <Link to={item.url} className="flex items-center gap-3">
-                          <span className="text-sm w-4 text-center">{item.emoji}</span>
-                          <span className="text-[14px]">{item.title}</span>
-                        </Link>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  );
-                })}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        ))}
       </SidebarContent>
 
       <SidebarFooter className="px-4 pb-5 pt-2">

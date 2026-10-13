@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHeader, PageShell } from "@/components/project-tile";
+import { PageShell } from "@/components/project-tile";
 import { PortfolioSection } from "@/components/portfolio-section";
 import {
   capstoneProjects,
@@ -29,8 +29,7 @@ function Page() {
 
   return (
     <PageShell>
-      <PageHeader title="Stanford Project Portfolio" />
-      <p className="-mt-6 mb-10 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+      <p className="mb-10 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
         {projectCount} projects, {sections.length} groups
       </p>
 

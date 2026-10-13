@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { PageHeader, PageShell, CourseTile } from "@/components/project-tile";
+import { PageShell, CourseTile } from "@/components/project-tile";
 import { courseworkCategories } from "@/content/coursework";
 
 export const Route = createFileRoute("/coursework")({
@@ -20,8 +20,7 @@ function Page() {
 
   return (
     <PageShell>
-      <PageHeader title="Stanford Coursework" />
-      <p className="-mt-6 mb-10 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+      <p className="mb-10 text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
         {courseCount} courses, across {courseworkCategories.length} subject areas
       </p>
 

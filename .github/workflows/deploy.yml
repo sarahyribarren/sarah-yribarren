@@ -38,9 +38,6 @@ jobs:
 
       - name: Build
         run: bun run build
-        env:
-          # Optional: set a repository variable VITE_ESRI_KEY to use Esri World Imagery on the photojournalism map.
-          VITE_ESRI_KEY: ${{ vars.VITE_ESRI_KEY }}
 
       - name: Copy index.html to 404.html for SPA routing
         run: cp dist/index.html dist/404.html

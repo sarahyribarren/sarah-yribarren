@@ -10,18 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
-import { Route as PhotojournalismRouteImport } from './routes/photojournalism'
 import { Route as CourseworkRouteImport } from './routes/coursework'
 import { Route as IndexRouteImport } from './routes/index'
 
 const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PhotojournalismRoute = PhotojournalismRouteImport.update({
-  id: '/photojournalism',
-  path: '/photojournalism',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CourseworkRoute = CourseworkRouteImport.update({
@@ -38,34 +32,30 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/coursework': typeof CourseworkRoute
-  '/photojournalism': typeof PhotojournalismRoute
   '/portfolio': typeof PortfolioRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/coursework': typeof CourseworkRoute
-  '/photojournalism': typeof PhotojournalismRoute
   '/portfolio': typeof PortfolioRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/coursework': typeof CourseworkRoute
-  '/photojournalism': typeof PhotojournalismRoute
   '/portfolio': typeof PortfolioRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/coursework' | '/photojournalism' | '/portfolio'
+  fullPaths: '/' | '/coursework' | '/portfolio'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/coursework' | '/photojournalism' | '/portfolio'
-  id: '__root__' | '/' | '/coursework' | '/photojournalism' | '/portfolio'
+  to: '/' | '/coursework' | '/portfolio'
+  id: '__root__' | '/' | '/coursework' | '/portfolio'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CourseworkRoute: typeof CourseworkRoute
-  PhotojournalismRoute: typeof PhotojournalismRoute
   PortfolioRoute: typeof PortfolioRoute
 }
 
@@ -76,13 +66,6 @@ declare module '@tanstack/react-router' {
       path: '/portfolio'
       fullPath: '/portfolio'
       preLoaderRoute: typeof PortfolioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/photojournalism': {
-      id: '/photojournalism'
-      path: '/photojournalism'
-      fullPath: '/photojournalism'
-      preLoaderRoute: typeof PhotojournalismRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/coursework': {
@@ -105,7 +88,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CourseworkRoute: CourseworkRoute,
-  PhotojournalismRoute: PhotojournalismRoute,
   PortfolioRoute: PortfolioRoute,
 }
 export const routeTree = rootRouteImport

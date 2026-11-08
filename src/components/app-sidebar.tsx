@@ -92,15 +92,6 @@ export function AppSidebar() {
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
-
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={pathname.startsWith("/photojournalism")} className="font-body">
-                  <Link to="/photojournalism" className="flex items-center gap-3">
-                    <span className="text-sm w-4 text-center">📷</span>
-                    <span className="text-[14px]">Photojournalism</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

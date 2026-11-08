@@ -289,13 +289,13 @@ export const timeline: TimelineEntry[] = [
     role: "Founder @ Stanford ChemE Car",
     orgUrl: "https://chemecar.stanford.edu/",
     location: "Stanford University",
-    dateRange: "Sep 2023 – Mar 2025",
+    dateRange: "Sep 2024 – Mar 2025",
     bullets: [
       "Refounded Stanford's Chem-E-Car team as a newly registered VSO, recruited and trained a team from scratch, and obtained $7,000 annual grant",
       "Designed and built a shoebox-sized car powered by a zinc-air battery, with a chemically-controlled stopping mechanism, integrated onto a 3-D printed chassis",
       "Outcome: First competition season was experimental and the car wasn't functional; the team walked away with critical engineering lessons that shaped a win the following year",
     ],
-    leadershipRoles: ["Founder (Junior)", "Coordinator (Senior)"],
+    leadershipRoles: ["Founder (Senior)"],
     photos: [img34, img28, img04],
   },
   {
